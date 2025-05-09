@@ -211,8 +211,7 @@
    - **Ans:** I would deploy the application across multiple Availability Zones behind a load balancer to distribute traffic. I’d use an Auto Scaling Group so instances can recover from failures and scale with demand, and ensure the database is Multi-AZ or replicated for redundancy. For maximum availability, I might also implement a multi-region failover with DNS if required.
 
 1. **Q: What are RTO and RPO, and how do they influence your AWS disaster recovery strategy?**
-
-A: RTO (Recovery Time Objective) is the target maximum downtime, and RPO (Recovery Point Objective) is the target maximum data loss in time. These drive the DR strategy: a low RTO/RPO means we need faster recovery solutions (like active-active multi-region or real-time replication), whereas a higher RTO/RPO allows for simpler solutions like restoring from backups with more downtime.
+   - **Ans:** RTO (Recovery Time Objective) is the target maximum downtime, and RPO (Recovery Point Objective) is the target maximum data loss in time. These drive the DR strategy: a low RTO/RPO means we need faster recovery solutions (like active-active multi-region or real-time replication), whereas a higher RTO/RPO allows for simpler solutions like restoring from backups with more downtime.
 
 1. **Q: If an AWS region hosting your application goes down, what steps would you take to recover**
    - **Ans:** I would fail over to a secondary region that has been prepared for DR. For example, if I have set up cross-region replication or backups, I’d launch the infrastructure in the DR region (using automated templates/IaC), restore data from the latest backup or replica, and update DNS (Route 53) to point users to the application in the new region. The key is having a pre-planned DR environment and automated processes to bring services back quickly.
