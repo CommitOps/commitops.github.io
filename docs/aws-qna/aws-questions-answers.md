@@ -1,4 +1,6 @@
-# **AWS Interview Questions & Answers**
+# **AWS Questions & Answers**
+
+## **AWS Interview QnA**
 
 1. **Q: List the components required to build Amazon VPC?**
 
@@ -266,7 +268,7 @@ A: RTO (Recovery Time Objective) is the target maximum downtime, and RPO (Recove
 1. **Q: If you suspect a security breach in your AWS environment, what steps would you take to respond?**
    - **Ans:** First, I would contain the incident by isolating affected resources – for example, take compromised EC2 instances offline (stop or quarantine them) and disable any exposed credentials. Next, I’d investigate using CloudTrail logs, CloudWatch logs, and other monitoring data to determine the scope and root cause of the breach. I would rotate any compromised keys or passwords, patch vulnerabilities or misconfigurations that were exploited, and restore clean backups if necessary. Throughout the process, I’d follow our incident response plan, which includes communicating with the security team and stakeholders and later conducting a post-mortem to prevent similar incidents in the future.
 
-# **AWS MCQs QnA**
+## **AWS MCQs QnA**
 
 1. **Q: You cannot store unlimited data in Amazon Web Services…..**
 
