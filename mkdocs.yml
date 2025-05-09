@@ -1,0 +1,62 @@
+site_name: DevOps Learning
+site_url: https://mydomain.org/mysite
+theme:
+  name: material
+  palette: 
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+
+plugins:
+  - search
+  - include-markdown:
+      opening_tag: "{%"
+      closing_tag: "%}"
+      cache: 600
+  - include_dir_to_nav
+  - tags:
+      tags_file: tags.md
+  - blog
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - smarty
+  - admonition
+  - pymdownx.details
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - AWS QnA: aws-qna/aws-questions-answers.md
