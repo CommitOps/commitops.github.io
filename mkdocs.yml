@@ -42,8 +42,8 @@ plugins:
       closing_tag: "%}"
       cache: 600
   - include_dir_to_nav
-  - tags:
-      tags_file: tags.md
+  # - tags:
+  #     tags_file: tags.md
   - blog
   - termynal:
       prompt_literal_start:
