@@ -15,10 +15,7 @@ theme:
   # custom_dir: docs/overrides
   custom_dir: overrides/partials
   palette:
-    primary: blue grey
-
     # Palette toggle for light mode
-
     - scheme: default
       toggle:
         icon: material/brightness-7 
