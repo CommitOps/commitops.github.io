@@ -10,15 +10,18 @@ site_url: https://mydomain.org/mysite
 #   - tags
 
 theme:
-  name: dracula
+  name: material
+  # name: dracula
   # custom_dir: docs/overrides
   custom_dir: overrides/partials
-  palette: 
+  palette:
+    primary: blue grey
 
     # Palette toggle for light mode
+
     - scheme: default
       toggle:
-        icon: dracula/brightness-7 
+        icon: material/brightness-7 
         name: Switch to dark mode
 
     # Palette toggle for dark mode
@@ -45,26 +48,23 @@ theme:
 
 plugins:
   - search
+  - group
   - minify
   - awesome-nav
+  - include_dir_to_nav
+  - blog
   - include-markdown:
       opening_tag: "{%"
       closing_tag: "%}"
       cache: 600
-  - include_dir_to_nav
-  # - tags:
-  #     tags_file: tags.md
-  # - blog
+  - tags:
+      tags_file: tags.md
   - termynal:
       prompt_literal_start:
         - "$"
         - ">"
 
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
@@ -72,6 +72,10 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.tabbed
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - toc:
       permalink: true
 
