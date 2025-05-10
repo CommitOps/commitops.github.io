@@ -12,8 +12,7 @@ site_url: https://mydomain.org/mysite
 theme:
   name: material
   # name: dracula
-  # custom_dir: docs/overrides
-  custom_dir: overrides/partials
+  custom_dir: docs/overrides
   palette:
     # Palette toggle for light mode
     - scheme: default
