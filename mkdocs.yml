@@ -30,6 +30,8 @@ theme:
         icon: dracula/brightness-4
         name: Switch to light mode
   features:
+    - announcement.bar
+    - announcement.dismiss
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
@@ -48,6 +50,11 @@ theme:
     - search.highlight
     - search.share
     - content.code.copy
+
+  announcement:
+    type: info
+    text: |
+      🚀 New DevOps tutorials added! [Explore Now](./devops/)
 
 plugins:
   - search
