@@ -27,7 +27,6 @@ theme:
         name: Switch to light mode
   features:
     - content.tabs
-    - content.tabs.link
     - announcement.bar
     - announcement.dismiss
     - navigation.instant
