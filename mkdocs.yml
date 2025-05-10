@@ -62,11 +62,11 @@ markdown_extensions:
       permalink: true
 
 extra_css:
-  - assets/stylesheets/thm.css
-  - assets/stylesheets/ai-summary.css
   - assets/stylesheets/extra.css
-  - assets/stylesheets/termynal.css
-  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+  # - assets/stylesheets/thm.css
+  # - assets/stylesheets/ai-summary.css
+  # - assets/stylesheets/termynal.css
+  # - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
 
 extra_javascript:
   - assets/javascripts/color.js
