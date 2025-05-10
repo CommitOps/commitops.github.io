@@ -72,8 +72,8 @@ extra_css:
   # - assets/stylesheets/termynal.css
   # - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
 
-extra_javascript:
-  - assets/javascripts/terminal-anim.js
+# extra_javascript:
+#   - assets/javascripts/terminal-anim.js
   # - assets/javascripts/color.js
   # - assets/javascripts/termynal.js
   # - assets/javascripts/gen_termynal.js

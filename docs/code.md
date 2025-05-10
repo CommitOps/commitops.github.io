@@ -19,6 +19,7 @@
 
 ## Terminal
 
+- Python
 <!-- termynal -->
 
 ```python
@@ -43,6 +44,8 @@ This is Cloud DevOps Terminal
 
 <!-- termynal -->
 
+- Shell
+
 ```bash
 
 $ echo "Welcome to CommitOps"
@@ -53,30 +56,3 @@ $ date
 Sat May 10 15:04:22 UTC 2025
 
 ```
-
-<div class="console" id="animated-terminal">
-
-```bash
-
-$ echo "Starting CommitOps setup..."
-Starting CommitOps setup...
-$ apt update
-Reading package lists... Done
-$ date
-Sat May 10 2025
-```
-
-</div>
-
-<div class="terminal-wrapper">
-  <div class="console" id="animated-terminal">
-
-```
-$ echo "Welcome to CommitOps"
-Welcome to CommitOps
-$ date
-Sat May 10 15:23:55 UTC 2025
-```
-  </div>
-  <button class="replay-btn" onclick="replayTerminal()">Replay</button>
-</div>
