@@ -71,3 +71,16 @@ Sat May 10 2025
 ```
 
 </div>
+
+<div class="terminal-wrapper">
+  <div class="console" id="animated-terminal">
+
+```
+$ echo "Welcome to CommitOps"
+Welcome to CommitOps
+$ date
+Sat May 10 15:23:55 UTC 2025
+```
+  </div>
+  <button class="replay-btn" onclick="replayTerminal()">Replay</button>
+</div>

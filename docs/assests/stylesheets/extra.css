@@ -8,4 +8,24 @@
   line-height: 1.5;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   min-height: 120px;
+  transition: all 0.3s ease;
+}
+
+.terminal-wrapper {
+  margin-bottom: 2rem;
+}
+
+.replay-btn {
+  margin-top: 0.5rem;
+  background-color: #333;
+  color: #00ff90;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.replay-btn:hover {
+  background-color: #444;
 }
