@@ -45,6 +45,10 @@ plugins:
   - tags:
       tags_file: tags.md
   - blog
+  - termynal:
+      prompt_literal_start:
+        - "$"
+        - ">"
 
 markdown_extensions:
   - pymdownx.highlight:

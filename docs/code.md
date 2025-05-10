@@ -19,7 +19,7 @@
 
 ## Terminal
 
-<div class="console">
+<!-- termynal -->
 
 ```python
 
@@ -41,9 +41,7 @@ This is Cloud DevOps Terminal
 
 ```
 
-</div>
-
-<div class="console">
+<!-- termynal -->
 
 ```bash
 
@@ -55,8 +53,6 @@ $ date
 Sat May 10 15:04:22 UTC 2025
 
 ```
-
-</div>
 
 <div class="console" id="animated-terminal">
 
