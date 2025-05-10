@@ -76,8 +76,7 @@ markdown_extensions:
   - smarty
   - admonition
   - pymdownx.details
-  - pymdownx.tabbed:
-    alternate_style: true
+  - pymdownx.tabbed
   - codehilite
   - pymdownx.highlight:
       anchor_linenums: true
