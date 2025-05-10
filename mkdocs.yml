@@ -90,4 +90,4 @@ extra_css:
 nav:
   - Home: index.md
   - AWS QnA: aws-qna/aws-questions-answers.md
-  - Code: aws-qna/aws-questions-answers.md
+  - Code: code.md
