@@ -21,9 +21,8 @@
 
 <div class="console">
 
-<div class="console">
+```python
 
-```console
 $ python -c "import os"
 
 This is Cloud DevOps Terminal
@@ -40,6 +39,6 @@ This is Cloud DevOps Terminal
 This is Cloud DevOps Terminal
 This is Cloud DevOps Terminal
 
-```
-
 </div>
+
+```
