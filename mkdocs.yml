@@ -26,6 +26,7 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
   features:
+    - content.tabs
     - content.tabs.link
     - announcement.bar
     - announcement.dismiss
