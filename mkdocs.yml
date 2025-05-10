@@ -57,7 +57,7 @@ plugins:
   - minify
   - awesome-nav
   - include_dir_to_nav
-  - blog
+  # - blog
   - tags
   - include-markdown:
       opening_tag: "{%"
