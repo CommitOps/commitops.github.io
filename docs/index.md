@@ -1,4 +1,5 @@
-# Welcome to CommitOps
+# Home
+## Welcome to CommitOps
 
 Welcome to **CommitOps** — your gateway to mastering modern Cloud and DevOps engineering.
 This platform is built for DevOps, SysAdmins, and Infrastructure enthusiasts who want to go beyond theory and learn how real-world cloud-native systems are designed, deployed, and maintained.
