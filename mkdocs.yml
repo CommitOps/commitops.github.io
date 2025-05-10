@@ -97,7 +97,7 @@ extra_css:
   # - assets/javascripts/termynal.js
   # - assets/javascripts/gen_termynal.js
 
-nav:
-  - Home: index.md
-  - AWS QnA: aws-qna/aws-questions-answers.md
-  - Code: code.md
+# nav:
+#   - Home: index.md
+#   - AWS QnA: aws-qna/aws-questions-answers.md
+#   - Code: code.md
