@@ -1,0 +1,5 @@
+# docs/getting-started/.pages
+title: Setup Steps
+nav:
+  - intro.md
+  - setup.md

@@ -1,0 +1,5 @@
+# docs/devops/.pages
+title: DevOps Tutorials
+nav:
+  - docker.md
+  - kubernetes.md
