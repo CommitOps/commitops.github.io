@@ -58,12 +58,11 @@ plugins:
   - awesome-nav
   - include_dir_to_nav
   - blog
+  - tags
   - include-markdown:
       opening_tag: "{%"
       closing_tag: "%}"
       cache: 600
-  - tags:
-      tags_file: tags.md
   - termynal:
       prompt_literal_start:
         - "$"
