@@ -39,6 +39,6 @@ This is Cloud DevOps Terminal
 This is Cloud DevOps Terminal
 This is Cloud DevOps Terminal
 
-</div>
-
 ```
+
+</div>
