@@ -1,5 +1,14 @@
 site_name: CommitOps Learning
 site_url: https://mydomain.org/mysite
+# material theme default plugins as below
+# plugins:
+#   - blog
+#   - group
+#   - offline
+#   - search
+#   - social
+#   - tags
+
 theme:
   name: dracula
   custom_dir: docs/overrides
@@ -44,7 +53,7 @@ plugins:
   - include_dir_to_nav
   # - tags:
   #     tags_file: tags.md
-  - blog
+  # - blog
   - termynal:
       prompt_literal_start:
         - "$"
