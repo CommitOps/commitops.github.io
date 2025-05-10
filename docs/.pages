@@ -1,4 +1,5 @@
 nav:
-  - getting-started
-  - devops
-  - Interview-QnA
+    - index.md
+    - getting-started/
+    - devops/
+    - Interview-QnA/
