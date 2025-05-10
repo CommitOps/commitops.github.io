@@ -5,16 +5,24 @@
     print("Hello, DevOps!")
     ```
 
-=== "Python"
-
-    ```python
-    print("Hello Python")
-    ```
+## Code Block
 
 === "Bash"
 
     ```bash
-    echo "Hello Shell"
+    echo "Hello from Bash!"
+    ```
+
+=== "Python"
+
+    ```python
+    print("Hello from Python!")
+    ```
+
+=== "PowerShell"
+
+    ```powershell
+    Write-Output "Hello from PowerShell!"
     ```
 
 ## Terminal
