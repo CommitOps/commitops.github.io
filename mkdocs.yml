@@ -76,3 +76,4 @@ extra_javascript:
 nav:
   - Home: index.md
   - AWS QnA: aws-qna/aws-questions-answers.md
+  - Code: aws-qna/aws-questions-answers.md
