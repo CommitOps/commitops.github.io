@@ -42,9 +42,9 @@ This is Cloud DevOps Terminal
 
 ```
 
-<!-- termynal -->
-
 - Shell
+
+<!-- termynal -->
 
 ```bash
 
@@ -54,5 +54,4 @@ $ uname -a
 Linux devops-vm 5.15.0-105-generic #115-Ubuntu SMP x86_64 GNU/Linux
 $ date
 Sat May 10 15:04:22 UTC 2025
-
 ```
