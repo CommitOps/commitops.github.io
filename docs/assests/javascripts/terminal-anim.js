@@ -1,22 +1,31 @@
-document.addEventListener("DOMContentLoaded", () => {
+function typeTerminal(el, text, index = 0) {
+    if (index === 0) el.textContent = "";
+  
+    if (index < text.length) {
+      el.textContent += text.charAt(index);
+      const delay = text.charAt(index) === "\n" ? 300 : 20;
+      setTimeout(() => typeTerminal(el, text, index + 1), delay);
+    }
+  }
+  
+  function replayTerminal() {
     const el = document.getElementById("animated-terminal");
     if (!el) return;
   
-    // Extract original text and clear it
-    const rawText = el.innerText.trim();
-    const lines = rawText.split("\n");
-    el.innerText = "";
-  
-    let i = 0;
-  
-    function typeLine() {
-      if (i < lines.length) {
-        el.innerText += (i > 0 ? "\n" : "") + lines[i];
-        i++;
-        setTimeout(typeLine, 500); // speed per line
-      }
+    const original = el.getAttribute("data-original");
+    if (original) {
+      typeTerminal(el, original, 0);
     }
+  }
   
-    typeLine();
+  document.addEventListener("DOMContentLoaded", () => {
+    const el = document.getElementById("animated-terminal");
+    if (!el) return;
+  
+    // Store initial content BEFORE wiping it
+    const content = el.textContent.trim();
+    el.setAttribute("data-original", content);
+  
+    replayTerminal();
   });
   
