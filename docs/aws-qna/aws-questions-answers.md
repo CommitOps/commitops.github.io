@@ -4,267 +4,267 @@
 
 1. **Q: List the components required to build Amazon VPC?**
 
-    - **Ans:** Subnet, Internet Gateway, NAT Gateway, HW VPN Connection, Virtual Private Gateway, Customer Gateway, Router, Peering Connection, VPC Endpoint for S3, Egress-only Internet Gateway.
+   - **Ans:** Subnet, Internet Gateway, NAT Gateway, HW VPN Connection, Virtual Private Gateway, Customer Gateway, Router, Peering Connection, VPC Endpoint for S3, Egress-only Internet Gateway.
 
-1. **Q: How do you safeguard your EC2 instances running in a VPC?**
+2. **Q: How do you safeguard your EC2 instances running in a VPC?**
 
-    - **Ans:** Security Groups can be used to protect your EC2 instances in a VPC. We can configure both INBOUND and OUTBOUND traffic in a Security Group which enables secured access to your EC2 instances. Security Group automatically denies any unauthorized access to your EC2 instances.
+   - **Ans:** Security Groups can be used to protect your EC2 instances in a VPC. We can configure both INBOUND and OUTBOUND traffic in a Security Group which enables secured access to your EC2 instances. Security Group automatically denies any unauthorized access to your EC2 instances.
 
-1. **Q: In a VPC how many EC2 instances can you use?**
+3. **Q: In a VPC how many EC2 instances can you use?**
 
-    - **Ans:** Initially you are limited to launch 20 EC2 Instances at one time. Maximum VPC  size is 65,536 instances.
+   - **Ans:** Initially you are limited to launch 20 EC2 Instances at one time. Maximum VPC  size is 65,536 instances.
 
-1. **Q:** **Can you establish a peering connection to a VPC in a different REGION?**
+4. **Q:** **Can you establish a peering connection to a VPC in a different REGION?**
 
-    - **Ans:** Not possible. Peering Connection are available only between VPC in the same region.
+   - **Ans:** Not possible. Peering Connection are available only between VPC in the same region.
 
-1. **Q: Can you connect your VPC with a VPC owned by another AWS account?**
+5. **Q: Can you connect your VPC with a VPC owned by another AWS account?**
 
-    - **Ans:** Yes, Possible. Provided the owner of other VPCs accepts your connection.
+   - **Ans:** Yes, Possible. Provided the owner of other VPCs accepts your connection.
 
-1. **Q: What are all the different connectivity options available for your VPC?**
+6. **Q: What are all the different connectivity options available for your VPC?**
 
-    - **Ans:** Internet Gateway, Virtual Private Gateway, NAT, EndPoints, Peering Connections.
+   - **Ans:** Internet Gateway, Virtual Private Gateway, NAT, EndPoints, Peering Connections.
 
-1. **Q: Can a EC2 instance inside your VPC connect with the EC2 instance belonging to other VPCs?**
+7. **Q: Can a EC2 instance inside your VPC connect with the EC2 instance belonging to other VPCs?**
 
-    - **Ans:** Yes, Possible. Provided an Internet Gateway is configured in such a way that traffic bounded for EC2 instances running in other VPCs.
+   - **Ans:** Yes, Possible. Provided an Internet Gateway is configured in such a way that traffic bounded for EC2 instances running in other VPCs.
 
-1. **Q: How can you monitor network traffic in your VPC?**
+8. **Q: How can you monitor network traffic in your VPC?**
 
-    - **Ans:** It is possible using Amazon VPC Flow-Logs feature.
+   - **Ans:** It is possible using Amazon VPC Flow-Logs feature.
 
-1. **Q: Difference between Security Groups and ACLs in a VPC?**
+9. **Q: Difference between Security Groups and ACLs in a VPC?**
 
-    - **Ans:** A Security Group defines which traffic is allowed TO or FROM  EC2 instance. Whereas ACL, controls at the SUBNET level, scrutinize the traffic TO or FROM a Subnet.
+   - **Ans:** A Security Group defines which traffic is allowed TO or FROM  EC2 instance. Whereas ACL, controls at the SUBNET level, scrutinize the traffic TO or FROM a Subnet.
 
-1. **Q: Hon an EC2 instance in a VPC establish the connection with the internet?**
+10. **Q: Hon an EC2 instance in a VPC establish the connection with the internet?**
 
-    - **Ans:** Using either a Public IP or an Elastic IP.
+   - **Ans:** Using either a Public IP or an Elastic IP.
 
-1. **Q: Different types of Cloud Computing as per services?**
+11. **Q: Different types of Cloud Computing as per services?**
 
-    - **Ans:**  PAAS (Platform As A Service), IAAS (Infrastructure As A Service), SAAS (Software As A Service)
+   - **Ans:**  PAAS (Platform As A Service), IAAS (Infrastructure As A Service), SAAS (Software As A Service)
 
-1. **Q: What is Auto Scaling?**
+12. **Q: What is Auto Scaling?**
 
-    - **Ans:** Creating duplicate instances during heavy business hours. Scale-IN and Scale-OUT are two different statues of Scaling. Scale-IN: Reducing the instances. Scale-OUT: Increasing the instances by duplicating.
+   - **Ans:** Creating duplicate instances during heavy business hours. Scale-IN and Scale-OUT are two different statues of Scaling. Scale-IN: Reducing the instances. Scale-OUT: Increasing the instances by duplicating.
 
-1. **Q: What is AMI?**
+13. **Q: What is AMI?**
 
-    - **Ans:** AMI is defined as Amazon Machine Image. Basically it’s a template comprising software configuration part. For example, Operating System, DB Server, Application Server, etc.,
+   - **Ans:** AMI is defined as Amazon Machine Image. Basically it’s a template comprising software configuration part. For example, Operating System, DB Server, Application Server, etc.,
 
-1. **Q: Difference between Stopping and Terminating the Instances?**
+14. **Q: Difference between Stopping and Terminating the Instances?**
 
-    - **Ans:** When you STOP an instance it is a normal shutdown. The corresponding EBS volume attached to that instance remains attached and you can restart the instance later. When you TERMINATE an instance it gets deleted and you cannot restart that instance again later. And any EBS volume attached with that instance also deleted.
+   - **Ans:** When you STOP an instance it is a normal shutdown. The corresponding EBS volume attached to that instance remains attached and you can restart the instance later. When you TERMINATE an instance it gets deleted and you cannot restart that instance again later. And any EBS volume attached with that instance also deleted.
 
-1. **Q: When you launch a standby Relational Database Service instance will it be available in the same Available Zone?**
+15. **Q: When you launch a standby Relational Database Service instance will it be available in the same Available Zone?**
 
-    - **Ans:** Not advisable. Because the purpose of having standby RDS  instance is to avoid an infrastructure failure. So you have to keep your standby RDS service in a different Availability Zone, which may have different infrastructure.
+   - **Ans:** Not advisable. Because the purpose of having standby RDS  instance is to avoid an infrastructure failure. So you have to keep your standby RDS service in a different Availability Zone, which may have different infrastructure.
 
-1. **Q: Difference between Amazon RDS, DynamoDB and Redshift?**
+16. **Q: Difference between Amazon RDS, DynamoDB and Redshift?**
 
-    - **Ans:** RDS is meant for structured data only. DynamoDB is meant for unstructured data which is a NoSQL service. Redshift is a data warehouse product used for data analysis.
+   - **Ans:** RDS is meant for structured data only. DynamoDB is meant for unstructured data which is a NoSQL service. Redshift is a data warehouse product used for data analysis.
 
-1. **Q: What are Lifecycle Hooks?**
+17. **Q: What are Lifecycle Hooks?**
 
-    - **Ans:** Lifecycle Hooks are used in Auto Scaling. Lifecycle hooks enable you to perform custom actions by pausing instances as an Auto Scaling group launches or terminates them. Each Auto Scaling group can have multiple lifecycle hooks.
+   - **Ans:** Lifecycle Hooks are used in Auto Scaling. Lifecycle hooks enable you to perform custom actions by pausing instances as an Auto Scaling group launches or terminates them. Each Auto Scaling group can have multiple lifecycle hooks.
 
-1. **Q: What is S3?**
+18. **Q: What is S3?**
 
-    - **Ans:** S3 stands for Simple Storage Service, with a  simple web service interface to store and retrieve any amount of data from anywhere on the web.
+   - **Ans:** S3 stands for Simple Storage Service, with a  simple web service interface to store and retrieve any amount of data from anywhere on the web.
 
-1. **Q: What is AWS Lambada?**
+19. **Q: What is AWS Lambada?**
 
-    - **Ans:** Lambda is an event-driven platform. It is a compute service that runs code in response to events and automatically manages the compute resources required by that code.
+   - **Ans:** Lambda is an event-driven platform. It is a compute service that runs code in response to events and automatically manages the compute resources required by that code.
 
-1. **Q: In S3 how many buckets can be created?**
+20. **Q: In S3 how many buckets can be created?**
 
-    - **Ans:** By default 100 buckets can be created in a region.
+   - **Ans:** By default 100 buckets can be created in a region.
 
-1. **Q: What is CloudFront?**
+21. **Q: What is CloudFront?**
 
-    - **Ans:** Amazon CloudFront is a service that speeds up transfer of your static and dynamic web content such as HTML files, IMAGE files., etc., CloudFront delivers your particulars thru worldwide data centers named Edge Locations.
+   - **Ans:** Amazon CloudFront is a service that speeds up transfer of your static and dynamic web content such as HTML files, IMAGE files., etc., CloudFront delivers your particulars thru worldwide data centers named Edge Locations.
 
-1. **Q: Brief about S3 service in AWS?**
+22. **Q: Brief about S3 service in AWS?**
 
-    - **Ans:** S3, a Simple Storage Service from Amazon. You can move your files TO and FROM S3. Its like a FTP storage. You can keep your SNAPSHOTS in S3. You can also ENCRYPT your sensitive data in S3.
+   - **Ans:** S3, a Simple Storage Service from Amazon. You can move your files TO and FROM S3. Its like a FTP storage. You can keep your SNAPSHOTS in S3. You can also ENCRYPT your sensitive data in S3.
 
-1. **Q: Explain Regions and Available Zones in EC2?**
+23. **Q: Explain Regions and Available Zones in EC2?**
 
-    - **Ans:** Amazon has hosted EC2 in various locations around the world. These locations are called REGIONS. For example in Asia, Mumbai is one region and Singapore is another region. Each region is composed of isolated locations which are known as AVAILABLE ZONES.    Region is independent. But the Available Zones are linked thru low-latency links.
+   - **Ans:** Amazon has hosted EC2 in various locations around the world. These locations are called REGIONS. For example in Asia, Mumbai is one region and Singapore is another region. Each region is composed of isolated locations which are known as AVAILABLE ZONES.    Region is independent. But the Available Zones are linked thru low-latency links.
 
-1. **Q: What are the two types  of Load Balancer?**
+24. **Q: What are the two types  of Load Balancer?**
 
-    - **Ans:** Classic LB and Application LB. ALB is the Content Based Routing.
+   - **Ans:** Classic LB and Application LB. ALB is the Content Based Routing.
 
-1. **Q: Can a AMI be shared?**
+25. **Q: Can a AMI be shared?**
 
-    - **Ans:** Yes. A developer can create an AMI and share it with other developers for their use. A shared AMI is packed with the components you need and you  can customize the same as per your needs. As you are not an owner of a shared AMI there is a risk always involved.
+   - **Ans:** Yes. A developer can create an AMI and share it with other developers for their use. A shared AMI is packed with the components you need and you  can customize the same as per your needs. As you are not an owner of a shared AMI there is a risk always involved.
 
-1. **Q: What is a Hypervisor?**
+26. **Q: What is a Hypervisor?**
 
-    - **Ans:** A Hypervisor is a kind of software that enables Virtualization. It combines physical hardware resources into a platform which is delivered virtually to one or more users. XEN is the Hypervisor for EC2.
+   - **Ans:** A Hypervisor is a kind of software that enables Virtualization. It combines physical hardware resources into a platform which is delivered virtually to one or more users. XEN is the Hypervisor for EC2.
 
-1. **Q: Key Pair and its uses?**
+27. **Q: Key Pair and its uses?**
 
-    - **Ans:** You use Key Pair to login to your Instance in a secured way. You can create a key pair using EC2 console. When your instances are spread across regions you need to create key pair in each region.
+   - **Ans:** You use Key Pair to login to your Instance in a secured way. You can create a key pair using EC2 console. When your instances are spread across regions you need to create key pair in each region.
 
-1. **Q: What is the feature of ClassicLink?**
+28. **Q: What is the feature of ClassicLink?**
 
-    - **Ans:** ClassicLink allows instances in EC2 classic platform to communicate with instances in VPC using Private IP address. EC2 classic platform instances cannot not be linked to more than one VPC at a time.
+   - **Ans:** ClassicLink allows instances in EC2 classic platform to communicate with instances in VPC using Private IP address. EC2 classic platform instances cannot not be linked to more than one VPC at a time.
 
-1. **Q: Can you edit a Route Table in VPC?**
+29. **Q: Can you edit a Route Table in VPC?**
 
-    - **Ans:** Yes. You can always modify route rules to specify which subnets are routed to the Internet gateway, the virtual private gateway, or other instances.
+   - **Ans:** Yes. You can always modify route rules to specify which subnets are routed to the Internet gateway, the virtual private gateway, or other instances.
 
-1. **Q: How many Elastic IPs can you create?**
+30. **Q: How many Elastic IPs can you create?**
 
-    - **Ans:** 5 VPC Elastic IP addresses per AWS account per region
+   - **Ans:** 5 VPC Elastic IP addresses per AWS account per region
 
-1. **Q: Can you ping the router or default gateway that connects your subnets?**
+31. **Q: Can you ping the router or default gateway that connects your subnets?**
 
-    - **Ans:** NO, you cannot. It is not supported. However you can ping EC2 instances within a VPC, provided your firewall, Security Groups and network ACLs allows such traffic.
+   - **Ans:** NO, you cannot. It is not supported. However you can ping EC2 instances within a VPC, provided your firewall, Security Groups and network ACLs allows such traffic.
 
-1. **Q: How will you monitor the network traffic in a VPC?**
+32. **Q: How will you monitor the network traffic in a VPC?**
 
-    - **Ans:** Using Amazon VPC Flow Logs feature.
+   - **Ans:** Using Amazon VPC Flow Logs feature.
 
-1. **Q: Can you make a VPC available in multiple Available Zones?**
+33. **Q: Can you make a VPC available in multiple Available Zones?**
 
-    - **Ans:** Yes.
+   - **Ans:** Yes.
 
-1. **Q: How do you ensure an EC2 instance is launched in a particular Available Zone?**
+34. **Q: How do you ensure an EC2 instance is launched in a particular Available Zone?**
 
-    - **Ans:** After selecting your AMI Template and Instance Type, in the third step while configuring the instance you must select the SUBNET in which you wish to launch your instance. It will be launched in the AZ associated with that SUBNET.
+   - **Ans:** After selecting your AMI Template and Instance Type, in the third step while configuring the instance you must select the SUBNET in which you wish to launch your instance. It will be launched in the AZ associated with that SUBNET.
 
-1. **Q: For Internet Gateways do you find any Bandwidth constraints?**
+35. **Q: For Internet Gateways do you find any Bandwidth constraints?**
 
-    - **Ans:** NO. Normally an IG is HORIZONTALLY SCALLED, Redundant and Highly Available. It is not having nay Bandwidth constraints usually.
+   - **Ans:** NO. Normally an IG is HORIZONTALLY SCALLED, Redundant and Highly Available. It is not having nay Bandwidth constraints usually.
 
-1. **Q: What is the significance of a Default VPC?**
+36. **Q: What is the significance of a Default VPC?**
 
-    - **Ans:** When you launch your instances in a Default VPC in a Region, you would be getting the benefit of advanced Network Functionalities. You can also make use of Security Groups, multiple IP addresses, and multiple Network interfaces.
+   - **Ans:** When you launch your instances in a Default VPC in a Region, you would be getting the benefit of advanced Network Functionalities. You can also make use of Security Groups, multiple IP addresses, and multiple Network interfaces.
 
-1. **Q: Can you make use of default EBS Snapshots?**
+37. **Q: Can you make use of default EBS Snapshots?**
 
-    - **Ans:** You can use, provided if it is located in the same region where your VPC is presented.
+   - **Ans:** You can use, provided if it is located in the same region where your VPC is presented.
 
-1. **Q: What will happen when you delete a PEERING CONNECTION in your side?**
+38. **Q: What will happen when you delete a PEERING CONNECTION in your side?**
 
-    - **Ans:** The PEERING CONNECTION available in the other side would also get terminated. There will no more traffic flow.
+   - **Ans:** The PEERING CONNECTION available in the other side would also get terminated. There will no more traffic flow.
 
-1. **Q: Can you establish a Peering connection to a VPC in a different region?**
+39. **Q: Can you establish a Peering connection to a VPC in a different region?**
 
-    - **Ans:** NO. Its possible between VPCs in the same region.
+   - **Ans:** NO. Its possible between VPCs in the same region.
 
-1. **Q: Can you connect your VPC with a VPC created by another AWS account?**
+40. **Q: Can you connect your VPC with a VPC created by another AWS account?**
 
-    - **Ans:** Yes. Only when that owner accepts your peering connection request.
+   - **Ans:** Yes. Only when that owner accepts your peering connection request.
 
-1. **Q: When you delete your DB instance what will happen to your backups and DB snapshots?**
+41. **Q: When you delete your DB instance what will happen to your backups and DB snapshots?**
 
-    - **Ans:** When a DB instance is deleted, RDS retains the user-created DB snapshot along with all other manually created DB snapshots. Also automated backups are deleted and only manually created DB Snapshots are retained.
+   - **Ans:** When a DB instance is deleted, RDS retains the user-created DB snapshot along with all other manually created DB snapshots. Also automated backups are deleted and only manually created DB Snapshots are retained.
 
-1. **Q: What is the significance of an Elastic IP?**
+42. **Q: What is the significance of an Elastic IP?**
 
    - **Ans:** The Public IP is associated with the instance until it is stopped or terminated Only. A Public IP is not static. Every time your instance is stopped or terminated the associated Public IP gets vanished and a new Public IP gets assigned with that instance. To over come this issue a public IP can be replaced by an Elastic IP address, which stays with the instance as long as the user doesn’t manually detach it. Similarly when if you are hosting multiple websites on your EC2 server, in that case you may require more than one Elastic IP address.
 
-2. **Q: How will you use S3 with your EC2 instances?**
+43. **Q: How will you use S3 with your EC2 instances?**
 
    - **Ans:** Websites hosted on your EC2 instances can load their static contents directly from S3. It provides highly scalable, reliable, fast, inexpensive data storage infrastructure.
 
-3. **Q: Is this possible to connect your company datacenter to Amazon Cloud?**
+44. **Q: Is this possible to connect your company datacenter to Amazon Cloud?**
 
    - **Ans:** Yes, you can very well do this  by establishing a VPN connection between your company’s network and Amazon VPC.
 
-4. **Q: Can you change the Private IP of an EC2 instance while it is running or stopped?**
+45. **Q: Can you change the Private IP of an EC2 instance while it is running or stopped?**
 
    - **Ans:** A Private IP is STATIC. And it is attached with an instance throughout is lifetime and cannot be changed.
 
-5. **Q: What is the use of Subnets?**
+46. **Q: What is the use of Subnets?**
 
    - **Ans:** When a network has more number of HOSTS, managing these hosts can be tedious under a single large network. Therefore we divide this large network into easily manageable sub-networks (subnets) so that managing hosts under each subnet becomes easier.
 
-6. **Q: What is the use of Route Table?**
+47. **Q: What is the use of Route Table?**
 
    - **Ans:** Route Table is used to route the network pockets. Generally one route table would be available in each subnet. Route table can have any no. of records or information, hence attaching multiple subnets to a route table is also possible.
 
-7. **Q: Can you use the Standby DB instance for read and write along with your Primary DB instance?**
+48. **Q: Can you use the Standby DB instance for read and write along with your Primary DB instance?**
 
    - **Ans:** Standby server cannot be used in parallel with primary server unless your Primary instance goes down.
 
-8. **Q: What is the use of Connection Draining?**
+49. **Q: What is the use of Connection Draining?**
 
    - **Ans:** Connection Draining is a service under Elastic Load Balancing. It keeps monitoring the healthiness of the instances. If any instance fails Connection Draining pulls all the traffic from that particular failed instance and re-route the traffic to other healthy instances.
 
-9. **Q: What is the role of AWS CloudTrail?**
+50. **Q: What is the role of AWS CloudTrail?**
 
    - **Ans:** CloudTrail is designed for logging and tracking API calls. Also used to audit all S3 bucket accesses.
 
-10. **Q: What is the use of Amazon Transfer Acceleration Service?**
+51. **Q: What is the use of Amazon Transfer Acceleration Service?**
 
    - **Ans:** ATA service speeds up your data transfer with the use of optimized network paths. Also, speed up your CDN up to 300% compared to normal data transfer speed
 
-11. **Q: How do you design a highly available architecture on AWS for a web application?**
+52. **Q: How do you design a highly available architecture on AWS for a web application?**
 
    - **Ans:** I would deploy the application across multiple Availability Zones behind a load balancer to distribute traffic. I’d use an Auto Scaling Group so instances can recover from failures and scale with demand, and ensure the database is Multi-AZ or replicated for redundancy. For maximum availability, I might also implement a multi-region failover with DNS if required.
 
-12. **Q: What are RTO and RPO, and how do they influence your AWS disaster recovery strategy?**
+53. **Q: What are RTO and RPO, and how do they influence your AWS disaster recovery strategy?**
    - **Ans:** RTO (Recovery Time Objective) is the target maximum downtime, and RPO (Recovery Point Objective) is the target maximum data loss in time. These drive the DR strategy: a low RTO/RPO means we need faster recovery solutions (like active-active multi-region or real-time replication), whereas a higher RTO/RPO allows for simpler solutions like restoring from backups with more downtime.
 
-13. **Q: If an AWS region hosting your application goes down, what steps would you take to recover**
+54. **Q: If an AWS region hosting your application goes down, what steps would you take to recover**
    - **Ans:** I would fail over to a secondary region that has been prepared for DR. For example, if I have set up cross-region replication or backups, I’d launch the infrastructure in the DR region (using automated templates/IaC), restore data from the latest backup or replica, and update DNS (Route 53) to point users to the application in the new region. The key is having a pre-planned DR environment and automated processes to bring services back quickly.
 
-14. **Q: You notice a sudden 30% increase in AWS costs this month. How do you investigate and address it?**
+55. **Q: You notice a sudden 30% increase in AWS costs this month. How do you investigate and address it?**
    - **Ans:** First, I’d use AWS Cost Explorer or billing reports to identify which services or resources saw the cost spike. Once I pinpoint the cause (for example, an oversized instance left running or a sudden increase in data transfer), I’d take action to correct it – such as shutting down or right-sizing the resource, or fixing the usage issue. I would also set up cost alerts or budgets to catch future anomalies early.
 
-15. **Q: Explain the difference between vertical and horizontal scaling in AWS, and when you might use each.**
+56. **Q: Explain the difference between vertical and horizontal scaling in AWS, and when you might use each.**
    - **Ans:** Vertical scaling means increasing the resources of a single server (for example, upgrading to a larger EC2 instance), while horizontal scaling means adding more instances/servers to distribute the load. I’d use horizontal scaling for most web applications because it improves fault tolerance and scalability (adding more instances behind a load balancer). Vertical scaling is sometimes used for quick performance boosts or when an application can’t be distributed, but it has limits and a single point of failure.
 
-16. **Q: How do you monitor a production environment in AWS? Name some key services or metrics you focus on.**
+57. **Q: How do you monitor a production environment in AWS? Name some key services or metrics you focus on.**
    - **Ans:** I rely on Amazon CloudWatch for monitoring. I track metrics like CPU utilization, memory (using the CloudWatch agent), disk I/O, network traffic, and custom application metrics (like latency or error rates). I set up CloudWatch Alarms on critical metrics to get alerts, use CloudWatch Logs (or a centralized logging solution) to monitor application logs, and may use AWS X-Ray or other APM tools to trace and diagnose performance issues.
 
-17. **Q: Your application’s response times have increased significantly. What AWS tools or approaches would you use to identify the bottleneck?**
+58. **Q: Your application’s response times have increased significantly. What AWS tools or approaches would you use to identify the bottleneck?**
    - **Ans:** I would start by checking CloudWatch metrics to see if any resource (CPU, memory, database throughput, etc.) is under pressure or if latency spiked on a specific component. Then I’d use AWS X-Ray (or another tracing/APM tool) to trace requests through the application and identify which service or call is slow. Examining CloudWatch Logs or enabling detailed logs on services (like ALB access logs or RDS performance insights) can also help pinpoint the issue.
 
-18. **Q: An EC2 instance in a private subnet cannot reach the internet. What could be the problem and how do you fix it?**
+59. **Q: An EC2 instance in a private subnet cannot reach the internet. What could be the problem and how do you fix it?**
    - **Ans:** The likely issue is that the instance has no route to the internet – typically missing a NAT Gateway (or NAT instance) setup. In a private subnet, instances need a NAT in a public subnet and a route in their route table pointing to that NAT for outbound internet access. I would deploy a NAT Gateway in a public subnet (with an Internet Gateway on the VPC) and update the private subnet’s route table to send outbound traffic through the NAT
 
-19. **Q: A developer accidentally left an S3 bucket open to the public. How do you remediate this and prevent it from happening again?**
+60. **Q: A developer accidentally left an S3 bucket open to the public. How do you remediate this and prevent it from happening again?**
    - **Ans:** I would immediately remove public access by adjusting the bucket policy/ACL and enabling S3 Block Public Access on that bucket (and at the account level if appropriate). Then, to prevent recurrence, I’d implement guardrails: for example, use AWS Config rules or IAM SCPs to detect or disallow public buckets, and ensure all buckets have proper access policies and default encryption. I’d also review access logs to verify no sensitive data was accessed while it was public.
 
-20. **Q: What is the principle of least privilege, and how do you apply it in AWS IAM?**
+61. **Q: What is the principle of least privilege, and how do you apply it in AWS IAM?**
    - **Ans:** The principle of least privilege means giving users and services only the minimum permissions they need to perform their tasks and nothing more. In AWS IAM, I implement this by creating finely-scoped policies (specifying exact allowed actions on specific resources), using IAM roles for services with only the necessary permissions, and regularly reviewing and removing any excessive or unused privileges.
 
-21. **Q: How do you ensure compliance and audit readiness for your AWS infrastructure?**
+62. **Q: How do you ensure compliance and audit readiness for your AWS infrastructure?**
    - **Ans:** I enable AWS CloudTrail to log all API actions for audit tracking and use AWS Config to continuously evaluate resource configurations against our compliance rules. We enforce best practices like encryption at rest/in transit and IAM least privilege. I also might use AWS Security Hub or third-party audit tools to run compliance checks (for standards like CIS, PCI, etc.) and produce reports. Regular audits and automated alerts for any violations (for example, an unencrypted volume or open security group) help ensure we stay compliant.
 
-22. **Q: How do you manage Terraform state in a team environment using AWS?**
+63. **Q: How do you manage Terraform state in a team environment using AWS?**
    - **Ans:** We store Terraform state in a remote backend (for example, an S3 bucket with DynamoDB table for state locking in AWS). This allows team members to share state and avoids conflicts – only one person can modify state at a time thanks to the lock. The remote state is secured and versioned, and we manage access to it via IAM, ensuring state files are not stored locally or lost.
 
-23. **Q: What would you do if a Terraform apply failed due to a state lock or a conflict?**
+64. **Q: What would you do if a Terraform apply failed due to a state lock or a conflict?**
    - **Ans:** If it’s a state lock issue (for instance, the state file is locked from a previous run), I’d clear the lock – for AWS backend that might mean using DynamoDB to remove a stale lock or running terraform force-unlock after confirming no other process is running. If it’s a conflict because something was changed outside of Terraform, I’d import the resource or run a terraform refresh to reconcile state, update the configuration to match the real environment, and then re-run the apply.
 
-24. **Q: You ran an AWS CloudFormation update and it failed. How do you troubleshoot and roll back the changes?**
+65. **Q: You ran an AWS CloudFormation update and it failed. How do you troubleshoot and roll back the changes?**
    - **Ans:** I’d go to the CloudFormation console and check the stack events to see which resource failed and what the error was. From there, I’d fix the underlying issue – for example, correct a parameter or resolve a dependency – and then attempt the update again. CloudFormation will automatically attempt to roll back on failure, but if it gets stuck, I might need to manually intervene (possibly update the stack with a known good configuration or delete/recreate the stack if the failure left it in an unrecoverable state).
 
-25. **Q: Describe a CI/CD pipeline you have set up for deploying infrastructure or applications to AWS.**
+66. **Q: Describe a CI/CD pipeline you have set up for deploying infrastructure or applications to AWS.**
    - **Ans:** In one case, I set up a pipeline using Jenkins (and also used AWS CodePipeline in another project). The flow was: a commit in Git triggers the pipeline, which then runs automated tests and builds an artifact or Docker image. If tests pass, the pipeline runs our Infrastructure as Code (Terraform/CloudFormation) to provision/update AWS resources, and then deploys the application (for example, updates the ECS service or pushes the new code to EC2/Beanstalk). We also included approval steps and automated rollbacks on failure to make deployments safe.
 
-26. **Q: How do you minimize downtime during deployments of a cloud-native application?**
+67. **Q: How do you minimize downtime during deployments of a cloud-native application?**
    - **Ans:** I use deployment strategies that allow zero-downtime releases, like blue-green or rolling deployments. For example, with blue-green, I deploy the new version to a parallel environment (new set of servers or containers) and then switch over traffic via load balancer or DNS once it’s verified. With rolling deployments (or canary releases), I gradually replace or update instances/pods with the new version so that a portion of traffic is always served by an up-to-date instance and the application never fully goes down during the release.
 
-27. **Q: You need to deploy a containerized application on AWS. What services would you use and what are the steps?**
+68. **Q: You need to deploy a containerized application on AWS. What services would you use and what are the steps?**
    - **Ans:** I would use Amazon ECR to store the Docker images and then deploy using a container orchestration service like Amazon ECS or EKS. The steps include: building the Docker image and pushing it to ECR, then creating a task definition (if using ECS) or a Kubernetes deployment (if using EKS) for the application. Next, I’d set up a service (ECS service or Kubernetes service) to run the containers, often behind an Application Load Balancer for traffic. Finally, I’d configure auto-scaling for the tasks/pods and use IaC/pipeline to automate this deployment process.
 
-28. **Q: If you receive an alert that CPU utilization is high on a critical server, what actions would you take?**
+69. **Q: If you receive an alert that CPU utilization is high on a critical server, what actions would you take?**
    - **Ans:** I would first log in to AWS or our monitoring dashboard to confirm the high CPU and check what's causing it (looking at CloudWatch metrics and possibly the instance logs or processes). If it’s due to legitimate load, I might scale out by adding instances or scale up the instance size temporarily, and then investigate optimizing the workload. If it looks like an abnormal spike (for example, a stuck process or a memory leak leading to swap usage), I’d remediate by restarting or fixing that service, and ensure auto-scaling or proper limits are in place to handle future spikes.
 
-29. **Q: What are the key differences between Terraform and CloudFormation?**
+70. **Q: What are the key differences between Terraform and CloudFormation?**
    - **Ans:** Terraform is an open-source Infrastructure as Code tool that works across multiple cloud providers and uses its own state file to track resources, whereas CloudFormation is AWS’s native IaC service that manages AWS resources without an external state file (state is managed by AWS within the stack). Terraform uses HCL for configuration and can provision resources in different clouds or services in one workflow, while CloudFormation uses JSON/YAML templates and is limited to AWS (with deep integration, offering features like change sets, stack policies, and drift detection). In practice, Terraform offers more flexibility for hybrid/multi-cloud environments, and CloudFormation is convenient for AWS-only setups with out-of-the-box integration.
 
-30. **Q: If you suspect a security breach in your AWS environment, what steps would you take to respond?**
+71. **Q: If you suspect a security breach in your AWS environment, what steps would you take to respond?**
    - **Ans:** First, I would contain the incident by isolating affected resources – for example, take compromised EC2 instances offline (stop or quarantine them) and disable any exposed credentials. Next, I’d investigate using CloudTrail logs, CloudWatch logs, and other monitoring data to determine the scope and root cause of the breach. I would rotate any compromised keys or passwords, patch vulnerabilities or misconfigurations that were exploited, and restore clean backups if necessary. Throughout the process, I’d follow our incident response plan, which includes communicating with the security team and stakeholders and later conducting a post-mortem to prevent similar incidents in the future.
 
 ## **AWS MCQs QnA**
