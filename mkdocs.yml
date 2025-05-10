@@ -89,7 +89,7 @@ markdown_extensions:
 
 extra_css:
   - assets/stylesheets/extra.css
-  - assets/stylesheets/footer.css
+  # - assets/stylesheets/footer.css
   # - assets/stylesheets/thm.css
   # - assets/stylesheets/ai-summary.css
   # - assets/stylesheets/termynal.css
