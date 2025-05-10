@@ -4,47 +4,47 @@
 
 1. **Q: List the components required to build Amazon VPC?**
 
-   - **Ans:** Subnet, Internet Gateway, NAT Gateway, HW VPN Connection, Virtual Private Gateway, Customer Gateway, Router, Peering Connection, VPC Endpoint for S3, Egress-only Internet Gateway.
+    - **Ans:** Subnet, Internet Gateway, NAT Gateway, HW VPN Connection, Virtual Private Gateway, Customer Gateway, Router, Peering Connection, VPC Endpoint for S3, Egress-only Internet Gateway.
 
 2. **Q: How do you safeguard your EC2 instances running in a VPC?**
 
-   - **Ans:** Security Groups can be used to protect your EC2 instances in a VPC. We can configure both INBOUND and OUTBOUND traffic in a Security Group which enables secured access to your EC2 instances. Security Group automatically denies any unauthorized access to your EC2 instances.
+    - **Ans:** Security Groups can be used to protect your EC2 instances in a VPC. We can configure both INBOUND and OUTBOUND traffic in a Security Group which enables secured access to your EC2 instances. Security Group automatically denies any unauthorized access to your EC2 instances.
 
 3. **Q: In a VPC how many EC2 instances can you use?**
 
-   - **Ans:** Initially you are limited to launch 20 EC2 Instances at one time. Maximum VPC  size is 65,536 instances.
+    - **Ans:** Initially you are limited to launch 20 EC2 Instances at one time. Maximum VPC  size is 65,536 instances.
 
 4. **Q:** **Can you establish a peering connection to a VPC in a different REGION?**
 
-   - **Ans:** Not possible. Peering Connection are available only between VPC in the same region.
+    - **Ans:** Not possible. Peering Connection are available only between VPC in the same region.
 
 5. **Q: Can you connect your VPC with a VPC owned by another AWS account?**
 
-   - **Ans:** Yes, Possible. Provided the owner of other VPCs accepts your connection.
+    - **Ans:** Yes, Possible. Provided the owner of other VPCs accepts your connection.
 
 6. **Q: What are all the different connectivity options available for your VPC?**
 
-   - **Ans:** Internet Gateway, Virtual Private Gateway, NAT, EndPoints, Peering Connections.
+    - **Ans:** Internet Gateway, Virtual Private Gateway, NAT, EndPoints, Peering Connections.
 
 7. **Q: Can a EC2 instance inside your VPC connect with the EC2 instance belonging to other VPCs?**
 
-   - **Ans:** Yes, Possible. Provided an Internet Gateway is configured in such a way that traffic bounded for EC2 instances running in other VPCs.
+    - **Ans:** Yes, Possible. Provided an Internet Gateway is configured in such a way that traffic bounded for EC2 instances running in other VPCs.
 
 8. **Q: How can you monitor network traffic in your VPC?**
 
-   - **Ans:** It is possible using Amazon VPC Flow-Logs feature.
+    - **Ans:** It is possible using Amazon VPC Flow-Logs feature.
 
 9. **Q: Difference between Security Groups and ACLs in a VPC?**
 
-   - **Ans:** A Security Group defines which traffic is allowed TO or FROM  EC2 instance. Whereas ACL, controls at the SUBNET level, scrutinize the traffic TO or FROM a Subnet.
+    - **Ans:** A Security Group defines which traffic is allowed TO or FROM  EC2 instance. Whereas ACL, controls at the SUBNET level, scrutinize the traffic TO or FROM a Subnet.
 
 10. **Q: Hon an EC2 instance in a VPC establish the connection with the internet?**
 
-   - **Ans:** Using either a Public IP or an Elastic IP.
+    - **Ans:** Using either a Public IP or an Elastic IP.
 
 11. **Q: Different types of Cloud Computing as per services?**
 
-   - **Ans:**  PAAS (Platform As A Service), IAAS (Infrastructure As A Service), SAAS (Software As A Service)
+    - **Ans:**  PAAS (Platform As A Service), IAAS (Infrastructure As A Service), SAAS (Software As A Service)
 
 12. **Q: What is Auto Scaling?**
 
