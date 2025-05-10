@@ -21,3 +21,30 @@ CommitOps delivers structured, high-quality documentation, examples, and tutoria
     ```bash
     echo "Hello Shell"
     ```
+
+## Terminal
+
+<div class="console">
+
+<div class="console">
+
+```console
+$ python -c "import os"
+
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+This is Cloud DevOps Terminal
+
+```
+
+</div>

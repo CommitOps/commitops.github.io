@@ -61,6 +61,18 @@ markdown_extensions:
   - toc:
       permalink: true
 
+extra_css:
+  - assets/stylesheets/thm.css
+  - assets/stylesheets/ai-summary.css
+  - assets/stylesheets/extra.css
+  - assets/stylesheets/termynal.css
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+
+extra_javascript:
+  - assets/javascripts/color.js
+  - assets/javascripts/termynal.js
+  - assets/javascripts/gen_termynal.js
+
 nav:
   - Home: index.md
   - AWS QnA: aws-qna/aws-questions-answers.md
