@@ -11,7 +11,8 @@ site_url: https://mydomain.org/mysite
 
 theme:
   name: dracula
-  custom_dir: docs/overrides
+  # custom_dir: docs/overrides
+  custom_dir: overrides/partials
   palette: 
 
     # Palette toggle for light mode
