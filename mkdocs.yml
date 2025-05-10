@@ -54,7 +54,6 @@ theme:
 
 plugins:
   - search
-  - group
   - minify
   - awesome-nav
   - include_dir_to_nav
