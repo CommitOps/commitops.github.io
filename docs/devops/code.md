@@ -1,6 +1,5 @@
 ---
-title: Code Block Testing
----
+title: Code
 
 # Code
 
