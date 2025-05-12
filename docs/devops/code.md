@@ -2,7 +2,7 @@
 title: Code Block Testing
 ---
 
-# Code Block Testing
+# Code
 
 ???+ note "Click to expand code"
     ```python
