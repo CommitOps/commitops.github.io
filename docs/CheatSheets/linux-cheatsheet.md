@@ -1,3 +1,1 @@
-<p align="center">
-  <img src="../assets/images/linux-cheat-sheet-612x792.png" alt="Linux CheatSheet" width="600px" />
-</p>
+![Linux CheatSheet](../assets/images/linux-cheat-sheet-612x792.png)
