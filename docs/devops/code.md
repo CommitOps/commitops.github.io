@@ -1,4 +1,8 @@
-# Code
+---
+title: Code Block Testing
+---
+
+# Code Block Testing
 
 ???+ note "Click to expand code"
     ```python
