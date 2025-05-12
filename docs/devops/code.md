@@ -2,7 +2,7 @@
 
 ???+ note "Click to expand code"
     ```python
-    print("Hello, DevOps!")
+    print("Hello DevOps!")
     ```
 
 ## Code Block
