@@ -1,4 +1,9 @@
-## Python Boto3 Script
+---
+title: Python Boto3
+---
+
+# Python Boto3 Script
+
 1) Start, Stop, Restart & Terminate EC2 instance
 
 <!-- termynal -->
