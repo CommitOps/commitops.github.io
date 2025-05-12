@@ -1,0 +1,6 @@
+# docs/devops/.pages
+title: DevOps
+nav:
+  - linux-cheatsheet.md
+  - docker-cheatsheet.md
+  - k8s-cheatsheet.md
