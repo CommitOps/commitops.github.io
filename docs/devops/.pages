@@ -1,5 +1,5 @@
 # docs/devops/.pages
-# title: DevOps Tutorials
+title: DevOps
 nav:
   - code.md
   - docker.md
