@@ -80,3 +80,123 @@ title: Ansible
     190.40.2.21
     190.40.2.22
     ```
+
+??? info "What is a dynamic inventory file? When would you use one?"
+
+    A dynamic inventory file tracks hosts from one or more sources like cloud providers and CMDB systems.
+
+    You should use one when using external sources and especially when the hosts in your environment are being automatically  
+    spun up and shut down, without you tracking every change in these sources.
+
+---
+
+### Ansible - Variables
+
+??? tip "Modify the following task to use a variable instead of the value \"zlib\" and have \"zlib\" as the default in case the variable is not defined"
+
+    ```yaml
+    - name: Install a package
+      package:
+        name: "{{ package_name|default('zlib') }}"
+        state: present
+    ```
+
+---
+
+??? tip "How to make the variable \"use_var\" optional?"
+
+    With `default(omit)`:
+
+    ```yaml
+    - name: Install a package
+      package:
+        name: "zlib"
+        state: present
+        use: "{{ use_var|default(omit) }}"
+    ```
+
+---
+
+??? question "What would be the result of the following play?"
+
+    ```yaml
+    ---
+    - name: Print information about my host
+      hosts: localhost
+      gather_facts: 'no'
+      tasks:
+          - name: Print hostname
+            debug:
+                msg: "It's me, {{ ansible_hostname }}"
+    ```
+
+    This will **fail**.  
+    We're using a fact (`ansible_hostname`), but `gather_facts: no` disables the collection of facts, so the variable is undefined.
+
+---
+
+??? question "When will the value `'2017'` be used in this case: `{{ lookup('env', 'BEST_YEAR') | default('2017', true) }}`?"
+
+    When the environment variable `BEST_YEAR` is **empty or false**, the default value `"2017"` is used.
+
+---
+
+??? tip "If the value of a certain variable is 1, how do you use \"one\" instead of \"two\"?"
+
+    ```jinja
+    {{ (certain_variable == 1) | ternary("one", "two") }}
+    ```
+
+---
+
+??? tip "The value of a certain variable you use is the string \"True\". You would like the value to be a boolean. How would you cast it?"
+
+    ```jinja
+    {{ some_string_var | bool }}
+    ```
+
+---
+
+??? question "You want to run an Ansible playbook only on specific minor version of your OS. How would you achieve that?"
+
+    Use a condition on `ansible_distribution_version` in `when`, for example:
+
+    ```yaml
+    - name: Only run on minor version 22.04
+      debug:
+        msg: "Running on Ubuntu 22.04"
+      when: ansible_distribution_version == "22.04"
+    ```
+
+---
+
+??? info "What is the `become` directive used for in Ansible?"
+
+    The `become` directive is used to **escalate privileges**, typically to run tasks as `root` or another user.  
+    It is equivalent to `sudo` in command-line operations.
+
+    ```yaml
+    - name: Install package with elevated privileges
+      become: true
+      package:
+        name: "nginx"
+        state: present
+    ```
+
+---
+
+??? info "What are facts? How to see all the facts of a certain host?"
+
+    **Facts** are system properties collected by Ansible (OS, IPs, memory, etc.).
+
+    To see all facts for a host:
+
+    ```bash
+    ansible [host] -m setup
+    ```
+
+    You can filter for specific facts with:
+
+    ```bash
+    ansible [host] -m setup -a 'filter=ansible_distribution*'
+    ```
