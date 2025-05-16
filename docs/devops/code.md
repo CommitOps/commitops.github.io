@@ -11,9 +11,9 @@ title: Code
     print("Hello DevOps!")
     ```
 
-# Embedded Static Diagram
+<!-- # Embedded Static Diagram
 
-<iframe src="assets/html/test-ilograph.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="assets/html/test-ilograph.html" width="100%" height="600" frameborder="0"></iframe> -->
 
 ## Code Block
 
