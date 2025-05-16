@@ -2,7 +2,11 @@
 title: Git
 ---
 
-![Git CheatSheet](../assets/pdf/atlassian-git-cheatsheet.pdf){ type=application/pdf style="min-height:100vh;width:100%" }
+![Atlassian Git CheatSheet](../assets/pdf/atlassian-git-cheatsheet.pdf){ type=application/pdf style="min-height:100vh;width:100%" }
+
+--
+
+![Git CheatSheet](../assets/pdf/git-cheatsheet.pdf){ type=application/pdf style="min-height:100vh;width:100%" }
 
 <!-- ![Git CheatSheet](../assets/pdf/atlassian-git-cheatsheet.pdf) -->
 
