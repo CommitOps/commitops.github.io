@@ -4,8 +4,6 @@ title: AWS
 
 # **AWS Questions & Answers**
 
-## **AWS Interview QnA**
-
 ## AWS Interview QnA
 
 ??? question "1. List the components required to build Amazon VPC?"
@@ -223,185 +221,136 @@ title: AWS
 
 ## **AWS MCQs QnA**
 
-1. **Q: You cannot store unlimited data in Amazon Web Services…..**
+???+ question "1. Q: You cannot store unlimited data in Amazon Web Services….."
+    1. True  
+    2. False
 
-    1.  True
-    2.  False
+    **Ans:** False
 
-    - **Ans:** False
+???+ question "2. Q: Rapid provisioning allows you to very quickly spin up a new virtual machine with minimal effort. True or false?"
+    1. True  
+    2. False
 
-1. **Q:** **Rapid provisioning allows you to very quickly spin up a new virtual machine with minimal effort. True or false ?**
+    **Ans:** True
 
-    1.  True
-    2.  False
+???+ question "3. Q: A hybrid setup is one in which part of your resources are AWS and the rest are with another cloud provider. True or False?"
+    1. True  
+    2. False
 
-    - **Ans:** True
+    **Ans:** False
 
-1. **Q: A hybrid setup is one in which part of your resources are AWS and the rest are with another cloud provider. True or False ?**
+???+ question "4. Q: As an added layer of security for AWS management, which of the following should you do?"
+    1. Create multiple Admin accounts  
+    2. Generate a new security key each time you log in  
+    3. Create IAM users
 
-    1.  True
-    2.  False
+    **Ans:** Create IAM users
 
-    - **Ans:** False
+???+ question "5. Q: Is AMI template?"
+    1. True  
+    2. False
 
-1. **Q:** **As an added layer of security for AWS management, which of the following should be you do ?**
+    **Ans:** True
 
-    1.  Create multiple Admin accounts
-    2.  Generate a new security key each time you log in
-    3.  Create IAM users
+???+ question "6. Q: EC2 Instances are Virtual Server in AWS"
+    1. True  
+    2. False
 
-    - **Ans:** Create IAM users
+    **Ans:** True
 
-1. **Q: Is AMI template ?**
+???+ question "7. Q: What does 'elastic' refer to in Elastic Compute Cloud(EC2)? Select all that apply."
+    1. Increasing and decreasing capacity as needed  
+    2. Monitoring services on multiple devices  
+    3. Operating on Mac, Windows and Linux  
+    4. Paying only for running virtual machines  
+    5. Stretching applications across virtual machines
 
-    1.  True
-    2.  False
+    **Ans:** 1. Increasing and decreasing capacity as needed & 4. Paying only for running virtual machines
 
-    - **Ans:** True
+???+ question "8. Q: You can upload a custom configuration virtual image and sell it on the AWS Marketplace. True or false?"
+    1. True  
+    2. False
 
-1. **Q: EC2 Instances are Virtual Server in AWS**
+    **Ans:** True
 
-    1.  True
-    2.  False
+???+ question "9. Q: EC2 Machine types define which of the following?"
+    1. AWS Region  
+    2. Core Count  
+    3. User Location
 
-    - **Ans:** True
+    **Ans:** Core Count
 
-1. **Q: What does “elastic” refer to in Elastic Compute Cloud(EC2)? Select all that apply.**
-    1.  Increasing and decreasing capacity as needed
-    2.  Monitoring services on multiple devices
-    3.  Operating on Mac, Windows and Linux
-    4.  Paying only for running virtual machines
-    5.  Stretching applications across virtual machines
+???+ question "10. Q: Which is default instance type?"
+    1. On-demand  
+    2. RI  
+    3. Spot instance
 
-    - **Ans:** 1. Increasing and decreasing capacity as needed & 4. Paying only for running virtual machines
+    **Ans:** On-demand
 
-1. **Q: You can upload a custom configuration virtual image and sell it on the AWS Marketplace. True or false ?**
+???+ question "11. Q: What is Elastic Computing?"
+    1. Data will be replicate to different AZs  
+    2. You can spin up and spin down VMs  
+    3. Automatically VMs will be add and remove
 
-    1.  True
-    2.  False
+    **Ans:** You can spin up and spin down VMs
 
-    - **Ans:** True
+???+ question "12. Q: Can We launch multiple instances with same AMI?"
+    1. True  
+    2. False
 
-1. **Q: EC2 Machine types define which of the following ?**
+    **Ans:** True
 
-   1.  AWS Region
-    2.  Core Count
-    3.  User Location
+???+ question "13. Q: PEM file is one time physical password…"
+    1. True  
+    2. False
 
-    - **Ans:** Core Count
+    **Ans:** True
 
-1. **Q: Which is default instance type**
+???+ question "14. Q: Windows user required PPK file to connect Linux instance hosted on AWS."
+    1. True  
+    2. False
 
-    1.  On-demand
-    2.  RI
-    3.  Spot instance
+    **Ans:** True
 
-    - **Ans:** On-demand
+???+ question "15. Q: You can purchase time on EC2 directly from other users and specify the price you want to pay. True or false?"
+    1. True  
+    2. False
 
-1. **Q: What is Elastic Computing ?**
+    **Ans:** True
 
-    1.  Data will be replicate to different AZs
-    2.  You can spin up and spin down VMs
-    3.  Automatically VMs will be add and remove
+???+ question "16. Q: Which of the following might prevent your EC2 instance from appearing in the list of instances?"
+    1. EC2 is not selected  
+    2. Correct region is not selected  
+    3. AWS marketplace is not selected
 
-    - **Ans:** You can spin up and spin down VMs
+    **Ans:** Correct region is not selected
 
-1. **Q:** **You can upload a custom configuration virtual image and sell it on the AWS Marketplace. True or false ?**
+???+ question "17. Q: Which of the following main reason to terminate an unused EC2 instance?"
+    1. Security Concerns  
+    2. Additional fees  
+    3. Data Loss
 
-    1.  True
-    2.  False
+    **Ans:** Additional fees
 
-    - **Ans:** True
+???+ question "18. Q: Which AWS service exists only to redundantly cache data and images?"
+    1. AWS Availability Zones  
+    2. AWS Edge Locations  
+    3. AWS Regions
 
-1. **Q: EC2 Machine types define which of the following ?**
+    **Ans:** AWS Edge Locations
 
-    1.  AWS Region
-    2.  Core Count
-    3.  User Location
+???+ question "19. Q: Regions, AZs and Edge Locations all terms are same…"
+    1. True  
+    2. False
 
-    - **Ans:** Core Count
+    **Ans:** False
 
-1. **Q:** **Which is default instance type**
+???+ question "20. Q: AWS every service is available at every regions…."
+    1. True  
+    2. False
 
-    1.  On-demand
-    2.  RI
-    3.  Spot instance
+    **Ans:** False
 
-    - **Ans:** On-demand
-
-1. **Q: What is Elastic Computing ?**
-
-    1.  Data will be replicate to different AZs
-    2.  You can spin up and spin down VMs
-    3.  Automatically VMs will be add and remove
-
-    - **Ans:** You can spin up and spin down VMs
-
-1. **Q: Can We launch multiple instances with same AMI ?**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: PEM file is one time physical password…**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: Windows user required PPK file to connect Linux instance hosted on AWS.**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: You can purchase time on EC2 directly from other users and specify the price you want to pay. True or false ?**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: Which of the following might prevent your EC2 instance from appearing in the list of instances?**
-
-    1.  EC2 is not selected
-    2.  Correct region is not selected
-    3.  AWS marketplace is not selected
-
-    - **Ans:** Correct region is not selected
-
-1. **Q: Which of the following main reason to terminate an unused EC2 instance ?**
-
-    1.  Security Concerns
-    2.  Additional fees
-    3.  Data Loss
-
-    - **Ans:** Additional fees
-
-1. **Q: Which AWS service exists only to redundantly cache data and images ?**
-
-    1.  AWS Availability Zones
-    2.  AWS Edge Locations
-    3.  AWS Regions
-
-    - **Ans:** AWS Edge Locations
-
-1. **Q: Regions, AZs and Edge Locations all terms are same…**
-
-    1.  True
-    2.  False
-
-    - **Ans:** False
-
-1. **Q: AWS every service is available at every regions….**
-
-    1.  True
-    2.  False
-
-    - **Ans:** False
 
 1. **Q: Premium support is Available in AWS for Developer, Business & Enterprise level ?**
 
