@@ -58,6 +58,7 @@ plugins:
   - minify
   - awesome-nav
   - include_dir_to_nav
+  - mkdocs-pdf
   # - blog
   - tags
   - include-markdown:

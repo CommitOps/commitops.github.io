@@ -2,10 +2,12 @@
 title: Git
 ---
 
+![Git CheatSheet](../assets/pdf/atlassian-git-cheatsheet.pdf){ type=application/pdf style="min-height:25vh;width:100%" }
+
 <!-- ![Git CheatSheet](../assets/pdf/atlassian-git-cheatsheet.pdf) -->
 
 <!--- file: docs/CheatSheets/git-cheatsheet.md --->
-{% with pdf_file = "assets/pdf/atlassian-git-cheatsheet.pdf" %}
+<!-- {% with pdf_file = "assets/pdf/atlassian-git-cheatsheet.pdf" %}
 
 {% set solid_filepdf = '<i class="fas fa-file-pdf"></i>' %}
 {% set empty_filepdf = '<i class="far fa-file-pdf"></i>' %}
@@ -20,4 +22,4 @@ title: Git
 
 <a href="{{ pdf_file }}" class="image fit">{{ solid_filepdf }}</a>
 
-{% endwith %}
+{% endwith %} -->
