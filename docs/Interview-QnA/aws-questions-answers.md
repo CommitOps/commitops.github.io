@@ -352,445 +352,330 @@ title: AWS
     **Ans:** False
 
 
-1. **Q: Premium support is Available in AWS for Developer, Business & Enterprise level ?**
+## AWS MCQs QnA (Set 2)
 
-    1.  True
-    2.  False
+???+ question "1. Q: Premium support is Available in AWS for Developer, Business & Enterprise level?"
+    1. True  
+    2. False  
 
-    - **Ans:** True
+    **Ans:** True
 
-1. **Q: Can you add new Debit/Credit card in your AWS Account ?**
+???+ question "2. Q: Can you add new Debit/Credit card in your AWS Account?"
+    1. True  
+    2. False  
 
-    1.  True
-    2.  False
+    **Ans:** True
 
-    - **Ans:** True
+???+ question "3. Q: Can you increase micro to large of instance?"
+    1. True  
+    2. False  
 
-1. **Q: Can you increase micro to large of instance ?**
+    **Ans:** True
 
-    1.  True
-    2.  False
+???+ question "4. Q: On-demand instances is based on a bid mechanism."
+    1. True  
+    2. False  
 
-    - **Ans:** True
+    **Ans:** False
 
-1. **Q: On-demand instances is based on a bid mechanism.**
+???+ question "5. Q: RI can be sold on the AWS marketplace?"
+    1. True  
+    2. False  
 
-    1.  True
-    2.  False
+    **Ans:** True
 
-    - **Ans:** False
+???+ question "6. Q: Which is default types options in AWS?"
+    1. On-demand  
+    2. RI  
+    3. Spot instance  
 
-1. **Q: RI can be sold on the AWS marketplace?**
+    **Ans:** On-demand
 
-    1.  True
-    2.  False
+???+ question "7. Q: What are On-demand, RI and Spot instances? Which instance is best on Production?"
+    1. On-demand  
+    2. RI  
+    3. Depends on Application or Website  
 
-    - **Ans:** True
+    **Ans:** Depends on Application or Website
 
-1. **Q: Which is default types options in AWS?**
+???+ question "8. Q: Which is most expensive options in instance?"
+    1. On-demand  
+    2. RI  
+    3. Spot instance  
 
-    1.  On-demand
-    2.  RI
-    3.  Spot instance
+    **Ans:** On-demand
 
-    - **Ans:** On-demand
+???+ question "9. Q: Amazon S3 is internet accessible storage via HTTP /HTTPS"
+    1. True  
+    2. False  
 
-1. **Q: What are On-demand, RI and Spot instances ? Which instance is best on Production?**
+    **Ans:** True
 
-    1.  On-demand
-    2.  RI
-    3.  Depends on Application or Website
+???+ question "10. Q: Amazon S3 is not a object level of storage"
+    1. True  
+    2. False  
 
-    - **Ans:** Depends on Application or Website
+    **Ans:** False
 
-1. **Q: Which is most expensive options in instance ?**
+???+ question "11. Q: Amazon S3 is storage for the Internet"
+    1. True  
+    2. False  
 
-    1.  On-demand
-    2.  RI
-    3.  Spot instance
+    **Ans:** True
 
-    - **Ans:** On-demand
+???+ question "12. Q: Temporary storage access speed is not guaranteed."
+    1. True  
+    2. False  
 
-1. **Q: Amazon S3  is internet accessible storage via HTTP /HTTPS**
+    **Ans:** True
 
-    1.  True
-    2.  False
+???+ question "13. Q: There is 99.99% SLA(Service Level Agreement) for temporary storage."
+    1. True  
+    2. False  
 
-    - **Ans:** True
+    **Ans:** False
 
-1. **Q: Amazon S3 is not a object level of storage**
+???+ question "14. Q: Ephemeral storage is block-level storage?"
+    1. True  
+    2. False  
 
-    1.  True
-    2.  False
+    **Ans:** True
 
-    - **Ans:** False
+???+ question "15. Q: Single object size is up to 5 TB in Amazon S3."
+    1. True  
+    2. False  
 
-1. **Q: Amazon S3 is storage for the Internet**
+    **Ans:** True
 
-    1.  True
-    2.  False
+???+ question "16. Q: You can create unlimited bucket size in Amazon S3."
+    1. True  
+    2. False  
 
-    - **Ans:** True
+    **Ans:** True
 
-1. **Q: Temporary storage access speed is not guaranteed.**
+???+ question "17. Q: By default, Instance-Backed and EBS-Backed root volumes delete all data. However, when using EBS-Backed storage, you can configure it to save the data on the root volume. True or false?"
+    1. True  
+    2. False  
 
-    1.  True
-    2.  False
+    **Ans:** True
 
-    - **Ans:** True
+???+ question "18. Q: You can switch from an Instance-Backed to an EBS-Backed root volume at any time. True or False?"
+    1. True  
+    2. False  
 
-1. **Q: There is 99.99% SLA(Service Level Agreement) for temporary storage.**
+    **Ans:** False
 
-    1.  True
-    2.  False
+???+ question "19. Q: When using an EBS-Backed machine, you can override the terminate option and save the root volume. True or False?"
+    1. True  
+    2. False  
 
-    - **Ans:** False
+    **Ans:** True
 
-1. **Q: Ephemeral storage is block-level storage ?**
+???+ question "20. Q: Which of the following is a service of AWS Simple Storage Service(S3)? Select all that apply."
+    1. Database Indexing  
+    2. File searching  
+    3. Secure Hosting  
+    4. Storage Scaling  
 
-    1.  True
-    2.  False
+    **Ans:** 3. Secure Hosting & 4. Storage Scaling
 
-    - **Ans:** True
+???+ question "21. Q: What’s the difference between instance store and EBS?"
+    **Issue:**  
+    I’m not sure whether to store the data associated with my Amazon EC2 instance in instance store or in an attached Amazon EBS volume. Which option is best for me?
 
-1. **Q: Single object size is up to 5 TB in Amazon S3.**
+    **Ans: Resolution:**  
+    Some Amazon EC2 instance types come with a form of directly attached, block-device storage known as the instance store. The instance store is ideal for temporary storage, because the data stored in instance store volumes is not persistent through instance stops, terminations, or hardware failures.  
 
-    1.  True
-    2.  False
+    For data you want to retain longer-term, or if you need to encrypt the data, we recommend using EBS volumes instead. EBS volumes preserve their data through instance stops and terminations, can be easily backed up with EBS snapshots, can be removed from instances and reattached to another, and support full-volume encryption.
 
-    - **Ans:** True
+???+ question "22. Q: EBS can be attached to any running instance that is in the same Availability Zone?"
+    1. True  
+    2. False  
 
-1. **Q: You can create unlimited bucket size in Amazon S3.**
+    **Ans:** True
 
-    1.  True
-    2.  False
+???+ question "23. Q: EBS is internet accessible"
+    1. True  
+    2. False  
 
-    - **Ans:** True
+    **Ans:** False
 
-1. **Q: By default, Instance-Backed and EBS-Backed root volumes delete all data. However, when using EBS-Backed storage, you can configure it to save the data on the root volume. True or false ?**
+???+ question "24. Q: EBS has persistent file system for EC2"
+    1. True  
+    2. False  
 
-    1.  True
-    2.  False
+    **An**
 
-    - **Ans:** True
+??? question "Q: VPC is Private, Isolated, Virtual Network"
+    1. True  
+    2. False  
 
-1. **Q: You can switch from an Instance-Backed to an EBS-Backed root volume at  any time. True or False ?**
+    **Ans:** True
 
-    1.  True
-    2.  False
+??? question "Q: VPC would be logically isolated network in AWS cloud"
+    1. True  
+    2. False  
 
-    - **Ans:** False
+    **Ans:** True
 
-1. **Q: When using an EBS-Backed machine, you can override the terminate option and save the root volume. True or False ?**
+??? question "Q: VPC is also give control of network architecture"
+    1. True  
+    2. False  
 
-    1.  True
-    2.  False
+    **Ans:** True
 
-    - **Ans:** True
+??? question "Q: VPC is also going to enhanced security"
+    1. True  
+    2. False  
 
-1. **Q: Which of the following is a service of AWS Simple Storage Service(S3)? Select all that apply.**
+    **Ans:** True
 
-    1.  Database Indexing
-    2.  File searching
-    3.  Secure Hosting
-    4.  Storage Scaling
+??? question "Q: VPC has ability to interwork with other organizations"
+    1. True  
+    2. False  
 
-    - **Ans:** 3. Secure Hosting & 4. Storage Scaling
+    **Ans:** True
 
-1. **Q: What’s the difference between instance store and EBS?**
+??? question "Q: VPC does not enable hybrid cloud(site-to-site VPN)"
+    1. True  
+    2. False  
 
-    **Issue**
+    **Ans:** False
 
-    I’m not sure whether to store the data associated with my Amazon EC2 instance in instance store or  in an attached Amazon Elastic Block Store (Amazon EBS) volume. Which option is best for me?
+??? question "Q: Route Table is a set of Rules tells the direction of network"
+    1. True  
+    2. False  
 
-    - **Ans:** **Resolution**
+    **Ans:** True
 
-    Some Amazon EC2 instance types come with a form of directly attached, block-device storage known as the instance store. The instance store is ideal for temporary storage, because the data stored in instance store volumes is not persistent through instance stops, terminations, or hardware failures. You can find more detailed information about the instance store at Amazon EC2 Instance Store.
+??? question "Q: Security Group is a subnet level of security"
+    1. True  
+    2. False  
 
-    For data you want to retain longer-term, or if you need to encrypt the data, we recommend using EBS volumes instead. EBS volumes preserve their data through instance stops and terminations, can be easily backed up with EBS snapshots, can be removed from instances and reattached to another, and support full-volume encryption. For more detailed information about EBS volumes, see Features of Amazon EBS.
+    **Ans:** False
 
-1. **Q: BS can be attached to any running instance that is in the same Availability Zone ?**
+??? question "Q: NACLs(Network Access Lists) is a resource level of security"
+    1. True  
+    2. False  
 
-    1.  True
-    2.  False
+    **Ans:** False
 
-    - **Ans:** True
+??? question "Q: Any default stack is available in Cloud Formation?"
+    **Ans:** You cannot create default stack but you can choose the type of stack to create:
+    
+    1. A sample stack  
+    2. A Linux-based Chef 12 stack  
+    3. A Windows-based Chef 12.2 stack  
+    4. A Linux-based Chef 11.10 stack  
 
-1. **Q: EBS is  internet accessible**
+??? question "Q: What is the difference between Stack and Template in Cloud Formation?"
+    **Ans:**  
+    - **Stack**: A collection of AWS resources that you can manage as a single unit.
+    - **Template**: A JSON or YAML text file that describes the resources and their properties.
 
-    1.  True
-    2.  False
+??? question "Q: We can create multiple server for same stack?"
+    **Ans:**  
+    You can select one instance type (e.g., `t2.micro`) at a time, but can increase "Webserver Capacity" to launch multiple identical instances.
 
-    - **Ans:** False
+??? question "Q: Can you explain the term SQS is pull based, not pushed base?"
+    **Ans:**  
+    Messages are **pushed** into the queue by producers, but **pulled** out by consumers using the ReceiveMessage API. They are not automatically delivered.
 
-1. **Q: EBS has persistent file system for EC2**
+??? question "Q: How many Elastic IP address can be associated with a single account?"
+    1. 4  
+    2. 10  
+    3. 5  
+    4. None of the above  
 
-    1.  True
-    2.  False
+    **Ans:** 5
 
-    - **Ans:** True
+??? question "Q: What is the name of the additional network interfaces that can be created and attached to any EC2 instance in your VPC?"
+    1. Elastic IP  
+    2. Elastic Network Interface  
+    3. AWS Elastic Interface  
+    4. AWS Network ACL  
 
-1. **Q:** **EBS supports incremental snapshots**
+    **Ans:** Elastic Network Interface
 
-    1.  True
-    2.  False
+??? question "Q: ELB has 3 instances. If an instance is unhealthy, which service ensures traffic is routed to healthy instances?"
+    1. Sticky session  
+    2. Fault Tolerance  
+    3. Connection drainage  
+    4. Monitoring  
 
-    - **Ans:** True
+    **Ans:** Fault Tolerance
 
-1. **Q: Amazon Glacier enables customers to offload the administrative burdens of operating and scaling storage to AWS.**
+??? question "Q: After configuring ELB, how do you ensure user requests go to the same instance?"
+    1. Session cookie  
+    2. Cross zone load balancing  
+    3. Connection drainage  
+    4. Sticky session  
 
-    1.  True
-    2.  False
+    **Ans:** Sticky session
 
-    - **Ans:** True
+??? question "Q: Which of the following metrics cannot have a CloudWatch alarm?"
+    1. EC2 instance status check failed  
+    2. EC2 CPU utilization  
+    3. RRS lost object  
+    4. Auto scaling group CPU utilization  
 
-1. **Q: Amazon Glacier is a great storage choice when low storage cost is paramount.**
+    **Ans:** RRS lost object
 
-    1.  True
-    2.  False
+??? question "Q: Which service is provided by CloudWatch?"
+    1. Monitor estimated AWS usage  
+    2. Monitor EC2 log files  
+    3. Monitor S3 storage  
+    4. Monitor AWS calls using CloudTrail  
 
-    - **Ans:** True
+    **Ans:** Monitor estimated AWS usage
 
-1. **Q: Data is rarely retrieved, and retrieval latency of several hours is acceptable in Glacier**
+??? question "Q: Which statement is not true about EC2 instance addressing?"
+    1. Private IPs aren't internet reachable  
+    2. Private IP works across regions  
+    3. Private/Public IPs are mapped using NAT  
+    4. Private IP is assigned using DHCP  
 
-    1.  True
-    2.  False
+    **Ans:** Private IP works across regions
 
-    - **Ans:** True
+??? question "Q: Which service provides edge storage or content delivery caching?"
+    1. Amazon RDS  
+    2. Simple DB  
+    3. Amazon CloudFront  
+    4. Amazon Associate Web Services  
 
-1. **Q: Glacier is basically for data archival**
+    **Ans:** Amazon CloudFront
 
-    1.  True
-    2.  False
+??? question "Q: A user launches a free-tier instance from AMI with 50GB snapshot. Can it qualify for free tier?"
+    1. Launch micro instance  
+    2. Launch micro and resize to 50GB  
+    3. Launch and keep below 30GB  
+    4. Not possible under free tier  
 
-    - **Ans:** True
+    **Ans:** Not possible under free tier
 
-1. **Q: It is very cheap storage**
+??? question "Q: What connection issues may occur when connecting to an instance?"
+    1. Connection timed out  
+    2. Server refused our key  
+    3. No supported auth methods  
+    4. All of the above  
 
-    1.  True
-    2.  False
+    **Ans:** All of the above
 
-    - **Ans:** True
+??? question "Q: Sticky session with ELB — what does it do?"
+    1. Routes to one DNS  
+    2. Binds session to instance  
+    3. Binds IP to session  
+    4. Gives DNS per IP  
 
-1. **Q: Glacier has very, very slow retrieval times**
+    **Ans:** Binds session to instance
 
-    1.  True
-    2.  False
+??? question "Q: Which is the main AWS email platform for sending/receiving messages with your domain?"
+    1. SES  
+    2. SNS  
+    3. SQS  
+    4. SAS  
 
-    - **Ans:** True
-
-1. **Q: By Default, Instance-Backed and EBS-Backed root volumes delete all data. However, when using EBS-Backed storage, you can configure it to save the data on the root volume.**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: You can switch from an Instance-Backed to an EBS-Backed root volume at any time.**
-
-    1.  True
-    2.  False
-
-    - **Ans:** False
-
-1. **Q: When using an EBS-Backed machine, you can override the terminate option and save the root volume.**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: VPC is Private, Isolated, Virtual Network**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: VPC would be logically isolated network in AWS cloud**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: VPC is also give control of network architecture**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: VPC is also going to enhanced security**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: VPC has ability to interwork with other organizations**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: VPC does not enable hybrid cloud(site-to-site VPN)**
-
-    1.  True
-    2.  False
-
-    - **Ans:** False
-
-1. **Q: Route Table is a set of Rules tells the direction of network**
-
-    1.  True
-    2.  False
-
-    - **Ans:** True
-
-1. **Q: Security Group is a subnet level of security**
-
-    1.  True
-    2.  False
-
-    - **Ans:** False
-
-1. **Q: NACLs(Network Access Lists) is a resource level of security**
-
-    1.  True
-    2.  False
-
-    - **Ans:** False
-
-1. **Q: Any default stack is available in Cloud Formation ?**
-
-    - **Ans:**  You can not create default stack but you can choose the type of stack to create e.g :
-
-    1.  A sample stack
-    2.  A Linux-based chef 12 stack
-    3.  A Windows-based Chef 12.2 stack
-    4.  A Linux-based Chef 11.10 stack
-
-1. **Q: What is the difference between Stack and Template in Cloud Formation ?**
-
-    - **Ans:** Stack : Cloud-based applications usually require a group of related resources—application servers, database servers, and so on—that must be created and managed collectively. This collection of instances is called a stack
-
-1. **Q: We can create multiple server for same stack ?**
-
-    - **Ans:** you can select one “instance type” e.g: t2.micro at a time but you can set more then one “Webserver Capacity” which is “The initial number of Webserver instances“ means automatically same kind of instances will launch.
-
-1. **Q:  Can you explain the term SQS is pull based, not pushed base.**
-
-    - **Ans:** It means that you have to actively poll the queue in order to receive a messages. The messages are pushed into the queue by the producers but pulled out of the queue by the consumers.You have to call the Receive Message action from the consumer in order to get the messages, they are not pushed to you automatically when they arrive.
-
-1. **Q: How many Elastic IP address can be associated with a single account?**
-
-    1.  4
-    2.  10
-    3.  5
-    4.  None the above
-
-    - **Ans:**
-
-1. **Q: What is the name to the additional network interfaces that can be created and attached to any Amazon EC2 instance in your VPC?**
-
-    1.  Elastic IP
-    2.  Elastic Network Interface
-    3.  AWS Elastic Interface
-    4.  AWS Network ACL
-
-    - **Ans:** Elastic Network Interface
-
-1. **Q: You have configured ELB with three instances connected to that. If your instances are unhealthy or terminated, the traffic should be automatically replaced to another instance, what type of service can be used to achieve this requirement?**
-
-    1.  Sticky session
-    2.  Fault Tolerance
-    3.  Connection drainage
-    4.  Monitoring
-
-    - **Ans:** Fault Tolerance
-
-1. **Q: After configuring ELB, you need to ensure that the user requests are always attached to a single instance. What setting can you use?**
-
-    1.  Session cookie
-    2.  Cross one load balancing
-    3.  Connection drainage
-    4.  Sticky session
-
-    - **Ans:** Sticky session
-
-1. **Q: Which of the following metrics cannot have a cloud watch alarm?**
-
-    1.  EC2 instance status check failed
-    2.  EC2 CPU utilization
-    3.  RRS lost object
-    4.  Auto scaling group CPU utilization
-
-    - **Ans:** RRS lost object
-
-1. **Q: Which of the below mentioned service is provided by Cloud watch?**
-
-    1.  Monitor estimated AWS usage
-    2.  Monitor EC2 log files
-    3.  Monitor S3 storage
-    4.  Monitor AWS calls using Cloud trail
-
-    - **Ans:** Monitor estimated AWS usage
-
-1. **Q: A user has Launched an EC2 instance which of the below mentioned statements is not true respect to instance addressing?**
-
-    1.  The private IP addresses are not reachable from the internet
-    2.  The user can communicate using the private IP across regions
-    3.  The private IP address and pubic IP address for an instance are directly mapped to each other using NAT
-    4.  The private IP address for the instance is assigned using DHCP
-
-    - **Ans:** The user can communicate using the private IP across regions
-
-1. **Q: Which of the following service provides the edge – storage or content delivery system that caches data at different locations?**
-
-    1.  Amazon RDS
-    2.  Simple DB
-    3.  Amazon Cloud Front
-    4.  Amazon associates web services
-
-    - **Ans:** Amazon Cloud Front
-
-1. **Q: A user is launching an instance under the free usage tier from the AMI with a snapshot size of 50 GB. How can the user launch the instance under the free usage tier?**
-
-    1.  Launch a micro instance
-    2.  Launch a micro instance, but in the EBS configuration modify the size of EBS to 50 GB.
-    3.  Launch a micro instance, but do not store the data of more than 30 GB on the EBS storage.
-    4.  It is not possible to have this instance under the free usage tier
-
-    - **Ans:** It is not possible to have this instance under the free usage tier
-
-1. **Q: What are the possible connection issues you can face while connecting to your instance?**
-
-    1.  Connection timed out
-    2.  Server refused our key
-    3.  No supported authentication methods available
-    4.  All of the above
-
-    - **Ans:** All of the above
-
-1. **Q: You are enabled sticky session with ELB. What does it do with your instance?**
-
-    1.  Routes all the requests to a single DNS
-    2.  Binds the user session with a specific instance
-    3.  Binds the user IP with a specific session
-    4.  Provides a single ELB DNS for each IP address
-
-    - **Ans:** Binds the user session with a specific instance
-
-1. **Q: Which is a main email platform that provides an easy, cost effective way for you to send compliance and receive a response using your own email address and domains?**
-
-    1.  SES
-    2.  SNS
-    3.  SQS
-    4.  SAS
-
-    - **Ans:** SES
+    **Ans:** SES
 
 1. **Q: Which type of load balancer makes routing decisions at either the transport layer or the application layer and supports either EC2 or VPC.**
 
