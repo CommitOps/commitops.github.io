@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs mkdocs-material mkdocs-include-dir-to-nav mkdocs-macros-plugin mkdocs-include-markdown-plugin mkdocs-minify-plugin mkdocs-awesome-nav termynal mkdocs-dracula-theme mkdocstrings-python pymdown-extensions mkdocs-material-extensions mkdocs-pdf
+          pip install mkdocs mkdocs-material mkdocs-include-dir-to-nav mkdocs-macros-plugin mkdocs-include-markdown-plugin mkdocs-minify-plugin mkdocs-awesome-nav termynal mkdocs-dracula-theme mkdocstrings-python pymdown-extensions mkdocs-material-extensions mkdocs-pdf mkdocs-mermaid2-plugin
 
       - name: Build MkDocs site
         run: |
