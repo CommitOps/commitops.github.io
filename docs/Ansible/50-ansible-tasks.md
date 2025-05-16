@@ -200,3 +200,478 @@ title: Ansible
     ```bash
     ansible [host] -m setup -a 'filter=ansible_distribution*'
     ```
+
+??? question "What would be the result of running the following task? How to fix it?"
+
+    ```yaml
+    - hosts: localhost
+      tasks:
+          - name: Install zlib
+            package:
+              name: zlib
+              state: present
+    ```
+
+    **Fix:** Add `become: yes` if root privileges are required and ensure `gather_facts` is enabled if you use any facts.
+
+---
+
+??? info "Which Ansible best practices are you familiar with? Name at least three"
+
+    - Use **roles** for modular and reusable code
+    - Keep **inventory files and group_vars** organized
+    - Avoid **shell/command** unless no module fits the use case
+    - Use **handlers** for service restarts to prevent redundancy
+    - Validate syntax with `ansible-playbook --syntax-check`
+
+---
+
+??? info "Explain the directory layout of an Ansible role"
+
+    A typical Ansible role directory layout:
+
+    ```
+    roles/
+      └── myrole/
+          ├── defaults/
+          │   └── main.yml
+          ├── files/
+          ├── handlers/
+          │   └── main.yml
+          ├── meta/
+          │   └── main.yml
+          ├── tasks/
+          │   └── main.yml
+          ├── templates/
+          ├── tests/
+          │   └── test.yml
+          └── vars/
+              └── main.yml
+    ```
+
+---
+
+??? question "What are 'blocks' used for in Ansible?"
+
+    **Blocks** group tasks together to apply common error handling, conditional logic, or privilege escalation.
+
+    ```yaml
+    tasks:
+      - block:
+          - name: Do something
+            command: /bin/true
+        rescue:
+          - name: Handle failure
+            debug:
+              msg: "Something went wrong"
+    ```
+
+---
+
+??? tip "How do you handle errors in Ansible?"
+
+    - Use `ignore_errors: yes`
+    - Use `block`, `rescue`, and `always`
+    - Use conditionals with `when`
+    - Use `failed_when` to customize failure conditions
+
+---
+
+??? tip "You would like to run a certain command if a task fails. How would you achieve that?"
+
+    Use `block` + `rescue`:
+
+    ```yaml
+    tasks:
+      - block:
+          - name: This might fail
+            command: /bin/false
+        rescue:
+          - name: Run this if the above fails
+            command: echo "Failure caught"
+    ```
+
+---
+
+??? example "Playbook to install ‘zlib’ and ‘vim’ on all hosts if the file ‘/tmp/mario’ exists"
+
+    ```yaml
+    ---
+    - hosts: all
+      vars:
+          mario_file: /tmp/mario
+          package_list:
+              - 'zlib'
+              - 'vim'
+      tasks:
+          - name: Check for mario file
+            stat:
+                path: "{{ mario_file }}"
+            register: mario_f
+
+          - name: Install zlib and vim if mario file exists
+            become: "yes"
+            package:
+                name: "{{ item }}"
+                state: present
+            loop: "{{ package_list }}"
+            when: mario_f.stat.exists
+    ```
+
+---
+
+??? example "Single task to verify all files in `files_list` exist"
+
+    ```yaml
+    - name: Ensure all files exist
+      assert:
+        that:
+          - item.stat.exists
+      loop: "{{ files_list }}"
+    ```
+
+---
+
+??? example "Playbook to deploy /tmp/system_info file on all hosts except controllers"
+
+    **Playbook:**
+
+    ```yaml
+    ---
+    - name: Deploy /tmp/system_info file
+      hosts: all:!controllers
+      tasks:
+          - name: Deploy /tmp/system_info
+            template:
+                src: system_info.j2
+                dest: /tmp/system_info
+    ```
+
+    **Template (system_info.j2):**
+
+    ```jinja
+    # {{ ansible_managed }}
+    I'm {{ ansible_hostname }} and my operating system is {{ ansible_distribution }}
+    ```
+
+---
+
+??? question "Which variable will be used from these definitions?"
+
+    ```
+    * role defaults -> whoami: mario
+    * extra vars -> whoami: toad
+    * host facts -> whoami: luigi
+    * inventory variables -> whoami: browser
+    ```
+
+    **Answer:** `toad` (extra vars always take highest precedence).
+
+    Refer to [Variable Precedence Docs](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#ansible-variable-precedence) for the full list.
+
+---
+
+??? quiz "True or False: Evaluate the following statements"
+
+    - A module is a collection of tasks → ❌ False  
+    - It’s better to use shell/command instead of specific modules → ❌ False  
+    - Host facts override play variables → ✅ True  
+    - A role might include: vars, meta, and handlers → ✅ True  
+    - Dynamic inventory is generated from external sources → ✅ True  
+    - Best practice indentation is 2 spaces instead of 4 → ❌ False (standard is 2 or 4, but Ansible uses 2)  
+    - ‘notify’ is used to trigger handlers → ✅ True  
+    - `hosts: all:!controllers` means run only on `controllers` → ❌ False (means run on all *except* `controllers`)
+
+
+??? question "Explain the Difference between Forks, Serial & Throttle"
+
+    - `forks` determines how many hosts Ansible will manage in parallel.
+    - `serial` runs a full playbook on a limited number of hosts at a time (e.g. rolling updates).
+    - `throttle` limits the number of forks used *for a specific task*.
+
+    ```ini
+    [defaults]
+    forks = 30
+    ```
+
+    ```yaml
+    - hosts: webservers
+      serial: 1
+      tasks:
+        - name: ...
+    ```
+
+    ```yaml
+    tasks:
+      - command: /path/to/cpu_intensive_command
+        throttle: 1
+    ```
+
+---
+
+??? question "What is ansible-pull? How is it different from how ansible-playbook works?"
+
+    - `ansible-playbook` is a **push-based** model (control node pushes configuration).
+    - `ansible-pull` is a **pull-based** model. The managed node pulls playbooks from a source like Git and applies them.
+
+    Useful for:
+    - Nodes behind firewalls
+    - CI/CD style deployments
+
+---
+
+??? question "What is Ansible Vault?"
+
+    Ansible Vault allows you to **encrypt sensitive data** such as passwords, keys, etc.
+
+    Example:
+
+    ```bash
+    ansible-vault encrypt secrets.yml
+    ansible-vault decrypt secrets.yml
+    ansible-vault edit secrets.yml
+    ```
+
+---
+
+??? example "Demonstrate Conditionals and Loops"
+
+    **Conditionals:**
+
+    ```yaml
+    - name: Install nginx if on Ubuntu
+      apt:
+        name: nginx
+        state: present
+      when: ansible_distribution == 'Ubuntu'
+    ```
+
+    **Loops:**
+
+    ```yaml
+    - name: Create users
+      user:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - alice
+        - bob
+    ```
+
+---
+
+??? question "What are filters? Do you have experience with writing filters?"
+
+    Filters are used to **transform data** in Jinja2 templates.
+
+    Examples:
+    - `{{ mylist | join(', ') }}`
+    - `{{ mystring | upper }}`
+
+    You can also **create custom filters** in Python.
+
+---
+
+??? example "Write a filter to capitalize a string"
+
+    ```python
+    def cap(self, string):
+        return string.capitalize()
+    ```
+
+---
+
+??? question "You would like to run a task only if the previous task changed anything. How would you achieve that?"
+
+    Use `when: previous_task_result.changed`:
+
+    ```yaml
+    - name: Create file
+      copy:
+        src: file.txt
+        dest: /tmp/file.txt
+      register: result
+
+    - name: Notify on change
+      debug:
+        msg: "File was changed"
+      when: result.changed
+    ```
+
+---
+
+??? question "What are callback plugins? What can you achieve by using callback plugins?"
+
+    Callback plugins let you **customize Ansible output** or send results to third-party tools.
+
+    Examples:
+    - `json` or `yaml` output
+    - Sending results to Slack, Datadog, etc.
+    - Custom logging formats
+
+---
+
+??? question "What is Ansible Collections?"
+
+    Collections are **namespaced bundles** of roles, playbooks, plugins, and modules.
+
+    Structure:
+
+    ```
+    ansible_collections/
+      my_namespace/
+        my_collection/
+          roles/
+          plugins/
+          playbooks/
+    ```
+
+    Installed via:
+
+    ```bash
+    ansible-galaxy collection install my_namespace.my_collection
+    ```
+
+---
+
+??? question "Difference between include_tasks and import_tasks?"
+
+    - `import_tasks`: **Static** inclusion. Tasks are parsed when playbook starts.
+    - `include_tasks`: **Dynamic** inclusion. Tasks are included at runtime (allows conditionals).
+
+---
+
+??? example "Modify file '/tmp/exercise' in one task"
+
+    File before:
+
+    ```
+    Goku = 9001
+    Vegeta = 5200
+    Trunks = 6000
+    Gotenks = 32
+    ```
+
+    Desired changes:
+
+    ```
+    Goku = 9001
+    Vegeta = 250
+    Trunks = 40
+    Gotenks = 32
+    ```
+
+    Ansible task:
+
+    ```yaml
+    - name: Change saiyans levels
+      lineinfile:
+        path: /tmp/exercise
+        regexp: "{{ item.regexp }}"
+        line: "{{ item.line }}"
+      loop:
+        - { regexp: '^Vegeta', line: 'Vegeta = 250' }
+        - { regexp: '^Trunks', line: 'Trunks = 40' }
+    ```
+
+---
+
+### 🔧 Execution and Strategy
+
+??? question "True or False? Ansible runs all tasks in a play on one host before moving to next host"
+
+    ❌ False.  
+    Ansible's default **linear strategy** runs each task on all hosts before moving to the next task.
+
+---
+
+??? question "What is a 'strategy' in Ansible? What is the default strategy?"
+
+    A strategy defines **how tasks are executed across hosts**.
+
+    Default: **linear**
+
+    - Linear: run one task at a time on all hosts
+    - Free: run all tasks on each host independently
+    - Debug: interactively step through tasks
+
+---
+
+??? question "What strategies are you familiar with in Ansible?"
+
+    - **Linear** (default): task-by-task across all hosts
+    - **Free**: each host progresses independently
+    - **Debug**: step through tasks interactively
+
+---
+
+??? question "What is the `serial` keyword used for?"
+
+    `serial` allows you to do **rolling deployments**.
+
+    Example:
+
+    ```yaml
+    - hosts: databases
+      serial: 4
+    ```
+
+    Runs the full play on 4 hosts at a time.
+
+---
+
+### 🧪 Testing
+
+??? question "How do you test your Ansible based projects?"
+
+    - `ansible-playbook --syntax-check`
+    - Use `check mode` (`--check`)
+    - Molecule for role testing
+    - CI pipelines (GitHub Actions, GitLab CI)
+
+---
+
+??? question "What is Molecule? How does it work?"
+
+    Molecule is a **testing framework** for Ansible roles.
+
+    - Uses Docker or Vagrant
+    - Verifies syntax, linting, idempotence
+    - Supports testinfra for assertions
+
+---
+
+??? question "You run Ansible tests and get 'idempotence test failed'. What does it mean?"
+
+    It means running the same playbook twice results in **changes on second run**.
+
+    Idempotence is crucial so that tasks don’t make unnecessary changes each time they're run.
+
+---
+
+### 🐞 Debugging
+
+??? question "How to find out the data type of a variable in a playbook?"
+
+    ```jinja
+    "{{ some_var | type_debug }}"
+    ```
+
+---
+
+??? question "What are Ansible Collections?"
+
+    Collections are **distributable content units** in Ansible.  
+    They include:
+    - Roles
+    - Modules
+    - Plugins
+    - Playbooks
+
+    You can install them via:
+
+    ```bash
+    ansible-galaxy collection install <namespace>.<collection>
+    ```
+
+---
