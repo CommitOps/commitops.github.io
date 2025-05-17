@@ -351,9 +351,6 @@ title: AWS
 
     **Ans:** False
 
-
-## AWS MCQs QnA (Set 2)
-
 ???+ question "1. Q: Premium support is Available in AWS for Developer, Business & Enterprise level?"
     1. True  
     2. False  
@@ -506,82 +503,81 @@ title: AWS
 
     **An**
 
-??? question "Q: VPC is Private, Isolated, Virtual Network"
+???+ question "Q: VPC is Private, Isolated, Virtual Network"
     1. True  
     2. False  
 
     **Ans:** True
 
-??? question "Q: VPC would be logically isolated network in AWS cloud"
+???+ question "Q: VPC would be logically isolated network in AWS cloud"
     1. True  
     2. False  
 
     **Ans:** True
 
-??? question "Q: VPC is also give control of network architecture"
+???+ question "Q: VPC is also give control of network architecture"
     1. True  
     2. False  
 
     **Ans:** True
 
-??? question "Q: VPC is also going to enhanced security"
+???+ question "Q: VPC is also going to enhanced security"
     1. True  
     2. False  
 
     **Ans:** True
 
-??? question "Q: VPC has ability to interwork with other organizations"
+???+ question "Q: VPC has ability to interwork with other organizations"
     1. True  
     2. False  
 
     **Ans:** True
 
-??? question "Q: VPC does not enable hybrid cloud(site-to-site VPN)"
+???+ question "Q: VPC does not enable hybrid cloud(site-to-site VPN)"
     1. True  
     2. False  
 
     **Ans:** False
 
-??? question "Q: Route Table is a set of Rules tells the direction of network"
+???+ question "Q: Route Table is a set of Rules tells the direction of network"
     1. True  
     2. False  
 
     **Ans:** True
 
-??? question "Q: Security Group is a subnet level of security"
+???+ question "Q: Security Group is a subnet level of security"
     1. True  
     2. False  
 
     **Ans:** False
 
-??? question "Q: NACLs(Network Access Lists) is a resource level of security"
+???+ question "Q: NACLs(Network Access Lists) is a resource level of security"
     1. True  
     2. False  
 
     **Ans:** False
 
-??? question "Q: Any default stack is available in Cloud Formation?"
+???+ question "Q: Any default stack is available in Cloud Formation?"
     **Ans:** You cannot create default stack but you can choose the type of stack to create:
-    
     1. A sample stack  
     2. A Linux-based Chef 12 stack  
     3. A Windows-based Chef 12.2 stack  
     4. A Linux-based Chef 11.10 stack  
 
-??? question "Q: What is the difference between Stack and Template in Cloud Formation?"
+???+ question "Q: What is the difference between Stack and Template in Cloud Formation?"
     **Ans:**  
     - **Stack**: A collection of AWS resources that you can manage as a single unit.
     - **Template**: A JSON or YAML text file that describes the resources and their properties.
 
-??? question "Q: We can create multiple server for same stack?"
+???+ question "Q: We can create multiple server for same stack?"
     **Ans:**  
     You can select one instance type (e.g., `t2.micro`) at a time, but can increase "Webserver Capacity" to launch multiple identical instances.
 
-??? question "Q: Can you explain the term SQS is pull based, not pushed base?"
+???+ question "Q: Can you explain the term SQS is pull based, not pushed base?"
     **Ans:**  
     Messages are **pushed** into the queue by producers, but **pulled** out by consumers using the ReceiveMessage API. They are not automatically delivered.
 
-??? question "Q: How many Elastic IP address can be associated with a single account?"
+???+ question "Q: How many Elastic IP address can be associated with a single account?"
     1. 4  
     2. 10  
     3. 5  
@@ -589,7 +585,7 @@ title: AWS
 
     **Ans:** 5
 
-??? question "Q: What is the name of the additional network interfaces that can be created and attached to any EC2 instance in your VPC?"
+???+ question "Q: What is the name of the additional network interfaces that can be created and attached to any EC2 instance in your VPC?"
     1. Elastic IP  
     2. Elastic Network Interface  
     3. AWS Elastic Interface  
@@ -597,7 +593,7 @@ title: AWS
 
     **Ans:** Elastic Network Interface
 
-??? question "Q: ELB has 3 instances. If an instance is unhealthy, which service ensures traffic is routed to healthy instances?"
+???+ question "Q: ELB has 3 instances. If an instance is unhealthy, which service ensures traffic is routed to healthy instances?"
     1. Sticky session  
     2. Fault Tolerance  
     3. Connection drainage  
@@ -605,7 +601,7 @@ title: AWS
 
     **Ans:** Fault Tolerance
 
-??? question "Q: After configuring ELB, how do you ensure user requests go to the same instance?"
+???+ question "Q: After configuring ELB, how do you ensure user requests go to the same instance?"
     1. Session cookie  
     2. Cross zone load balancing  
     3. Connection drainage  
@@ -613,7 +609,7 @@ title: AWS
 
     **Ans:** Sticky session
 
-??? question "Q: Which of the following metrics cannot have a CloudWatch alarm?"
+???+ question "Q: Which of the following metrics cannot have a CloudWatch alarm?"
     1. EC2 instance status check failed  
     2. EC2 CPU utilization  
     3. RRS lost object  
@@ -621,7 +617,7 @@ title: AWS
 
     **Ans:** RRS lost object
 
-??? question "Q: Which service is provided by CloudWatch?"
+???+ question "Q: Which service is provided by CloudWatch?"
     1. Monitor estimated AWS usage  
     2. Monitor EC2 log files  
     3. Monitor S3 storage  
@@ -629,7 +625,7 @@ title: AWS
 
     **Ans:** Monitor estimated AWS usage
 
-??? question "Q: Which statement is not true about EC2 instance addressing?"
+???+ question "Q: Which statement is not true about EC2 instance addressing?"
     1. Private IPs aren't internet reachable  
     2. Private IP works across regions  
     3. Private/Public IPs are mapped using NAT  
@@ -637,7 +633,7 @@ title: AWS
 
     **Ans:** Private IP works across regions
 
-??? question "Q: Which service provides edge storage or content delivery caching?"
+???+ question "Q: Which service provides edge storage or content delivery caching?"
     1. Amazon RDS  
     2. Simple DB  
     3. Amazon CloudFront  
@@ -645,7 +641,7 @@ title: AWS
 
     **Ans:** Amazon CloudFront
 
-??? question "Q: A user launches a free-tier instance from AMI with 50GB snapshot. Can it qualify for free tier?"
+???+ question "Q: A user launches a free-tier instance from AMI with 50GB snapshot. Can it qualify for free tier?"
     1. Launch micro instance  
     2. Launch micro and resize to 50GB  
     3. Launch and keep below 30GB  
@@ -653,7 +649,7 @@ title: AWS
 
     **Ans:** Not possible under free tier
 
-??? question "Q: What connection issues may occur when connecting to an instance?"
+???+ question "Q: What connection issues may occur when connecting to an instance?"
     1. Connection timed out  
     2. Server refused our key  
     3. No supported auth methods  
@@ -661,7 +657,7 @@ title: AWS
 
     **Ans:** All of the above
 
-??? question "Q: Sticky session with ELB — what does it do?"
+???+ question "Q: Sticky session with ELB — what does it do?"
     1. Routes to one DNS  
     2. Binds session to instance  
     3. Binds IP to session  
@@ -669,7 +665,7 @@ title: AWS
 
     **Ans:** Binds session to instance
 
-??? question "Q: Which is the main AWS email platform for sending/receiving messages with your domain?"
+???+ question "Q: Which is the main AWS email platform for sending/receiving messages with your domain?"
     1. SES  
     2. SNS  
     3. SQS  
@@ -677,8 +673,7 @@ title: AWS
 
     **Ans:** SES
 
-1. **Q: Which type of load balancer makes routing decisions at either the transport layer or the application layer and supports either EC2 or VPC.**
-
+???+ question "Q: Which type of load balancer makes routing decisions at either the transport layer or the application layer and supports either EC2 or VPC."
     1.  Application Load Balancer
     2.  Classic Load Balancer
     3.  Primary Load Balancer
@@ -686,7 +681,7 @@ title: AWS
 
     - **Ans:** Classic Load Balancer
 
-1. **Q: AWS Cloud Front has been configured to handle the customer requests to the web server launched in Linux machine. How many requests per second can Amazon Cloud Front handle?**
+???+ question "Q: AWS Cloud Front has been configured to handle the customer requests to the web server launched in Linux machine. How many requests per second can Amazon Cloud Front handle?"
 
     1.  1000
     2.  100
@@ -695,7 +690,7 @@ title: AWS
 
     - **Ans:** There is no such limit
 
-1. **Q: You are going to launched one instance with security group. While configuring security group, what are the things you have to select?**
+???+ question "Q: You are going to launched one instance with security group. While configuring security group, what are the things you have to select?"
 
     1.  Protocol and type
     2.  Port
@@ -704,7 +699,7 @@ title: AWS
 
     - **Ans:** Source
 
-1. **Q: Which is virtual network interface that you can attach to an instance in a VPC?**
+???+ question "Q: Which is virtual network interface that you can attach to an instance in a VPC?"
 
     1.  Elastic IP
     2.  AWS Elastic Interface
@@ -713,7 +708,7 @@ title: AWS
 
     - **Ans:** Elastic Network Interface
 
-1. **Q: You have launched a Linux instance in AWS EC2. While configuring security group, you have selected SSH, HTTP, HTTPS protocol. Why do we need to select SSH?**
+???+ question "Q: You have launched a Linux instance in AWS EC2. While configuring security group, you have selected SSH, HTTP, HTTPS protocol. Why do we need to select SSH?"
 
     1.  To verity that there is a rule that allows traffic from your computer to port 22
     2.  To verify that there is a rule that allows traffic from EC2 Instance to your computer
@@ -722,7 +717,7 @@ title: AWS
 
     - **Ans:** To verify that there is a rule that allows traffic from EC2 Instance to your computer
 
-1. **Q: You need to quickly set up an email service because a client needs to start using it in the next hour. Amazon service seems to be the logical choice but there are several options available to set it up. Which of the following options to set up AWS service would best meet the needs of the client?**
+???+ question "Q: You need to quickly set up an email service because a client needs to start using it in the next hour. Amazon service seems to be the logical choice but there are several options available to set it up. Which of the following options to set up AWS service would best meet the needs of the client?"
 
     1.  Amazon SES console
     2.  AWS Cloud Formation
@@ -731,7 +726,7 @@ title: AWS
 
     - **Ans:** Amazon SES console
 
-1. **Q:You have chosen a windows instance with Classic and you want to make some change to the security group. How will these changes be effective?**
+???+ question "Q:You have chosen a windows instance with Classic and you want to make some change to the security group. How will these changes be effective?"
 
     1.  Security group rules cannot be changed
     2.  Changes are automatically applied to windows instances
@@ -740,7 +735,7 @@ title: AWS
 
     - **Ans:** Changes are automatically applied to windows instances
 
-1. **Q: Load Balancer and DNS service comes under which type of cloud service?**
+???+ question "Q: Load Balancer and DNS service comes under which type of cloud service?"
 
     1.  IAAS-Network
     2.  IAAS-Computational
@@ -749,7 +744,7 @@ title: AWS
 
     - **Ans:** IAAS-Storage
 
-1. **Q: You have an EC2 instance that has an unencrypted volume. You want to create another encrypted volume from this unencrypted volume. Which of the following steps can achieve this?**
+???+ question "Q: You have an EC2 instance that has an unencrypted volume. You want to create another encrypted volume from this unencrypted volume. Which of the following steps can achieve this?"
 
     1.  Just simply create a copy of the unencrypted volume, you will have the option to encrypt the volume.
     2.  Create a snapshot of the unencrypted volume and then while creating a volume from the snapshot you can encrypt it
@@ -758,7 +753,7 @@ title: AWS
 
     - **Ans:** Create a snapshot of the unencrypted volume (applying encryption parameters), copy the snapshot and create a volume from the copied snapshot
 
-1. **Q: Where does the user specify the maximum number of instances with the auto scaling commands?**
+???+ question "Q: Where does the user specify the maximum number of instances with the auto scaling commands?"
 
     1.  Auto scaling Launch Config
     2.  Auto scaling group
@@ -767,7 +762,7 @@ title: AWS
 
     - **Ans:** Auto scaling Launch Config
 
-1. **Q: A user is identify that a huge data download is occurring on his instance he has already set the auto scaling policy to increase the instance count when the network Input Output increase beyond a threshold limits how can the user ensure that this temporary event does not result in scaling**
+???+ question "Q: A user is identify that a huge data download is occurring on his instance he has already set the auto scaling policy to increase the instance count when the network Input Output increase beyond a threshold limits how can the user ensure that this temporary event does not result in scaling"
 
     1.  The network I/O are not affecting during data download
     2.  The policy cannot be set on the network I/O
@@ -776,7 +771,7 @@ title: AWS
 
     - **Ans:** Suspend scaling
 
-1. **Q: Which are the types of AMI provided by AWS?**
+???+ question "Q: Which are the types of AMI provided by AWS?"
 
     1.  EBS Backed
     2.  Instance Store backed
