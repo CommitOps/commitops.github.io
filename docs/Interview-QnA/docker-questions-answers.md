@@ -8,9 +8,7 @@ title: Docker
 
 Docker is a containerization platform which packages your application and all its dependencies together in the form of containers so as to ensure that your application works seamlessly in any environment, be it development, test or production.
 
-<p align="center">
-  <img src="../assets/images/docker-architecture.png" alt="Docker Architecture" width="600px" />
-</p>
+![docker-architecture](../assets/images/docker-architecture.png)
 
 ## Q. What is a Docker Container?
 
@@ -207,13 +205,9 @@ for eg:
 docker-compose -f docker-compose.json up
 ```
 
-
-
 ## Q. What is the Difference Between Containers and Virtual Machines?
 
-<p align="center">
-  <img src="../assets/images/container-vs-virtual-machine.png" alt="Containers and Virtual Machines" width="600px" />
-</p>
+![container-vs-virtual-machine](../assets/images/container-vs-virtual-machine.png)
 
 **Virtual Machines:**
 
@@ -679,11 +673,7 @@ Docker has two options for containers to store files in the host machine so that
 * **Volumes** are stored in a part of the host filesystem, which is managed by
 * **Bind mounts** may be stored anywhere on the host system.
 
-<p align="center">
-  <img src="../assets/images/types-of-mounts-volume.png" alt="Docker Volumes" width="500px" />
-</p>
-
-
+![types-of-mounts-volume](../assets/images/types-of-mounts-volume.png)
 
 ## Q. When would you use "docker kill" or "docker rm -f"?
 
@@ -1068,6 +1058,4 @@ Paravirtualization is a computer hardware virtualization technique that allows v
 
 With paravirtualization, the guest OS is modified, so it knows that it is running in a virtualized environment on top of a hypervisor (the hardware running the VM) and not on the physical hardware.
 
-<p align="center">
-  <img src="../assets/images/paravirtualization.png" alt="Paravirtualization" width="600px" />
-</p>
+![paravirtualization](../assets/images/paravirtualization.png)
