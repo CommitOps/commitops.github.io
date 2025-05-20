@@ -31,6 +31,37 @@ title: AWS
 
 <p id="result"></p>
 
+## AWS Storage
+
+<form id="storageQuizForm" onsubmit="return checkStorageAnswers()">
+  <h3>1. Which AWS storage service is ideal for storing unstructured data like images, videos, and backups?</h3>
+  <input type="radio" name="q1" value="a"> Amazon EBS<br>
+  <input type="radio" name="q1" value="b"> Amazon S3<br>
+  <input type="radio" name="q1" value="c"> Amazon RDS<br>
+
+  <h3>2. What is the maximum size of a single object that can be stored in Amazon S3?</h3>
+  <input type="radio" name="q2" value="a"> 5 GB<br>
+  <input type="radio" name="q2" value="b"> 100 GB<br>
+  <input type="radio" name="q2" value="c"> 5 TB<br>
+
+  <h3>3. Which AWS service provides scalable file storage for use with Amazon EC2?</h3>
+  <input type="radio" name="q3" value="a"> Amazon S3<br>
+  <input type="radio" name="q3" value="b"> Amazon EFS<br>
+  <input type="radio" name="q3" value="c"> Amazon Glacier<br>
+
+  <h3>4. What storage class in Amazon S3 is optimized for long-term archival?</h3>
+  <input type="radio" name="q4" value="a"> S3 Standard<br>
+  <input type="radio" name="q4" value="b"> S3 Glacier<br>
+  <input type="radio" name="q4" value="c"> S3 Intelligent-Tiering<br>
+
+  <h3>5. Which AWS storage service provides block-level storage volumes for use with EC2?</h3>
+  <input type="radio" name="q5" value="a"> Amazon EFS<br>
+  <input type="radio" name="q5" value="b"> Amazon EBS<br>
+  <input type="radio" name="q5" value="c"> Amazon S3<br>
+
+  <input type="submit" value="Submit Storage Quiz">
+</form>
+
 <script>
   function checkAnswers() {
     var correctAnswers = {
@@ -53,8 +84,33 @@ title: AWS
       }
     }
 
-    alert("You scored " + score + " out of " + total);
+    alert("You scored " + score + " out of " + total + " in the VPC Quiz.");
     return false; // Prevent form submission
+  }
+
+  function checkStorageAnswers() {
+    var correctAnswers = {
+      q1: "b", // Amazon S3
+      q2: "c", // 5 TB
+      q3: "b", // Amazon EFS
+      q4: "b", // S3 Glacier
+      q5: "b"  // Amazon EBS
+    };
+
+    var score = 0;
+    var total = Object.keys(correctAnswers).length;
+
+    for (var key in correctAnswers) {
+      var radios = document.getElementsByName(key);
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked && radios[i].value === correctAnswers[key]) {
+          score++;
+        }
+      }
+    }
+
+    alert("You scored " + score + " out of " + total + " in the Storage Quiz.");
+    return false;
   }
 </script>
 
