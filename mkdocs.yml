@@ -57,14 +57,14 @@ theme:
 plugins:
   - search
   - quiz
-  - mkdocs_quiz:
-      quiz_file: quizzes.json
-      language: en
-      show_refresh_button: true
-      show_indice_on_answer: true
-      show_score: true
-      show_progress_bar: true
-      logging: true
+  - mkdocs_quiz
+      # quiz_file: quizzes.json
+      # language: en
+      # show_refresh_button: true
+      # show_indice_on_answer: true
+      # show_score: true
+      # show_progress_bar: true
+      # logging: true
   - minify
   - awesome-nav
   - include_dir_to_nav
@@ -112,6 +112,9 @@ extra_javascript:
   # - assets/javascripts/color.js
   # - assets/javascripts/termynal.js
   # - assets/javascripts/gen_termynal.js
+
+hooks:
+  - assets/hooks/quiz_hook.py
 
 # nav:
 #   - Home: index.md
