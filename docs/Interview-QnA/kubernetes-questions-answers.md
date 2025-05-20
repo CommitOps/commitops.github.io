@@ -8,265 +8,219 @@ title: Kubernetes
 
 ### <a name="Kubernetes-101">Kubernetes 101</a>
 
-<details>
-<summary markdown="span"><b>What are the features of Kubernetes?</b></summary>
+???+ "Q) What are the features of Kubernetes?"
+    <p align="center">
+      <img src="assets/k8s-features.png" alt="K8s Features" width="800px" />
+    </p>
 
-<p align="center">
-  <img src="assets/k8s-features.png" alt="K8s Features" width="800px" />
-</p>
+???+ "Q) How is Kubernetes different from Docker Swarm?"
+    - **Docker Swarm** is Docker’s native, open-source container orchestration platform that is used to cluster and schedule Docker containers.
+    - **Docker Swarm** is more convenient to set up but doesn’t have a robust cluster, while Kubernetes is more complicated to set up but benefits from a more robust cluster.
+    - Docker Swarm can’t do auto-scaling; Kubernetes can.
+    - Docker Swarm is faster in scaling but lacks features like GUI, auto-rollbacks, and native monitoring/logging tools that Kubernetes has.
+    - Kubernetes supports automatic rollbacks; Docker Swarm does not.
 
-</details>
+???+ "Q) How are Kubernetes & Docker related?"
+    - Docker is a containerization platform.
+    - Kubernetes orchestrates and manages Docker containers at scale.
 
-<details>
-<summary markdown="span"><b>How is Kubernetes different from Docker Swarm?</b></summary>
+???+ "Q) What is the difference between deploying applications on hosts & containers?"
+    <p align="center">
+      <img src="assets/hosts-containers.png" alt="Hosts Containers" width="800px" />
+    </p>
+    - Host-based apps share OS libraries.
+    - Container-based apps are isolated with only shared kernel.
 
-- **Docker Swarm** is Docker’s native, open-source container orchestration platform that is used to cluster and schedule Docker containers. Swarm differs from Kubernetes in the following ways:
-- **Docker Swarm** is more convenient to set up but doesn’t have a robust cluster, while Kubernetes is more complicated to set up but the benefit of having the assurance of a robust cluster
-- Docker Swarm can’t do auto-scaling (as can Kubernetes); however, Docker scaling is five times faster than Kubernetes
-- Docker Swarm doesn’t have a GUI; Kubernetes has a GUI in the form of a dashboard Docker Swarm does automatic load balancing of traffic between containers in a cluster, while Kubernetes requires manual intervention for load balancing such traffic
-- Docker requires third-party tools like ELK stack for logging and monitoring, while Kubernetes has integrated tools for the same
-Docker Swarm can share storage volumes with any container easily, while Kubernetes can only share storage volumes with containers in the same pod
-- Docker can deploy rolling updates but can’t deploy automatic rollbacks; Kubernetes
-can deploy rolling updates as well as automatic rollbacks
+???+ "Q) What is Container Orchestration?"
+    - It refers to managing multiple containers as one system.
+    - It ensures communication, deployment, scaling, and availability of microservices spread across containers.
 
-</details>
+???+ "Q) How does Kubernetes simplify containerized Deployment?"
+    - Kubernetes abstracts infrastructure complexity.
+    - Provides auto-scaling, self-healing, load balancing, and monitoring.
+    - It is cloud-agnostic.
 
-<details>
-<summary markdown="span"><b>How are Kubernetes & Docker related?</b></summary>
+???+ "Q) What do you know about clusters in Kubernetes?"
+    <p align="center">
+      <img src="assets/k8s-cluster.png" alt="K8s Cluster" width="800px" />
+    </p>
+    - A Kubernetes cluster has master (API, scheduler) and worker nodes (Kubelet, pods).
+    - Desired state is managed via deployment files submitted to the API.
 
-- Docker is an open-source platform used to handle software development.
-- Its main benefit is that it packages the settings and dependencies that the software/application needs to run into a container, which allows for portability and several other advantages. Kubernetes allows for the manual linking and orchestration of several containers, running on multiple hosts that have been created using Docker.
+???+ "Q) What is a Pod in Kubernetes?"
+    - A pod is the smallest deployable unit in Kubernetes.
+    - It can contain one or more containers.
+    ```bash
+    kubectl get pods -n <namespace-name>
+    ```
 
-</details>
+???+ "Q) What is Kubectl?"
+    - CLI to interact with Kubernetes API.
+    - Used to deploy apps, inspect resources, and troubleshoot.
 
-<details>
-<summary markdown="span"><b>What is the difference between deploying applications on hosts & containers?</b></summary>
+???+ "Q) What is Kubelet?"
+    - An agent that runs on each node in the cluster.
+    - Ensures the containers described in PodSpecs are running.
 
-<p align="center">
-  <img src="assets/hosts-containers.png" alt="Hosts Containers" width="800px" />
-</p>
+???+ "Q) What is etcd?"
+    - A distributed key-value store used by Kubernetes.
+    - Stores configuration data and state of the cluster.
 
-- Refer to the above diagram. The left side architecture represents deploying applications on hosts. So, this kind of architecture will have an operating system and then the operating system will have a kernel which will have various libraries installed on the operating system needed for the application. So, in this kind of framework you can have n number of applications and all the applications will share the libraries present in that operating system whereas while deploying applications in containers the architecture is a little different.
-- This kind of architecture will have a kernel and that is the only thing that’s going to be the only thing common between all the applications. So, if there’s a particular application which needs Java then that particular application we’ll get access to Java and if there’s another application which needs Python then only that particular application will have access to Python.
-- The individual blocks that you can see on the right side of the diagram are basically containerized and these are isolated from other applications. So, the applications have the necessary libraries and binaries isolated from the rest of the system, and cannot be encroached by any other application.
+???+ "Q) What are the different services within Kubernetes?"
+    <p align="center">
+      <img src="assets/k8s-services.png" alt="K8s Services" width="800px" />
+    </p>
 
-</details>
+???+ "Q) What is the role of a pod?"
+    - Pods encapsulate containers and provide shared storage, IP, and communication.
 
-<details>
-<summary markdown="span"><b>What is Container Orchestration?</b></summary>
-
-Consider a scenario where you have 5-6 microservices for an application.
-Now, these microservices are put in individual containers, but won’t be able to communicate without container orchestration. So, as orchestration means the amalgamation of all instruments playing together in harmony in music, similarly container orchestration means all the services in individual containers working together to fulfill the needs of a single server.
-
-</details>
-
-<details>
-<summary markdown="span"><b>How does Kubernetes simplify containerized Deployment?</b></summary>
-
-As a typical application would have a cluster of containers running across multiple hosts, all these containers would need to talk to each other. So, to do this you need something big that would load balance, scale & monitor the containers. Since Kubernetes is cloud-agnostic and can run on any public/private providers it must be your choice simplify containerized deployment.
-
-</details>
-
-<details>
-<summary markdown="span"><b>What do you know about clusters in Kubernetes?</b></summary>
-
-The fundamental behind Kubernetes is that we can enforce the desired state management, by which I mean that we can feed the cluster services of a specific configuration, and it will be up to the cluster services to go out and run that configuration in the infrastructure.
-
-<p align="center">
-  <img src="assets/k8s-cluster.png" alt="K8s Cluster" width="800px" />
-</p>
-
-So, as you can see in the above diagram, the deployment file will have all the configurations required to be fed into the cluster services. Now, the deployment file will be fed to the API and then it will be up to the cluster services to figure out how to schedule these pods in the environment and make sure that the right number of pods are running.
-So, the API which sits in front of services, the worker nodes & the Kubelet process that the nodes run, all together make up the Kubernetes Cluster.
-
-</details>
-
-<details>
-<summary markdown="span"><b>What is a Pod in Kubernetes?</b></summary>
-
-A cluster of one or more Linux containers makes up a Kubernetes pod, the smallest unit of a Kubernetes application. From the more common scenario of a single container to an advanced use case with numerous tightly coupled containers within a pod, this basic structure allows for an array of designs.
-
-```bash
-kubectl get pods -n <namespace-name>
-```
-
-</details>
-
-<details>
-<summary markdown="span"><b>What is Kubectl?</b></summary>
-
-Kubectl is the platform using which you can pass commands to the cluster.
-So, it basically provides the CLI to run commands against the Kubernetes cluster with various ways to create and manage the Kubernetes
-component.
-
-</details>
-
-<details>
-<summary markdown="span"><b>What is Kubelet?</b></summary>
-
-Consider a scenario where you have 5-6 microservices for an application.
-Now, these microservices are put in individual containers, but won’t be able to communicate without container orchestration. So, as orchestration means the amalgamation of all instruments playing together in harmony in music, similarly container orchestration means all the services in individual containers working together to fulfill the needs of a single server.
-
-</details>
-
-<details>
-<summary markdown="span"><b>What is etcd?</b></summary>
-
-Etcd is written in Go programming language and is a distributed key-value store used for coordinating between distributed work. So, Etcd stores the configuration data of the Kubernetes cluster, representing the state of the cluster at any given point in time.
-
-</details>
-
-<details>
-<summary markdown="span"><b>What are the different services within Kubernetes?</b></summary>
-
-The following are the different types of services used:
-
-<p align="center">
-  <img src="assets/k8s-services.png" alt="K8s Services" width="800px" />
-</p>
-
-</details>
-
-<details>
-<summary markdown="span"><b>What is the role of a pod?</b></summary>
-
-A: A pod in Kubernetes is responsible for holding individual containers. Each pod can hold various containers depending on the configurations and requirements. The containers held within a single pod share the same resources and the same local network, which makes it easier for them to communicate.
-
-</details>
-
-
-<details>
-<summary markdown="span"><b>What is the LoadBalancer in Kubernetes?</b></summary>
-
-A load balancer is one of the most common and standard ways of exposing service. There are two types of load balancer used based on the working environment i.e. either the Internal Load Balancer or the External Load Balancer. The Internal Load Balancer automatically balances load and allocates the pods with the required configuration whereas the External Load Balancer directs the traffic from the external load to the backend pods.
-
-</details>
+???+ "Q) What is the LoadBalancer in Kubernetes?"
+    - Used to expose services externally.
+    - Internal LB balances traffic inside the cluster.
+    - External LB routes external traffic to the services.
 
 ### <a name="ARCHITECTURE BASED QUESTIONS">ARCHITECTURE BASED QUESTIONS</a>
 
-<details>
-<summary markdown="span"><b>What are the different components of Kubernetes Architecture?</b></summary>
+???+ "Q) What are the different components of Kubernetes Architecture?"
+    - Kubernetes architecture is composed of two major components:
+      - **Master Node**
+      - **Worker Node**
 
-The Kubernetes Architecture has mainly 2 components – the master node and the worker node. As you can see in the below diagram, the master and the worker nodes have many inbuilt components within them. The master node has the kube-controller-manager, kube-apiserver,
-kube-scheduler, etcd. Whereas the worker node has kubelet and kube-proxy running on each node
+    - **Master Node Components:**
+      - `kube-apiserver`: Handles communication within the cluster.
+      - `kube-scheduler`: Assigns pods to available worker nodes.
+      - `kube-controller-manager`: Maintains the cluster’s desired state.
+      - `etcd`: Key-value store for all cluster data.
 
-<p align="center">
-  <img src="assets/k8s-arch.png" alt="Docker Architecture" width="800px" />
-</p>
+    - **Worker Node Components:**
+      - `kubelet`: Ensures containers are running as specified.
+      - `kube-proxy`: Manages networking and communication for pods.
 
-<p align="center">
-  <img src="assets/kubernetes-architecture.png" alt="Docker Architecture" width="800px" />
-</p>
+    <p align="center">
+      <img src="assets/k8s-arch.png" alt="Kubernetes Architecture Diagram" width="800px" />
+    </p>
+    
+    <p align="center">
+      <img src="assets/kubernetes-architecture.png" alt="Kubernetes Architecture Diagram" width="800px" />
+    </p>
 
-</details>
+???+ "Q) What are the various K8 related services running on nodes and role of each service?"
+    - Kubernetes cluster consists of two node types:
+      - **Master Nodes**
+      - **Executor (Worker) Nodes** (also runs on Master)
 
-<details>
-<summary markdown="span"><b>What are the various K8 related services running on nodes and role of each service?</b></summary>
+    - **Master Node Services:**
+      - `kube-apiserver`: Entry point for the Kubernetes cluster (API gateway).
+      - `kube-scheduler`: Assigns pods to nodes based on available resources.
+      - `kube-controller-manager`: Monitors cluster state and attempts to maintain desired configuration.
 
-Mainly K8 cluster consists of two type of nodes: master and executor
-
-- master services:
-  - <b>kube-apiserver:</b> Master API service which acts like a door to K8 cluster. 
-  - <b>kube-scheduler:</b> Schedule PODs according to available resources on executor nodes. 
-  - <b>kube-controller-manager:</b> controller is a control loop that watches the shared state of the cluster through the 
-    apiserver and makes changes attempting to move the current state towards the desired state
-
-- executor node: (These also runs on master node)
-  - <b>kube-proxy:</b> The Kubernetes network proxy runs on each node. This reflects services as defined in the Kubernetes API on 
-    each node and can do simple TCP, UDP, and SCTP stream forwarding or round robin TCP, UDP, and SCTP forwarding across a set of backends.
-  - <b>kubelet:</b> kubelet takes a set of PodSpecs that are provided through various mechanisms (primarily through the 
-    apiserver) and ensures that the containers described in those PodSpecs are running and healthy
-
-</details>
+    - **Executor Node Services:**
+      - `kube-proxy`: Network proxy handling TCP, UDP, and SCTP forwarding.
+      - `kubelet`: Ensures pods are running and in healthy state per spec from `kube-apiserver`.
 
 ### <a name="Technical Questions">Technical QUESTIONS</a>
 
-<details>
-<summary markdown="span"><b>What is the difference between config map and secret? (Differentiate the answers as with examples)</b></summary>
+???+ "Q) What is the difference between ConfigMap and Secret? (With examples)"
+    - **ConfigMap:** Stores non-sensitive configuration data in plain text format.
+    - **Secret:** Stores sensitive information (e.g., passwords) in base64-encoded format.
 
-Config maps ideally stores application configuration in a plain text format whereas Secrets store sensitive data like password in an encrypted format. Both config maps and secrets can be used as volume and mounted inside a pod through a pod definition file.
+    **ConfigMap Example:**
+    ```bash
+    kubectl create configmap myconfigmap --from-literal=env=dev
+    ```
 
-- Configmap
-```bash
-kubectl create configmap myconfigmap --from-literal=env=dev
-```
+    **Secret Example:**
+    ```bash
+    echo -n 'admin' > ./username.txt
+    echo -n 'abcd1234' > ./password.txt
+    kubectl create secret generic mysecret --from-file=./username.txt --from-file=./password.txt
+    ```
 
-- Secret
-```bash
-echo -n ‘admin’ > ./username.txt
-echo -n ‘abcd1234’ ./password.txt
-kubectl create secret generic mysecret --from-file=./username.txt --from-file=./password.txt
-```
+    <p align="center">
+      <img src="assets/configmap-secrets.png" alt="ConfigMap vs Secret" width="800px" />
+    </p>
 
-<p align="center">
-  <img src="assets/configmap-secrets.png" alt="Docker Architecture" width="800px" />
-</p>
+???+ "Q) How to use secrets in Kubernetes?"
+    - Secrets are Kubernetes objects used to store encrypted sensitive data such as usernames and passwords.
 
-</details>
+    **Secret YAML Example:**
+    ```yaml
+    apiVersion: v1
+    kind: Secret
+    metadata:
+      name: tomcat-pass
+    type: Opaque
+    data:
+      password: <User Password>
+      username: <User Name>
+    ```
 
-<details>
-<summary markdown="span"><b>How to use secrets in Kubernetes?</b></summary>
+    **Create Secret:**
+    ```bash
+    kubectl create -f Secret.yaml
+    kubectl apply -k .
+    ```
 
-Secrets can be defined as Kubernetes objects used to store sensitive data such as user name and passwords with encryption.
+???+ "Q) How to control the resource usage of a POD?"
+    - Use `requests` and `limits` in the container spec.
 
-```yaml
-apiVersion: v1
-kind: Secret
-metadata:
-name: tomcat-pass
-type: Opaque
-data:
-   password: <User Password>
-   username: <User Name>
-```
+    - **request:** Minimum amount of resources guaranteed.
+    - **limit:** Maximum resource usage allowed. Exceeding this may lead to throttling or termination.
 
-- Creating the Secret:
+    **Example in Pod spec:**
+    ```yaml
+    resources:
+      requests:
+        cpu: "250m"
+        memory: "64Mi"
+      limits:
+        cpu: "500m"
+        memory: "128Mi"
+    ```
 
-```bash
-$ kubectl create –f Secret.yaml
-secrets/tomcat-pass
+???+ "Q) Recommended way of managing the access to multiple clusters?"
+    - Use the Kubernetes config file (usually located at `~/.kube/config`) to store access information for multiple clusters.
+    - Use `kubectl config` subcommands to switch between and manage clusters.
 
-$ kubectl apply -k .
-```
+    **Examples:**
+    ```bash
+    kubectl config use-context my-cluster
+    kubectl config get-contexts
+    ```
 
-</details>
+???+ "Q) What is PDB (Pod Disruption Budget)?"
+    - A **Pod Disruption Budget (PDB)** ensures a minimum number of pods remain available during voluntary disruptions (e.g., node upgrade).
 
-<details>
-<summary markdown="span"><b>How to control the resource usage of a POD?</b></summary>
+    - Example:
+      - Deployment has 5 replicas.
+      - PDB allows 1 pod disruption at a time, meaning at least 4 pods must remain available.
 
-With requests and limits resource usage of a POD can be control. 
+???+ "Q) How to troubleshoot if the POD is not getting scheduled?"
+    - Common causes: Insufficient resources, node selectors, taints, etc.
+    - Use the following commands:
+      ```bash
+      kubectl describe pod <pod-name> -n <namespace>
+      kubectl get events
+      ```
 
-<b>request:</b> the amount of resources being requested for a container. If a container exceeds its request for resources, it may be throttled back down to it’s request.
+    - Look for events such as `FailedScheduling` or resource-related errors.
 
-<b>limit:</b> an upper cap on the resources a container is able to use. If it tries to exceed this limit it may be terminated if Kubernetes decides that another container needs the resources. If you’re sensitive to pod restarts, it makes sense to have the sum of all container resource limits equal or less than the total resource capacity for your cluster.
+???+ "Q) What are taints and tolerations?"
+    - **Taints:** Set on nodes to prevent certain pods from being scheduled unless they tolerate the taint.
+    - **Tolerations:** Allow pods to be scheduled on nodes with matching taints.
 
-</details>
+    - Useful for workload isolation or reserving nodes for specific teams or services.
 
-<details>
-<summary markdown="span"><b>Recommended way of managing the access to multiple clusters?</b></summary>
+    **Example Taint:**
+    ```bash
+    kubectl taint nodes node1 key=value:NoSchedule
+    ```
 
-kubectl looks for the config file, multiple clusters access information can be specified in this config file. `kubectl config` commands can be used to manage the access to these clusters.
-
-</details>
-
-
-<details>
-<summary markdown="span"><b>What is PDB (Pod Disruption Budget)?</b></summary>
-
-A PDB specifies the number of replicas that an application can tolerate having, relative to how many it is intended to have. For example, a Deployment which has a .spec.replicas: 5 is supposed to have 5 pods at any given time. If its PDB allows for there to be 4 at a time, then the Eviction API will allow voluntary disruption of one, but not two pods, at a time. This is applicable for voluntary disruptions.
-
-</details>
-
-<details>
-<summary markdown="span"><b>How to troubleshoot if the POD is not getting scheduled?</b></summary>
-
-There are many factors which can led to unstartable POD. Most common one is running out of resources, use the commands like `kubectl desribe <POD> -n <Namespace>` to see the reason why POD is not started. Also, keep an eye on `kubectl get events` to see all events coming from the cluster.
-
-</details>
-
-<details>
-<summary markdown="span"><b>What are the taints and toleration?</b></summary>
-
-Taints allow a node to repel a set of pods. You can set taints on the node and only the POD which have tolerations matching the taints condition will be able to run on those nodes. This is useful in the case when you allocated node for one user and don't want to run the PODs from other users on that node. 
-
-</details>
+    **Matching Toleration in Pod:**
+    ```yaml
+    tolerations:
+    - key: "key"
+      operator: "Equal"
+      value: "value"
+      effect: "NoSchedule"
+    ```
