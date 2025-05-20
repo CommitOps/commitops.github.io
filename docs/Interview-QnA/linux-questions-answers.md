@@ -1,5 +1,5 @@
 ---
-title: Linux QnA
+title: Linux
 ---
 
 # Linux Questions and Answers
