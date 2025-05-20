@@ -9,7 +9,7 @@ title: Docker
 Docker is a containerization platform which packages your application and all its dependencies together in the form of containers so as to ensure that your application works seamlessly in any environment, be it development, test or production.
 
 <p align="center">
-  <img src="assets/docker-architecture.png" alt="Docker Architecture" width="600px" />
+  <img src="../assets/images/docker-architecture.png" alt="Docker Architecture" width="600px" />
 </p>
 
 ## Q. What is a Docker Container?
@@ -212,7 +212,7 @@ docker-compose -f docker-compose.json up
 ## Q. What is the Difference Between Containers and Virtual Machines?
 
 <p align="center">
-  <img src="assets/container-vs-virtual-machine.png" alt="Containers and Virtual Machines" width="600px" />
+  <img src="../assets/images/container-vs-virtual-machine.png" alt="Containers and Virtual Machines" width="600px" />
 </p>
 
 **Virtual Machines:**
@@ -680,7 +680,7 @@ Docker has two options for containers to store files in the host machine so that
 * **Bind mounts** may be stored anywhere on the host system.
 
 <p align="center">
-  <img src="assets/types-of-mounts-volume.png" alt="Docker Architecture" width="500px" />
+  <img src="../assets/images/types-of-mounts-volume.png" alt="Docker Volumes" width="500px" />
 </p>
 
 
@@ -1054,8 +1054,6 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
 |Images can be shared on Docker Hub.|It makes no sense in sharing a running entity, always docker images are shared.|
 |There is no such running state of Docker Image.|Containers uses RAM when created and in running state.|
 
-
-
 ## Q. How to link containers?
 
 **Connect using network port mapping:**
@@ -1064,8 +1062,6 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
 docker run -d -p 3000:3000 sofyspace/react-app
 ```
 
-
-
 ## Q. What is Paravirtualization?
 
 Paravirtualization is a computer hardware virtualization technique that allows virtual machines (VMs) to have an interface similar to that of the underlying or host hardware. This technique aims to improve the VM\'s performance by modifying the guest operating system (OS).
@@ -1073,7 +1069,5 @@ Paravirtualization is a computer hardware virtualization technique that allows v
 With paravirtualization, the guest OS is modified, so it knows that it is running in a virtualized environment on top of a hypervisor (the hardware running the VM) and not on the physical hardware.
 
 <p align="center">
-  <img src="assets/paravirtualization.png" alt="Paravirtualization" width="600px" />
+  <img src="../assets/images/paravirtualization.png" alt="Paravirtualization" width="600px" />
 </p>
-
-
