@@ -6,123 +6,77 @@ title: Terraform
 
 ## <a name="Terraform-101">Terraform 101</a>
 
-<details>
-<summary markdown="span"><b>What is Terraform?</b></summary>
+???+ question "What is Terraform?"
+    [Terraform](https://www.terraform.io/intro): "HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features."
 
-[Terraform](https://www.terraform.io/intro): "HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features."
+???+ question "What are the advantages in using Terraform or IaC in general?"
+    - Full automation: In the past, resource creation, modification and removal were handled manually or by using a set of tooling. With Terraform or other IaC technologies, you manage the full lifecycle in an automated fashion.
+    - Modular and Reusable: Code that you write for certain purposes can be used and assembled in different ways. You can write code to create resources on a public cloud and it can be shared with other teams who can also use it in their account on the same (or different) cloud.
+    - Improved testing: Concepts like CI can be easily applied on IaC based projects and code snippets. This allow you to test and verify operations beforehand.
 
-</details>
+???+ question "What are some of Terraform features?"
+    - Declarative: Terraform uses the declarative approach (rather than the procedural one) in order to define end-status of the resources.
+    - No agents: as opposed to other technologies (e.g. Puppet) where you use a model of agent and server, with Terraform you use the different APIs (of clouds, services, etc.) to perform the operations.
+    - Community: Terraform has strong community who constantly publishes modules and fixes when needed. This ensures there is good modules maintenance and users can get support quite quickly at any point.
 
-<details>
+???+ question "What language does Terraform uses?"
+    A DSL called "HCL" (Hashicorp Configuration Language). A declarative language for defining infrastructure.
 
-<summary markdown="span"><b>What are the advantages in using Terraform or IaC in general?</b></summary>
+???+ "What's a typical Terraform workflow?"
+    1. Write Terraform definitions: `.tf` files written in HCL that described the desired infrastructure state (and run `terraform init` at the very beginning).
+    2. Review: With command such as `terraform plan` you can get a glance at what Terraform will perform with the written definitions.
+    3. Apply definitions: With the command `terraform apply` Terraform will apply the given definitions, by adding, modifying or removing the resources.
 
-- Full automation: In the past, resource creation, modification and removal were handled manually or by using a set of tooling. With Terraform or other IaC technologies, you manage the full lifecycle in an automated fashion.
-- Modular and Reusable: Code that you write for certain purposes can be used and assembled in different ways. You can write code to create resources on a public cloud and it can be shared with other teams who can also use it in their account on the same (or different) cloud.
-- Improved testing: Concepts like CI can be easily applied on IaC based projects and code snippets. This allow you to test and verify operations beforehand
+    This is a manual process. Most of the time this is automated so user submits a PR/MR to propose terraform changes, there is a process to test these changes and once merged they are applied (`terraform apply`).
 
-</details>
+???+ "What are some use cases for using Terraform?"
+    - Infra provisioning and management: You need to automate or code your infra so you are able to test it easily, apply it and make any changes necessary.
+    - Multi-cloud environment: You manage infrastructure on different clouds, but looking for a consistent way to do it across the clouds.
+    - Consistent environments: You manage environments such as test, production, staging, ... and looking for a way to have them consistent so any modification in one of them, applies to other environments as well.
 
-<details>
-<summary markdown="span"><b>What are some of Terraform features?</b></summary>
+???+ "What's the difference between Terraform and technologies such as Ansible, Puppet, Chef, etc."
+    Terraform is considered to be an IaC technology. It's used for provisioning resources, for managing infrastructure on different platforms.
 
-- Declarative: Terraform uses the declarative approach (rather than the procedural one) in order to define end-status of the resources
-- No agents: as opposed to other technologies (e.g. Puppet) where you use a model of agent and server, with Terraform you use the different APIs (of clouds, services, etc.) to perform the operations
-- Community: Terraform has strong community who constantly publishes modules and fixes when needed. This ensures there is good modules maintenance and users can get support quite quickly at any point
+    Ansible, Puppet and Chef are Configuration Management technologies. They are used once there is an instance running and you would like to apply some configuration on it like installing an application, applying security policy, etc.
 
-</details>
+    To be clear, CM tools can be used to provision resources so in the end goal of having infrastructure, both Terraform and something like Ansible, can achieve the same result. The difference is in the how. Ansible doesn't save the state of resources, it doesn't know how many instances there are in your environment as opposed to Terraform. At the same time while Terraform can perform configuration management tasks, it has less module support for that specific goal and it doesn't track the task execution state like Ansible.
 
-<details>
-<summary markdown="span"><b>What language does Terraform uses?</b></summary>
-
-A DSL called "HCL" (Hashicorp Configuration Language). A declarative language for defining infrastructure.
-
-</details>
-
-<details>
-<summary markdown="span"><b>What's a typical Terraform workflow?</b></summary>
-
-1. Write Terraform definitions: `.tf` files written in HCL that described the desired infrastructure state (and run `terraform init` at the very beginning)
-2. Review: With command such as `terraform plan` you can get a glance at what Terraform will perform with the written definitions
-3. Apply definitions: With the command `terraform apply` Terraform will apply the given definitions, by adding, modifying or removing the resources
-
-This is a manual process. Most of the time this is automated so user submits a PR/MR to propose terraform changes, there is a process to test these changes and once merged they are applied (`terraform apply`).
-
-</details>
-
-<details>
-<summary markdown="span"><b>What are some use cases for using Terraform?</b></summary>
-
-- Infra provisioning and management: You need to automated or code your infra so you are able to test it easily, apply it and make any changes necessary.
-- Multi-cloud environment: You manage infrastructure on different clouds, but looking for a consistent way to do it across the clouds
-- Consistent environments: You manage environments such as test, production, staging, ... and looking for a way to have them consistent so any modification in one of them, applies to other environments as well
-
-</details>
-
-<details>
-<summary markdown="span"><b>What's the difference between Terraform and technologies such as Ansible, Puppet, Chef, etc.</b></summary>
-
-Terraform is considered to be an IaC technology. It's used for provisioning resources, for managing infrastructure on different platforms.
-
-Ansible, Puppet and Chef are Configuration Management technologies. They are used once there is an instance running and you would like to apply some configuration on it like installing an application, applying security policy, etc.
-
-To be clear, CM tools can be used to provision resources so in the end goal of having infrastructure, both Terraform and something like Ansible, can achieve the same result. The difference is in the how. Ansible doesn't saves the state of resources, it doesn't know how many instances there are in your environment as opposed to Terraform. At the same time while Terraform can perform configuration management tasks, it has less modules support for that specific goal and it doesn't track the task execution state as Ansible. The differences are there and it's most of the time recommended to mix the technologies, so Terraform used for managing infrastructure and CM technologies used for configuration on top of that infrastructure.
-
-</details>
+    The differences are there and it's most of the time recommended to mix the technologies, so Terraform is used for managing infrastructure and CM technologies are used for configuration on top of that infrastructure.
 
 ### <a name="Terraform-Hands-On-Basics">Terraform Hands-On Basics</a>
 
-Q) Explain the following block of Terraform code
+???+ "Q) Explain the following block of Terraform code"
+    ```hcl
+    resource "aws_instance" "some-instance" {
+      ami           = "ami-201720221991yay"
+      instance_type = "t2.micro"
+    }
+    ```
 
-```json
-resource "aws_instance" "some-instance" {
-  ami           = "ami-201720221991yay"
-  instance_type = "t2.micro
-}
-```
+    It's a resource of type `aws_instance` used to provision an instance. The name of the resource (NOT INSTANCE) is `"some-instance"`.
 
-It's a resource of type "aws_instance" used to provision an instance. The name of the resource (NOT INSTANCE) is "some-instance".
+    The instance itself will be provisioned with type `t2.micro` and using an image of the AMI `"ami-201720221991yay"`.
 
-The instance itself will be provisioned with type "t2.micro" and using an image of the AMI "ami-201720221991yay".
+???+ "Q) What do you do next after writing the following in main.tf file?"
+    ```hcl
+    resource "aws_instance" "some-instance" {
+      ami           = "ami-201720221991yay"
+      instance_type = "t2.micro"
+    }
+    ```
 
-Q) What do you do next after writing the following in main.tf file?
+    Run `terraform init`. This will scan the code in the directory to figure out which providers are used (in this case the AWS provider) and will download them.
 
-```json
-resource "aws_instance" "some-instance" {
-  ami           = "ami-201720221991yay"
-  instance_type = "t2.micro
-}
-```
+???+ "Q) You've executed `terraform init` and now you would like to move forward to creating the resources but you have concerns and would like to make be 100% sure on what you are going to execute. What should you be doing?"
+    Execute `terraform plan`. That will provide detailed information on what Terraform will do once you apply the changes.
 
-Run `terraform init`. This will scan the code in the directory to figure out which providers are used (in this case AWS provider) and will download them.
+???+ "Q) You've downloaded the providers, seen what Terraform will do (with terraform plan) and you are ready to actually apply the changes. What should you do next?"
+    Run `terraform apply`. That will apply the changes described in your `.tf` files.
 
-<details>
-<summary markdown="span"><b>You've executed <code>terraform init</code> and now you would like to move forward to creating the resources but you have concerns and would like to make be 100% sure on what you are going to execute. What should you be doing?</b></summary>
-
-Execute `terraform plan`. That will provide a detailed information on what Terraform will do once you apply the changes.
-
-</details>
-
-<details>
-<summary markdown="span"><b>You've downloaded the providers, seen the what Terraform will do (with terraform plan) and you are ready to actually apply the changes. What should you do next?</b></summary>
-
-Run `terraform apply`. That will apply the changes described in your .tf files.
-
-</details>
-
-<details>
-<summary markdown="span"><b>Explain the meaning of the following strings that seen at the beginning of each line When you run <code>terraform apply</code>
-- '+'
-- '-'
-- '-/+'
-
-</b></summary>
-
-* '+' - The resource or attribute is going to be added
-* '-' - the resource or attribute is going to be removed
-* '-/+' - the resource or attribute is going to be replaced
-
-</details>
+???+ "Q) Explain the meaning of the following strings that are seen at the beginning of each line when you run `terraform apply`"
+    - `+` - The resource or attribute is going to be **added**  
+    - `-` - The resource or attribute is going to be **removed**  
+    - `-/+` - The resource or attribute is going to be **replaced**
 
 <details>
 <summary markdown="span"><b>How to cleanup Terraform resources? Why the user shold be careful doing so?</b></summary>
