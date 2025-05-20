@@ -4,7 +4,7 @@ title: Linux QnA
 
 # Linux Questions and Answers
 
-???+ note "Give some examples of Linux distribution. What is your favorite distro and why?"
+???+ question "Give some examples of Linux distribution. What is your favorite distro and why?"
 
     - Red Hat Enterprise Linux  
     - Fedora  
@@ -30,7 +30,7 @@ title: Linux QnA
     - [List of Linux distributions](https://en.wikipedia.org/wiki/List_of_Linux_distributions)  
     - [What is your favorite Linux distro and why?](https://www.quora.com/What-is-your-favorite-Linux-distro-and-why)
 
-???+ note "What are the differences between Unix, Linux, BSD, and GNU?"
+???+ question "What are the differences between Unix, Linux, BSD, and GNU?"
 
     **GNU** isn't really an OS. It's more of a set of rules or philosophies that govern free software, that at the same time gave birth to a bunch of tools while trying to create an OS. So **GNU** tools are basically open versions of tools that already existed, but were reimplemented to conform to principles of open software. **GNU/Linux** is a mesh of those tools and the **Linux kernel** to form a complete OS, but there are other GNUs, e.g. **GNU/Hurd**.
 
@@ -48,7 +48,7 @@ title: Linux QnA
     - [The Great Debate: Is it Linux or GNU/Linux?](https://www.howtogeek.com/139287/the-great-debate-is-it-linux-or-gnulinux/)
 
 
-???+ note "What is a CLI? Tell me about your favorite CLI tools, tips, and hacks."
+???+ question "What is a CLI? Tell me about your favorite CLI tools, tips, and hacks."
 
     **CLI** is an acronym for Command Line Interface or Command Language Interpreter. The command line is one of the most powerful ways to control your system/computer.
 
@@ -82,7 +82,7 @@ title: Linux QnA
     - [What is your single most favorite command-line trick using Bash?](https://stackoverflow.com/questions/68372/what-is-your-single-most-favorite-command-line-trick-using-bash/69716)  
     - [What are your favorite command line features or tricks?](https://unix.stackexchange.com/questions/6/what-are-your-favorite-command-line-features-or-tricks)
 
-???+ note "What is your favorite shell and why?"
+???+ question "What is your favorite shell and why?"
 
     **BASH** is my favorite. It’s really a preferential kind of thing, where I love the syntax and it just "clicks" for me. The input/output redirection syntax (`>>`, `<< 2>&1`, `2>`, `1>`, etc.) is similar to C++ which makes it easier for me to recognize.
 
@@ -93,14 +93,14 @@ title: Linux QnA
 
 ---
 
-???+ note "How do you get help on the command line? \*\*\*"
+???+ question "How do you get help on the command line? \*\*\*"
 
     - `man [commandname]` can be used to see a description of a command (e.g., `man less`, `man cat`)  
     - `-h` or `--help` — some programs print instructions when passed this parameter (e.g., `python -h` and `python --help`)
 
 ---
 
-???+ note "Your first 5 commands on a *nix server after login."
+???+ question "Your first 5 commands on a *nix server after login."
 
     - `w` — displays useful information like server uptime and logged-in users  
     - `top` — shows running processes, sortable by CPU, memory utilization, and more  
@@ -113,7 +113,7 @@ title: Linux QnA
 
 ---
 
-???+ note "What do the fields in `ls -al` output mean?"
+???+ question "What do the fields in `ls -al` output mean?"
 
     In the order of output:
 
@@ -152,7 +152,7 @@ title: Linux QnA
     - [What do the fields in ls -al output mean? (original)](https://unix.stackexchange.com/questions/103114/what-do-the-fields-in-ls-al-output-mean)
 
 
-???+ note "How do you get a list of logged-in users?"
+???+ question "How do you get a list of logged-in users?"
 
     For a summary of logged-in users, including each login of a username, the terminal users are attached to, the date/time they logged in, and possibly the computer from which they are making the connection, enter:
 
@@ -180,7 +180,7 @@ title: Linux QnA
 
 ---
 
-???+ note "What is the advantage of executing the running processes in the background? How can you do that?"
+???+ question "What is the advantage of executing the running processes in the background? How can you do that?"
 
     The most significant advantage of executing a process in the background is that you can perform other tasks simultaneously. More processes can be completed while you are working on different things. This can be done by appending an ampersand (`&`) at the end of the command.
 
@@ -231,11 +231,11 @@ title: Linux QnA
 
 ---
 
-???+ note "Before you can manage processes, you must be able to identify them. Which tools will you use? \*\*\*"
+???+ question "Before you can manage processes, you must be able to identify them. Which tools will you use? \*\*\*"
 
     To be completed.
 
-???+ note "Running the command as root user. Is it a good or bad practice?"
+???+ question "Running the command as root user. Is it a good or bad practice?"
 
     Running everything as root is **bad practice** due to several key reasons:
 
@@ -253,7 +253,7 @@ title: Linux QnA
 
 ---
 
-???+ note "How to check memory stats and CPU stats?"
+???+ question "How to check memory stats and CPU stats?"
 
     Use the following tools:
 
@@ -268,7 +268,7 @@ title: Linux QnA
 
 ---
 
-???+ note "What is load average?"
+???+ question "What is load average?"
 
     **Load average** shows the system demand — the average number of threads (running + waiting) over 1, 5, and 15 minutes.
 
@@ -289,7 +289,7 @@ title: Linux QnA
 
 ---
 
-???+ note "Where is my password stored on Linux/Unix?"
+???+ question "Where is my password stored on Linux/Unix?"
 
     Passwords themselves are **not** stored. Instead, **hashes** are stored in:
 
@@ -308,7 +308,7 @@ title: Linux QnA
     - [Where are the passwords of the users located in Linux?](https://www.cyberciti.biz/faq/where-are-the-passwords-of-the-users-located-in-linux/)
     - [Linux Password & Shadow File Formats](https://www.tldp.org/LDP/lame/LAME/linux-admin-made-easy/shadow-file-formats.html)
 
-???+ note "How to recursively change permissions for all directories except files and for all files except directories?"
+???+ question "How to recursively change permissions for all directories except files and for all files except directories?"
 
     To change permissions recursively:
 
@@ -327,7 +327,7 @@ title: Linux QnA
 
 ---
 
-???+ note "Every command fails with `command not found`. How to trace the source of the error and resolve it?"
+???+ question "Every command fails with `command not found`. How to trace the source of the error and resolve it?"
 
     Likely, the `PATH` environment variable has been overwritten or cleared.
 
@@ -356,7 +356,7 @@ title: Linux QnA
 
 ---
 
-???+ note "You're typing `CTRL + C` but your script is still running. How do you stop it?"
+???+ question "You're typing `CTRL + C` but your script is still running. How do you stop it?"
 
     If `CTRL + C` does not terminate the process, try the following:
 
@@ -383,7 +383,7 @@ title: Linux QnA
 
 ---
 
-???+ note "What is `grep` command? How to match multiple strings in the same line?"
+???+ question "What is `grep` command? How to match multiple strings in the same line?"
 
     `grep` is a command-line utility that searches for patterns within text.
 
@@ -404,7 +404,7 @@ title: Linux QnA
 
 ---
 
-???+ note "Explain the file content commands along with the description."
+???+ question "Explain the file content commands along with the description."
 
     - `head`: Displays the beginning of a file.
     - `tail`: Displays the end of a file.
@@ -417,7 +417,7 @@ title: Linux QnA
 
 ---
 
-???+ note "SIGHUP, SIGINT, SIGKILL, and SIGTERM POSIX signals. Explain."
+???+ question "SIGHUP, SIGINT, SIGKILL, and SIGTERM POSIX signals. Explain."
 
     - **SIGHUP**: Sent when a terminal closes. Many daemons reload config instead of exiting.
     - **SIGINT**: Sent on `Ctrl+C`, interrupts the process.
@@ -429,7 +429,7 @@ title: Linux QnA
     - [Introduction To Unix Signals Programming](http://titania.ctie.monash.edu.au/signals/)
 
 
-???+ note "What does `kill` command do?"
+???+ question "What does `kill` command do?"
 
     In Unix-like systems, `kill` sends a signal to a process. By default, it sends the `SIGTERM` (termination) signal.
 
@@ -440,7 +440,7 @@ title: Linux QnA
 
 ---
 
-???+ note "What is the difference between `rm` and `rm -rf`?"
+???+ question "What is the difference between `rm` and `rm -rf`?"
 
     - `rm`: Deletes files only (not directories).
     - `rm -rf`: Recursively and forcefully deletes directories and their contents.
@@ -454,7 +454,7 @@ title: Linux QnA
 
 ---
 
-???+ note "How do I `grep` recursively? Explain on several examples."
+???+ question "How do I `grep` recursively? Explain on several examples."
 
     To recursively search directories using `grep`, use the `-r` (or `--recursive`) flag:
 
@@ -481,7 +481,7 @@ title: Linux QnA
 
 ---
 
-???+ note "`archive.tgz` has ~30 GB. How do you list content of it and extract only one file?"
+???+ question "`archive.tgz` has ~30 GB. How do you list content of it and extract only one file?"
 
     - **List contents:**
       ```bash
@@ -499,7 +499,7 @@ title: Linux QnA
 
 ---
 
-???+ note "Execute combine multiple shell commands in one line."
+???+ question "Execute combine multiple shell commands in one line."
 
     - **Run next command only if previous succeeds:**
       ```bash
@@ -525,7 +525,7 @@ title: Linux QnA
 
 ---
 
-???+ note "What symbolic representation can you pass to `chmod` to give all users execute access to a file without affecting other permissions?"
+???+ question "What symbolic representation can you pass to `chmod` to give all users execute access to a file without affecting other permissions?"
 
     Use the following command:
 
@@ -542,7 +542,7 @@ title: Linux QnA
 
 ---
 
-???+ note "How can I sync two local directories?"
+???+ question "How can I sync two local directories?"
 
     Use `rsync` to sync contents from **dir1** to **dir2**:
 
@@ -562,7 +562,7 @@ title: Linux QnA
 
 ---
 
-???+ note "Many basic maintenance tasks require you to edit config files. Explain ways to undo the changes you make."
+???+ question "Many basic maintenance tasks require you to edit config files. Explain ways to undo the changes you make."
 
     Ways to undo config file changes:
 
@@ -583,7 +583,7 @@ title: Linux QnA
 
 ---
 
-???+ note "You have to find all files larger than 20MB. How do you do it?"
+???+ question "You have to find all files larger than 20MB. How do you do it?"
 
     Use `find` to locate large files:
 
@@ -599,7 +599,7 @@ title: Linux QnA
 
 ---
 
-???+ note "Why do we use `sudo su -` and not just `sudo su`?"
+???+ question "Why do we use `sudo su -` and not just `sudo su`?"
 
     - `sudo su`: switches to root but retains current user’s environment.
     - `sudo su -`: gives a **login shell** for root, resetting the environment as if you logged in as root.
@@ -610,209 +610,145 @@ title: Linux QnA
     - [su vs sudo -s vs sudo -i](https://unix.stackexchange.com/questions/35338/su-vs-sudo-s-vs-sudo-i-vs-sudo-bash)
     - [Why use `su -`?](https://unix.stackexchange.com/questions/7013/why-do-we-use-su-and-not-just-su)
 
+???+ question "How to find files that have been modified on your system in the past 60 minutes?"
+    ```bash
+    find / -mmin -60 -type f
+    ```
+    Useful resources:
 
-<details>
-<summary markdown="span"><b>How to find files that have been modified on your system in the past 60 minutes?</b></summary><br>
+    - [Get all files modified in last 30 days in a directory (original)](https://stackoverflow.com/questions/23070245/get-all-files-modified-in-last-30-days-in-a-directory)
 
-```bash
-find / -mmin -60 -type f
-```
+???+ question "What are the main reasons for keeping old log files?"
+    They are essential to investigate issues on the system. **Log management** is absolutely critical for IT security.
 
-Useful resources:
+    Servers, firewalls, and other IT equipment keep log files that record important events and transactions. This information can provide important clues about hostile activity affecting your network from within and without. Log data can also provide information for identifying and troubleshooting equipment problems including configuration problems and hardware failure.
 
-- [Get all files modified in last 30 days in a directory (orignal)](https://stackoverflow.com/questions/23070245/get-all-files-modified-in-last-30-days-in-a-directory)
+    It’s your server’s record of who’s come to your site, when, and exactly what they looked at. It’s incredibly detailed, showing:
 
-</details>
+    - where folks came from
+    - what browser they were using
+    - exactly which files they looked at
+    - how long it took to load each file
+    - and a whole bunch of other nerdy stuff
 
-<details>
-<summary markdown="span"><b>What are the main reasons for keeping old log files?</b></summary><br>
+    Factors to consider:
 
-They are essential to investigate issues on the system. **Log management** is absolutely critical for IT security.
+    - legal requirements for retention or destruction
+    - company policies for retention and destruction
+    - how long the logs are useful
+    - what questions you're hoping to answer from the logs
+    - how much space they take up
 
-Servers, firewalls, and other IT equipment keep log files that record important events and transactions. This information can provide important clues about hostile activity affecting your network from within and without. Log data can also provide information for identifying and troubleshooting equipment problems including configuration problems and hardware failure.
+    By collecting and analyzing logs, you can understand what transpires within your network. Each log file contains many pieces of information that can be invaluable, especially if you know how to read them and analyze them.
 
-It’s your server’s record of who’s come to your site, when, and exactly what they looked at. It’s incredibly detailed, showing:
+    Useful resources:
 
-- where folks came from
-- what browser they were using
-- exactly which files they looked at
-- how long it took to load each file
-- and a whole bunch of other nerdy stuff
+    - [How long do you keep log files?](https://serverfault.com/questions/135365/how-long-do-you-keep-log-files)
 
-Factors to consider:
+???+ question "What is an incremental backup?"
+    An incremental backup is a type of backup that only copies files that have changed since the previous backup.
 
-- legal requirements for retention or destruction
-- company policies for retention and destruction
-- how long the logs are useful
-- what questions you're hoping to answer from the logs
-- how much space they take up
+    Useful resources:
 
-By collecting and analyzing logs, you can understand what transpires within your network. Each log file contains many pieces of information that can be invaluable, especially if you know how to read them and analyze them.
+    - [What Is Incremental Backup?](https://www.nakivo.com/blog/what-is-incremental-backup/)
 
-Useful resources:
+???+ question "What is RAID? What is RAID0, RAID1, RAID5, RAID6, RAID10?"
+    A **RAID** (Redundant Array of Inexpensive Disks) is a technology that is used to increase the performance and/or reliability of data storage.
 
-- [How long do you keep log files?](https://serverfault.com/questions/135365/how-long-do-you-keep-log-files)
+    - **RAID0**: Also known as disk **striping**, is a technique that breaks up a file and spreads the data across all the disk drives in a RAID group. There are no safeguards against failure
+    - **RAID1**: A popular disk subsystem that increases safety by writing the same data on two drives. Called "**mirroring**," RAID 1 does not increase write performance, but read performance may equal up to the sum of each disks' performance. However, if one drive fails, the second drive is used, and the failed drive is manually replaced. After replacement, the RAID controller duplicates the contents of the working drive onto the new one
+    - **RAID5**: It is disk subsystem that increases safety by computing parity data and increasing speed by interleaving data across three or more drives (**striping**). Upon failure of a single drive, subsequent reads can be calculated from the distributed parity such that no data is lost
+    - **RAID6**: RAID 6 extends RAID 5 by adding another parity block. It requires a minimum of four disks and can continue to execute read and write of any two concurrent disk failures. RAID 6 does not have a performance penalty for read operations, but it does have a performance penalty on write operations because of the overhead associated with parity calculations
+    - **RAID10**: Also known as **RAID 1+0**, is a RAID configuration that combines disk mirroring and disk striping to protect data. It requires a minimum of four disks, and stripes data across mirrored pairs. As long as one disk in each mirrored pair is functional, data can be retrieved. If two disks in the same mirrored pair fail, all data will be lost because there is no parity in the striped sets
 
-</details>
+    Useful resources:
 
-<details>
-<summary markdown="span"><b>What is an incremental backup?</b></summary><br>
+    - [RAID](https://www.prepressure.com/library/technology/raid)
 
-An incremental backup is a type of backup that only copies files that have changed since the previous backup.
+???+ question "How is a user’s default group determined? How would you change it?"
+    ```bash
+    useradd -m -g initial_group username
+    ```
 
-Useful resources:
+    `-g/--gid`: defines the group name or number of the user's initial login group. If specified, the group name must exist; if a group number is provided, it must refer to an already existing group.
 
-- [What Is Incremental Backup?](https://www.nakivo.com/blog/what-is-incremental-backup/)
+    If not specified, the behaviour of useradd will depend on the `USERGROUPS_ENAB` variable contained in `/etc/login.defs`. The default behaviour (`USERGROUPS_ENAB yes`) is to create a group with the same name as the username, with **GID** equal to **UID**.
 
-</details>
+    Useful resources:
 
-<details>
-<summary markdown="span"><b>What is RAID? What is RAID0, RAID1, RAID5, RAID6, RAID10? </b></summary><br>
+    - [How can I change a user's default group in Linux?](https://unix.stackexchange.com/questions/26675/how-can-i-change-a-users-default-group-in-linux)
 
-A **RAID** (Redundant Array of Inexpensive Disks) is a technology that is used to increase the performance and/or reliability of data storage.
+???+ question "What is your best command line text editor for daily working and scripting? ***"
+    To be completed.
 
-- **RAID0**: Also known as disk **striping**, is a technique that breaks up a file and spreads the data across all the disk drives in a RAID group. There are no safeguards against failure
-- **RAID1**: A popular disk subsystem that increases safety by writing the same data on two drives. Called "**mirroring**," RAID 1 does not increase write performance, but read performance may equal up to the sum of each disks' performance. However, if one drive fails, the second drive is used, and the failed drive is manually replaced. After replacement, the RAID controller duplicates the contents of the working drive onto the new one
-- **RAID5**: It is disk subsystem that increases safety by computing parity data and increasing speed by interleaving data across three or more drives (**striping**). Upon failure of a single drive, subsequent reads can be calculated from the distributed parity such that no data is lost
-- **RAID6**: RAID 6 extends RAID 5 by adding another parity block. It requires a minimum of four disks and can continue to execute read and write of any two concurrent disk failures. RAID 6 does not have a performance penalty for read operations, but it does have a performance penalty on write operations because of the overhead associated with parity calculations
-- **RAID10**: Also known as **RAID 1+0**, is a RAID configuration that combines disk mirroring and disk striping to protect data. It requires a minimum of four disks, and stripes data across mirrored pairs. As long as one disk in each mirrored pair is functional, data can be retrieved. If two disks in the same mirrored pair fail, all data will be lost because there is no parity in the striped sets
+???+ question "Why would you want to mount servers in a rack?"
+    - Protecting Hardware
+    - Proper Cooling
+    - Organized Workspace
+    - Better Power Management
+    - Cleaner Environment
 
-Useful resources:
+    Useful resources:
 
-- [RAID](https://www.prepressure.com/library/technology/raid)
+    - [5 Reasons to Rackmount Your PC](https://www.racksolutions.com/news/custom-projects/5-reasons-to-rackmount-pc/)
 
-</details>
+???+ question "How to change permissions of the file in linux?"
+    The `chmod` command is used to change permissions of files and directories. It supports two modes of operation: symbolic mode and octal mode.
 
-<details>
-<summary markdown="span"><b>How is a user’s default group determined? How would you change it? </b></summary><br>
+    1. Symbolic Mode:
+       - Syntax: `chmod [options] [permissions] file(s)`
 
-```bash
-useradd -m -g initial_group username
-```
+       - Examples:
+         - Grant read and write permissions to the owner: `chmod u+rw file.txt`
+         - Revoke execute permission from the group: `chmod g-x script.sh`
+         - Add read and execute permissions to others: `chmod o+rx program`
+         - Combined permissions: `chmod u=rw,go=r file.txt`
 
-`-g/--gid`: defines the group name or number of the user's initial login group. If specified, the group name must exist; if a group number is provided, it must refer to an already existing group.
+    2. Octal Mode:
+       - Syntax: `chmod [options] [mode] file(s)`
 
-If not specified, the behaviour of useradd will depend on the `USERGROUPS_ENAB` variable contained in `/etc/login.defs`. The default behaviour (`USERGROUPS_ENAB yes`) is to create a group with the same name as the username, with **GID** equal to **UID**.
-
-Useful resources:
-
-- [How can I change a user's default group in Linux?](https://unix.stackexchange.com/questions/26675/how-can-i-change-a-users-default-group-in-linux)
-
-</details>
-
-<details>
-<summary markdown="span"><b>What is your best command line text editor for daily working and scripting? ***</b></summary><br>
-
-To be completed.
-
-</details>
-
-<details>
-<summary markdown="span"><b>Why would you want to mount servers in a rack?</b></summary><br>
-
-- Protecting Hardware
-- Proper Cooling
-- Organized Workspace
-- Better Power Management
-- Cleaner Environment
-
-Useful resources:
-
-- [5 Reasons to Rackmount Your PC](https://www.racksolutions.com/news/custom-projects/5-reasons-to-rackmount-pc/)
-
-</details>
-
-<details>
-<summary markdown="span"><b>How to change permissions of the file in linux?</b></summary><br>
-
-The `chmod` command is used to change permissions of files and directories. It supports two modes of operation: symbolic mode and octal mode.
-
-1. Symbolic Mode:
-   - Syntax: `chmod [options] [permissions] file(s)`
-
-   - Examples:
-     - Grant read and write permissions to the owner: `chmod u+rw file.txt`
-     - Revoke execute permission from the group: `chmod g-x script.sh`
-     - Add read and execute permissions to others: `chmod o+rx program`
-     - Combined permissions: `chmod u=rw,go=r file.txt`
-
-2. Octal Mode:
-   - Syntax: `chmod [options] [mode] file(s)`
-
-   - Examples:
-     - Set read, write, and execute permissions for owner, group, and others: `chmod 755 script.sh`
-     - Restrict permissions to the owner only: `chmod 700 private.txt`
-     - Grant full permissions to everyone: `chmod 777 public_dir`
-
-</details>
-
-<details>
-<summary markdown="span"><b>How to change owner of the file in linux?</b></summary><br>
-
-The `chown` command is used to change the ownership of files and directories.
-
-- Syntax: `chown [options] owner:group file(s)`
-
-- Examples:
-  - Change the owner and group of a file: `chown john:users file.txt`
-  - Recursively change ownership for a directory and its contents: `chown -R alice:staff project_dir`
-
-</details>
-
-<details>
-<summary markdown="span"><b>How to change group ownership of the file in linux?</b></summary><br>
-
-The `chgrp` command is used to change the group ownership of files and directories.
-
-- Syntax: `chgrp [options] group file(s)`
-
-- Examples:
-  - Change the group of a file: `chgrp developers script.sh`
-  - Recursively change group ownership for a directory and its contents: `chgrp -R team project_dir`
-
-</details>
-
-<details>
-<summary markdown="span"><b>What are the different Linux Directory Structure?</b></summary><br>
-
-The folder structure in Ubuntu Linux follows the Filesystem Hierarchy Standard (FHS), which is a standard for organizing the files and directories on a Unix-like operating system. Here is an overview of the main directories you will typically find in Ubuntu:
-
-- **/bin**: Contains essential command-line executable files (binaries) that are available to all users.
-
-- **/boot**: Contains files related to the boot process, including the Linux kernel, initial ramdisk (initrd), and bootloader configuration.
-
-- **/dev**: Contains device files that represent and allow access to various hardware devices on the system.
-
-- **/etc**: Contains system-wide configuration files for various applications and services.
-
-- **/home**: The home directories for individual users. Each user typically has a subdirectory here to store their personal files and settings.
-
-- **/lib** and **/lib64**: These directories contain shared libraries needed by the system and applications. The "lib64" directory is present on 64-bit systems.
-
-- **/media**: Mount point for removable media devices such as USB drives or optical discs.
-
-- **/mnt**: A general-purpose mount point for temporarily mounting filesystems.
-
-- **/opt**: Contains optional software packages installed on the system. Applications installed here are often self-contained in their own directories.
-
-- **/proc**: A virtual filesystem that provides information about processes and system status. It is used by many system utilities to obtain runtime information.
-
-- **/root**: The home directory for the root user, the administrative superuser.
-
-- **/run**: A temporary filesystem that contains runtime data for various system services. It is cleared on each reboot.
-
-- **/sbin**: Contains system binaries (executable files) that are primarily used by the root user for system administration tasks.
-
-- **/srv**: Contains data for services provided by the system.
-
-- **/sys**: A virtual filesystem that exposes kernel-related information and configuration.
-
-- **/tmp**: A directory for temporary files created by applications and users. Its contents are typically cleared on each reboot.
-
-- **/usr**: Contains user-related programs, libraries, documentation, and shared resources. It has subdirectories such as /usr/bin for user binaries, /usr/lib for libraries, and /usr/share for shared data.
-
-- **/var**: Contains variable data that changes during the system's operation, such as logs, databases, and spool files.
-
-This is a high-level overview of the Ubuntu Linux folder structure. Each directory serves a specific purpose in organizing the system's files and resources.
-
-</details>
+       - Examples:
+         - Set read, write, and execute permissions for owner, group, and others: `chmod 755 script.sh`
+         - Restrict permissions to the owner only: `chmod 700 private.txt`
+         - Grant full permissions to everyone: `chmod 777 public_dir`
+
+???+ question "How to change owner of the file in linux?"
+    The `chown` command is used to change the ownership of files and directories.
+
+    - Syntax: `chown [options] owner:group file(s)`
+
+    - Examples:
+      - Change the owner and group of a file: `chown john:users file.txt`
+      - Recursively change ownership for a directory and its contents: `chown -R alice:staff project_dir`
+
+???+ question "How to change group ownership of the file in linux?"
+    The `chgrp` command is used to change the group ownership of files and directories.
+
+    - Syntax: `chgrp [options] group file(s)`
+
+    - Examples:
+      - Change the group of a file: `chgrp developers script.sh`
+      - Recursively change group ownership for a directory and its contents: `chgrp -R team project_dir`
+
+???+ question "What are the different Linux Directory Structure?"
+    The folder structure in Ubuntu Linux follows the Filesystem Hierarchy Standard (FHS), which is a standard for organizing the files and directories on a Unix-like operating system. Here is an overview of the main directories you will typically find in Ubuntu:
+
+    - **/bin**: Contains essential command-line executable files (binaries) that are available to all users.
+    - **/boot**: Contains files related to the boot process, including the Linux kernel, initial ramdisk (initrd), and bootloader configuration.
+    - **/dev**: Contains device files that represent and allow access to various hardware devices on the system.
+    - **/etc**: Contains system-wide configuration files for various applications and services.
+    - **/home**: The home directories for individual users. Each user typically has a subdirectory here to store their personal files and settings.
+    - **/lib** and **/lib64**: These directories contain shared libraries needed by the system and applications. The "lib64" directory is present on 64-bit systems.
+    - **/media**: Mount point for removable media devices such as USB drives or optical discs.
+    - **/mnt**: A general-purpose mount point for temporarily mounting filesystems.
+    - **/opt**: Contains optional software packages installed on the system. Applications installed here are often self-contained in their own directories.
+    - **/proc**: A virtual filesystem that provides information about processes and system status. It is used by many system utilities to obtain runtime information.
+    - **/root**: The home directory for the root user, the administrative superuser.
+    - **/run**: A temporary filesystem that contains runtime data for various system services. It is cleared on each reboot.
+    - **/sbin**: Contains system binaries (executable files) that are primarily used by the root user for system administration tasks.
+    - **/srv**: Contains data for services provided by the system.
+    - **/sys**: A virtual filesystem that exposes kernel-related information and configuration.
+    - **/tmp**: A directory for temporary files created by applications and users. Its contents are typically cleared on each reboot.
+    - **/usr**: Contains user-related programs, libraries, documentation, and shared resources. It has subdirectories such as /usr/bin for user binaries, /usr/lib for libraries, and /usr/share for shared data.
+    - **/var**: Contains variable data that changes during the system's operation, such as logs, databases, and spool files.
+    This is a high-level overview of the Ubuntu Linux folder structure. Each directory serves a specific purpose in organizing the system's files and resources.
