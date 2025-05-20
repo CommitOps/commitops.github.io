@@ -57,6 +57,14 @@ theme:
 plugins:
   - search
   - quiz
+  - mkdocs_quiz
+      quiz_file: quizzes.json
+      language: en
+      show_refresh_button: true
+      show_indice_on_answer: true
+      show_score: true
+      show_progress_bar: true
+      logging: true
   - minify
   - awesome-nav
   - include_dir_to_nav
@@ -92,14 +100,15 @@ markdown_extensions:
 
 extra_css:
   - assets/stylesheets/extra.css
+  - https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
   # - assets/stylesheets/footer.css
   # - assets/stylesheets/thm.css
   # - assets/stylesheets/ai-summary.css
   # - assets/stylesheets/termynal.css
   # - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
 
-# extra_javascript:
-#   - assets/javascripts/terminal-anim.js
+extra_javascript:
+  - assets/javascripts/extra.js
   # - assets/javascripts/color.js
   # - assets/javascripts/termynal.js
   # - assets/javascripts/gen_termynal.js
