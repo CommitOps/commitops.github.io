@@ -58,7 +58,7 @@ plugins:
   - search
   - quiz
   - mkdocs_quiz:
-      quiz_file: docs/quizzes.json
+      quiz_file: quizzes.json
       language: en
       show_refresh_button: true
       show_indice_on_answer: true
