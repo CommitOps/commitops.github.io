@@ -57,7 +57,7 @@ theme:
 plugins:
   - search
   - quiz
-  - mkdocs_quiz
+  - mkdocs_quiz:
       quiz_file: quizzes.json
       language: en
       show_refresh_button: true
