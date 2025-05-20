@@ -1,5 +1,7 @@
 # AWS VPC Quiz
 
+::: quiz
+
 ## Question 1
 
 What does a VPC (Virtual Private Cloud) allow you to do in AWS?
@@ -40,46 +42,4 @@ Which type of subnet is required to host a publicly accessible web server in AWS
 - [x] Public Subnet
 - [ ] VPN Subnet
 
----
-
-# AWS Storage Quiz
-
-## Question 1
-
-Which AWS storage service is ideal for storing unstructured data like images, videos, and backups?
-
-- [ ] Amazon EBS
-- [x] Amazon S3
-- [ ] Amazon RDS
-
-## Question 2
-
-What is the maximum size of a single object that can be stored in Amazon S3?
-
-- [ ] 5 GB
-- [ ] 100 GB
-- [x] 5 TB
-
-## Question 3
-
-Which AWS service provides scalable file storage for use with Amazon EC2?
-
-- [ ] Amazon S3
-- [x] Amazon EFS
-- [ ] Amazon Glacier
-
-## Question 4
-
-What storage class in Amazon S3 is optimized for long-term archival?
-
-- [ ] S3 Standard
-- [x] S3 Glacier
-- [ ] S3 Intelligent-Tiering
-
-## Question 5
-
-Which AWS storage service provides block-level storage volumes for use with EC2?
-
-- [ ] Amazon EFS
-- [x] Amazon EBS
-- [ ] Amazon S3
+:::
