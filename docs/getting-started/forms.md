@@ -23,28 +23,26 @@
 <p id="result"></p>
 
 <script>
-  function checkAnswers() {
-    var correctAnswers = {
-      q1: "b", // Launch AWS resources into a virtual network
-      q2: "a", // 1 VPC per region by default
-      q3: "c", // Lambda Function is not part of VPC components
-      q4: "c", // To enable internet access to/from the VPC
-      q5: "b"  // Public Subnet for public web server
-    };
+function checkAnswers() {
+  const answers = {
+    q1: 'b',
+    q2: 'b',
+    q3: 'b'
+  };
 
-    var score = 0;
-    var total = Object.keys(correctAnswers).length;
+  let score = 0;
+  let total = Object.keys(answers).length;
 
-    for (var key in correctAnswers) {
-      var radios = document.getElementsByName(key);
-      for (var i = 0; i < radios.length; i++) {
-        if (radios[i].checked && radios[i].value === correctAnswers[key]) {
-          score++;
-        }
-      }
+  for (let q in answers) {
+    const selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (selected && selected.value === answers[q]) {
+      score++;
     }
-
-    alert("You scored " + score + " out of " + total);
-    return false; // Prevent form submission
   }
+
+  document.getElementById("result").innerHTML = 
+    `You scored ${score} out of ${total}.`;
+
+  return false; // prevent page reload
+}
 </script>
