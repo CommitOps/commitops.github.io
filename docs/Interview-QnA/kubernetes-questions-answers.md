@@ -21,9 +21,7 @@ title: Kubernetes
     - Kubernetes orchestrates and manages Docker containers at scale.
 
 ??? question "Q) What is the difference between deploying applications on hosts & containers?"
-    <p align="center">
-      <img src="assets/hosts-containers.png" alt="Hosts Containers" width="800px" />
-    </p>
+    - ![hosts-containers](../assets/images/hosts-containers.png)
     - Host-based apps share OS libraries.
     - Container-based apps are isolated with only shared kernel.
 
@@ -37,9 +35,7 @@ title: Kubernetes
     - It is cloud-agnostic.
 
 ??? question "Q) What do you know about clusters in Kubernetes?"
-    <p align="center">
-      <img src="assets/k8s-cluster.png" alt="K8s Cluster" width="800px" />
-    </p>
+    - ![k8s-cluster](../assets/images/k8s-cluster.png)
     - A Kubernetes cluster has master (API, scheduler) and worker nodes (Kubelet, pods).
     - Desired state is managed via deployment files submitted to the API.
 
@@ -63,9 +59,7 @@ title: Kubernetes
     - Stores configuration data and state of the cluster.
 
 ??? question "Q) What are the different services within Kubernetes?"
-    <p align="center">
-      <img src="assets/k8s-services.png" alt="K8s Services" width="800px" />
-    </p>
+    - ![k8s-services](../assets/images/k8s-services.png)
 
 ??? question "Q) What is the role of a pod?"
     - Pods encapsulate containers and provide shared storage, IP, and communication.
@@ -92,13 +86,8 @@ title: Kubernetes
       - `kubelet`: Ensures containers are running as specified.
       - `kube-proxy`: Manages networking and communication for pods.
 
-    <p align="center">
-      <img src="assets/k8s-arch.png" alt="Kubernetes Architecture Diagram" width="800px" />
-    </p>
-    
-    <p align="center">
-      <img src="assets/kubernetes-architecture.png" alt="Kubernetes Architecture Diagram" width="800px" />
-    </p>
+    - ![k8s-arch](../assets/images/k8s-arch.png)
+    - ![kubernetes-architecture](../assets/images/kubernetes-architecture.png)
 
 ??? question "Q) What are the various K8 related services running on nodes and role of each service?"
     - Kubernetes cluster consists of two node types:
