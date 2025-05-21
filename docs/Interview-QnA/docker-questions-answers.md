@@ -536,8 +536,6 @@ You can also specify this within a docker run command, such as:
 
 Please note that EXPOSE will not allow communication via the defined ports to containers outside of the same network or to the host machine. To allow this to happen you need to publish the ports.
 
-
-
 ## Q. Why Docker Monitoring is necessary?
 
 * Monitoring helps to identify issues proactively that would help to avoid system outages.
@@ -545,13 +543,9 @@ Please note that EXPOSE will not allow communication via the defined ports to co
 * With full monitoring in place, changes could be rolled out safely as issues will be caught early on and be resolved quickly before that transforms into root-cause for an outage.
 * The changes are inherent in container based environments and impact of that too gets monitored indirectly.
 
-
-
 ## Q. Is it possible to run Kubernetes on Docker EE 2.0 Platform?
 
 Yes, it is possible to run Kubernetes under Docker EE 2.0 platform. Docker Enterprise Edition (EE) 2.0 is the only platform that manages and secures applications on Kubernetes in multi-Linux, multi-OS and multi-cloud customer environments. As a complete platform that integrates and scales with your organization, Docker EE 2.0 gives you the most flexibility and choice over the types of applications supported, orchestrators used, and where it’s deployed. It also enables organizations to operationalize Kubernetes more rapidly with streamlined workflows and helps you deliver safer applications through integrated security solutions.
-
-
 
 ## Q. Can you use Docker Compose to build up Swarm/Kubernetes Cluster?
 
@@ -563,19 +557,13 @@ Yes, one can deploy a stack on Kubernetes with docker stack deploy command, the 
 
 The "docker stack deploy" is a command to deploy a new stack or update an existing stack. A stack is a collection of services that make up an application in a specific environment. A stack file is a file in YAML format that defines one or more services, similar to a docker-compose.yml file for Docker Compose but with a few extensions.
 
-
-
 ## Q. Explain the concept of HA under Swarm Mode?
 
 HA refers to High Availability. High Availability is a feature where you have multiple instances of your applications running in parallel to handle increased load or failures. These two paradigms fit perfectly into Docker Swarm, the built-in orchestrator that comes with Docker. Deploying your applications like this will improve your uptime which translates to happy users. For creating a high availability container in the Docker Swarm, we need to deploy a docker service to the swarm with nginx image. This can be done by using docker swarm create command as specified above.
 
-
-
 ## Q. What are Docker secrets and why is it necessary
 
 In Docker there are three key components to container security and together they result in inherently safer apps. img Docker Secrets, a container native solution that strengthens the Trusted Delivery component of container security by integrating secret distribution directly into the container platform. By integrating secrets into Docker orchestration, we are able to deliver a solution for the secrets management problem that follows these exact principles. The following diagram provides a high-level view of how the Docker swarm mode architecture is applied to securely deliver a new type of object to our containers: a secret object.
-
-
 
 ## Q. What are docker networking
 
@@ -586,14 +574,10 @@ Mainly we have four mode of networking for Docker
 * Container mode networking
 * No networking
 
-
-
 ## Q. Explain a use case for Docker
 
 * It can be used to spin up a unified developement environment for all the developers to avoid the problem of "it works fine on my machine" by packaging up the application with all its dependencies in a docker container and then run it on any os.
 * You can spin up clean test environments quickly (instead of bringing up full virtual machines)in order to test your software.
-
-
 
 ## Q. Basic Docker Commands
 
@@ -621,8 +605,6 @@ Mainly we have four mode of networking for Docker
 |rm `<container id>`| delete a stopped container          | $ docker rm myapp |
 |rmi `<image-id>` | delete an image from the local system | $ docker rmi myapp |
 |system prune | to remove all the stopped containers, all the networks that are not used, all dangling images and all build caches.| $ docker system prune --all |
-
-
 
 ## Q. What is the difference between the COPY and ADD commands in a Dockerfile?
 
@@ -655,8 +637,6 @@ ADD file.tar /app
 # Copy svg file directly from url to Docker image
 ADD https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/svg/docker.svg /app/images/logo.svg
 ```
-
-
 
 ## Q. What is Docker Volume?
 
