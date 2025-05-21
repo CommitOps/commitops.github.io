@@ -4,13 +4,6 @@ title: Code
 
 ---
 
-# Code
-
-???+ note "Click to expand code"
-    ```python
-    print("Hello DevOps!")
-    ```
-
 <!-- # Embedded Static Diagram
 
 <iframe src="assets/html/test-ilograph.html" width="100%" height="600" frameborder="0"></iframe> -->
