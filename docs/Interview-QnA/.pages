@@ -5,3 +5,5 @@ nav:
   - linux-questions-answers.md
   - terraform-questions-answers.md
   - docker-questions-answers.md
+  - kubernetes-questions-answers.md
+  - behavioural-questions-answers.md
