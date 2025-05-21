@@ -114,7 +114,7 @@ extra_javascript:
   # - assets/javascripts/gen_termynal.js
 
 hooks:
-  - assets/hooks/quiz_hook.py
+  - docs/assets/hooks/quiz_hook.py
 
 # nav:
 #   - Home: index.md
