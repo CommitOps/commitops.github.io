@@ -7,9 +7,7 @@ title: Kubernetes
 ## <a name="Kubernetes-101">Kubernetes 101</a>
 
 ??? question "Q) What are the features of Kubernetes?"
-    <p align="center">
-      <img src="assets/k8s-features.png" alt="K8s Features" width="800px" />
-    </p>
+    ![k8s-features](../assets/images/k8s-features.png)
 
 ??? question "Q) How is Kubernetes different from Docker Swarm?"
     - **Docker Swarm** is Docker’s native, open-source container orchestration platform that is used to cluster and schedule Docker containers.
