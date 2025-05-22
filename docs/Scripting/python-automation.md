@@ -67,7 +67,7 @@ delete_unused_ebs_volumes()
 
 3) Cleanup Old Lambda Function Versions
 
-```python
+```python title="lambda_ops.py"
 import boto3
 
 def cleanup_old_lambda_versions(function_name):
@@ -86,7 +86,7 @@ cleanup_old_lambda_versions('my-lambda-function')
 4) Monitor AWS Billing Costs
 
 
-```python
+```python title="cost.py"
 import boto3
 
 def get_aws_billing():
@@ -105,7 +105,7 @@ get_aws_billing()
 5) Identify and stop underutilized instances.
 
 
-```python
+```python title="ec2_stop.py"
 import boto3
 
 def stop_idle_instances():
@@ -124,7 +124,7 @@ stop_idle_instances()
 
 6) DynamoDB Data Export to S3
 
-```python
+```python title="ddb_export.py"
 import boto3
 
 def export_dynamodb_to_s3(table_name, bucket_name, file_name):
@@ -141,7 +141,7 @@ export_dynamodb_to_s3('my-table', 'my-bucket', 'backup.json')
 
 7) Set up CloudWatch alarms to monitor AWS resources and receive notifications on specific metrics.
 
-```python
+```python title="cw_alarm.py"
 import boto3
 
 def create_cloudwatch_alarm(instance_id, threshold=70.0):
@@ -166,7 +166,7 @@ create_cloudwatch_alarm('i-1234567890abcdef0')
 
 8) Identify and delete unused Elastic Block Store (EBS) volumes to reduce costs.
 
-```python
+```python title="ebs_vol.py"
 import boto3
 
 def delete_unused_ebs_volumes():
@@ -182,7 +182,7 @@ delete_unused_ebs_volumes()
 
 9) Reduce AWS Lambda storage usage by deleting old versions.
 
-```python
+```python title="lambda_old.py"
 import boto3
 
 def cleanup_old_lambda_versions(function_name):
@@ -200,7 +200,7 @@ cleanup_old_lambda_versions('my-lambda-function')
 
 10) Check for Open Security Groups:
 
-```python
+```python title="open_sg.py"
 import boto3
 
 def check_open_security_groups():
