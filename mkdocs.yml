@@ -42,12 +42,14 @@ theme:
     - navigation.path
     - navigation.indexes
     - header.autohide
-    # - toc.integrate
     - navigation.top
     - search.suggest
     - search.highlight
     - search.share
     - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    # - toc.integrate
 
   announcement:
     type: info

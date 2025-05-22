@@ -8,7 +8,7 @@ title: Python Boto3
 
 <!-- termynal -->
 
-```python
+```python title="ec2_ops.py"
 import boto3
 import sys
 
@@ -48,14 +48,14 @@ if __name__ == "__main__":
 <!-- termynal -->
 
 ```bash
-python script.py i-0qwert1234adad678 start
+python ec2_ops.py i-0sdjignbfdghierg start
 ```
 
 2) Identify and delete unused Elastic Block Store (EBS) volumes to reduce costs.
 
 <!-- termynal -->
 
-```python
+```python title="ebs_ops.py"
 import boto3
 
 def delete_unused_ebs_volumes():
