@@ -6,7 +6,7 @@ title: Python Boto3
 
 1) Start, Stop, Restart & Terminate EC2 instance
 
-```python title="ec2_ops.py"
+```python title="ec2_ops.py" linenums="1"
 import boto3
 import sys
 
@@ -51,7 +51,7 @@ python ec2_ops.py i-0sdjignbfdghierg start
 
 2) Identify and delete unused Elastic Block Store (EBS) volumes to reduce costs.
 
-```python title="ebs_ops.py"
+```python title="ebs_ops.py" linenums="1"
 import boto3
 
 def delete_unused_ebs_volumes():
@@ -67,7 +67,7 @@ delete_unused_ebs_volumes()
 
 3) Cleanup Old Lambda Function Versions
 
-```python title="lambda_ops.py"
+```python title="lambda_ops.py" linenums="1"
 import boto3
 
 def cleanup_old_lambda_versions(function_name):
@@ -86,7 +86,7 @@ cleanup_old_lambda_versions('my-lambda-function')
 4) Monitor AWS Billing Costs
 
 
-```python title="cost.py"
+```python title="cost.py" linenums="1"
 import boto3
 
 def get_aws_billing():
@@ -105,7 +105,7 @@ get_aws_billing()
 5) Identify and stop underutilized instances.
 
 
-```python title="ec2_stop.py"
+```python title="ec2_stop.py" linenums="1"
 import boto3
 
 def stop_idle_instances():
@@ -124,7 +124,7 @@ stop_idle_instances()
 
 6) DynamoDB Data Export to S3
 
-```python title="ddb_export.py"
+```python title="ddb_export.py" linenums="1"
 import boto3
 
 def export_dynamodb_to_s3(table_name, bucket_name, file_name):
@@ -141,7 +141,7 @@ export_dynamodb_to_s3('my-table', 'my-bucket', 'backup.json')
 
 7) Set up CloudWatch alarms to monitor AWS resources and receive notifications on specific metrics.
 
-```python title="cw_alarm.py"
+```python title="cw_alarm.py" linenums="1"
 import boto3
 
 def create_cloudwatch_alarm(instance_id, threshold=70.0):
@@ -166,7 +166,7 @@ create_cloudwatch_alarm('i-1234567890abcdef0')
 
 8) Identify and delete unused Elastic Block Store (EBS) volumes to reduce costs.
 
-```python title="ebs_vol.py"
+```python title="ebs_vol.py" linenums="1"
 import boto3
 
 def delete_unused_ebs_volumes():
@@ -182,7 +182,7 @@ delete_unused_ebs_volumes()
 
 9) Reduce AWS Lambda storage usage by deleting old versions.
 
-```python title="lambda_old.py"
+```python title="lambda_old.py" linenums="1"
 import boto3
 
 def cleanup_old_lambda_versions(function_name):
@@ -200,7 +200,7 @@ cleanup_old_lambda_versions('my-lambda-function')
 
 10) Check for Open Security Groups:
 
-```python title="open_sg.py"
+```python title="open_sg.py" linenums="1"
 import boto3
 
 def check_open_security_groups():
