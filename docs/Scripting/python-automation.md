@@ -46,7 +46,7 @@ if __name__ == "__main__":
 <!-- termynal -->
 
 ```bash
-python ec2_ops.py i-0sdjignbfdghierg start
+$ python ec2_ops.py i-0sdjignbfdghierg start
 ```
 
 2) Identify and delete unused Elastic Block Store (EBS) volumes to reduce costs.
