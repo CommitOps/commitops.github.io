@@ -62,6 +62,9 @@ Use spot instances to run batch jobs: if some of the instances are preempted, th
 <!-- termynal -->
 
 ```bash
+
+$ terraform apply
+
 resource "aws_spot_instance_request" "cheap_worker" {
   # ...
   spot_price    = "0.03"
@@ -71,4 +74,44 @@ resource "aws_spot_instance_request" "cheap_worker" {
     Name = "Worker"
   }
 }
+```
+
+## Pattern: Object storage lifecycle rules
+
+- Define lifecycle rules for object storage to move objects to cheaper storage or drop them entirely.
+
+- **Context**
+- By default, objects stored in cloud object storage are retained, and therefore billed, indefinitely. Objects also have a storage class or access tier, which can be used to balance access performance and cost depending on the use case.
+
+- **Solution**
+- By configuring lifecycle rules or policies, objects can be transitioned to cheaper storage classes or deleted after a certain amount of time.
+
+- **Example**
+- Transition objects under the "log/" prefix to the Glacier storage class after 60 days, and expire after 90 days:
+
+<!-- termynal -->
+
+```bash
+
+$ terraform apply
+
+resource "aws_s3_bucket_lifecycle_configuration" "example" {
+  bucket = aws_s3_bucket.bucket.id
+
+  rule {
+    id = "log"
+    expiration {
+      days = 90
+    }
+    filter {
+      prefix = "log/"
+    }
+    status = "Enabled"
+    transition {
+      days          = 60
+      storage_class = "GLACIER"
+    }
+  }
+}
+
 ```
