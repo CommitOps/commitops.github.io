@@ -4,25 +4,28 @@ title: Cost Optimization
 
 ---
 
-# IAC Cost Patters
+# IAC Cost Patterns
 
 ## Pattern: Budget
-Use budgets to receive alerts about charged and forecasted costs and control spending.
 
-Context
-The lack of explicit cost monitoring can often lead to unforeseen and undesirable costs.
+- Use budgets to receive alerts about charged and forecasted costs and control spending.
 
-Solution
-Major cloud providers support the creation of budgets, which allow users to define alerts about charged and forecasted costs and control spending. Having one or more budgets can help monitor and manage the cost of cloud deployments.
+- **Context**
+  - The lack of explicit cost monitoring can often lead to unforeseen and undesirable costs.
 
-Example
-Define a budget for a cost limit of 1200 USD for EC2, and generate an email notification if the forecasted monthly cost exceeds this amount:
+- **Solution**
+  - Major cloud providers support the creation of budgets, which allow users to define alerts about charged and forecasted costs and control spending. Having one or more budgets can help monitor and manage the cost of cloud deployments.
+
+- **Example**
+  - Define a budget for a cost limit of 100 USD for EC2, and generate an email notification if the forecasted monthly cost exceeds this amount:
+
+<!-- termynal -->
 
 ```json
 resource "aws_budgets_budget" "example" {
   name              = "example"
   budget_type       = "COST"
-  limit_amount      = "1200"
+  limit_amount      = "100"
   limit_unit        = "USD"
   time_unit         = "MONTHLY"
 
