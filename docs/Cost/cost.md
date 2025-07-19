@@ -21,7 +21,7 @@ title: Cost Optimization
 
 <!-- termynal -->
 
-```json
+```bash
 resource "aws_budgets_budget" "example" {
   name              = "example"
   budget_type       = "COST"
@@ -48,18 +48,20 @@ resource "aws_budgets_budget" "example" {
 
 ## Pattern: Spot instances
 
-Use spot instances to run interruptible workloads for significant cost savings compared to regular instances.
+- Use spot instances to run interruptible workloads for significant cost savings compared to regular instances.
 
-Context
-Continuously running compute instances are also continuously billed. Certain types of workloads which can handle interruption, e.g. batch jobs, data analysis and optional tasks, do not require on-demand, provisioned instances.
+- **Context**
+- Continuously running compute instances are also continuously billed. Certain types of workloads which can handle interruption, e.g. batch jobs, data analysis and optional tasks, do not require on-demand, provisioned instances.
 
-Solution
-Major cloud providers offer excess compute capacity in the form of spot instances. These provide discounts over on-demand compute instances, with the caveat that instances can be preempted or deleted at any time when compute capacity needs to be reclaimed. Users define a price limit and if the spot price falls below this limit, an instance is allocated. If a user's workloads can handle interruptions, spot instances can offer an economical alternative to regular instances.
+- **Solution**
+- Major cloud providers offer excess compute capacity in the form of spot instances. These provide discounts over on-demand compute instances, with the caveat that instances can be preempted or deleted at any time when compute capacity needs to be reclaimed. Users define a price limit and if the spot price falls below this limit, an instance is allocated. If a user's workloads can handle interruptions, spot instances can offer an economical alternative to regular instances.
 
-Example
+- **Example**
 Use spot instances to run batch jobs: if some of the instances are preempted, the job is slowed down, but it does not completely stop. For example, request a worker at a price of 0.03 USD:
 
-```json
+<!-- termynal -->
+
+```bash
 resource "aws_spot_instance_request" "cheap_worker" {
   # ...
   spot_price    = "0.03"
