@@ -63,8 +63,6 @@ Use spot instances to run batch jobs: if some of the instances are preempted, th
 
 ```bash
 
-$ terraform apply
-
 resource "aws_spot_instance_request" "cheap_worker" {
   # ...
   spot_price    = "0.03"
@@ -92,8 +90,6 @@ resource "aws_spot_instance_request" "cheap_worker" {
 <!-- termynal -->
 
 ```bash
-
-$ terraform apply
 
 resource "aws_s3_bucket_lifecycle_configuration" "example" {
   bucket = aws_s3_bucket.bucket.id
