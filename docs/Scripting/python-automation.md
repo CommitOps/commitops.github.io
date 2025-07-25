@@ -104,7 +104,6 @@ get_aws_billing()
 
 5) Identify and stop underutilized instances.
 
-
 ```python title="ec2_stop.py" linenums="1"
 import boto3
 
@@ -219,4 +218,37 @@ check_open_security_groups()
 
 ```
 
-1.  Code Test annotation!
+1)  EC2 Auto ShutDown using Lambda:
+
+![ec2_auto_shutdown](../assets/images/ec2_auto_shutdown.png)
+
+```python title="ec2_auto_shutdown.py" linenums="1"
+# You can replace the variable values for tag_key and tag_value to the values you want to assign to the EC2 instances.
+import boto3
+
+def lambda_handler(event, context):
+    # Initialize the EC2 client
+    ec2 = boto3.client('ec2')
+    
+    # Define the tag key and value to identify instances to be stopped
+    tag_key = 'AutoStop'
+    tag_value = 'True'
+    
+    # Get a list of all instances
+    instances = ec2.describe_instances(Filters=[{'Name': 'tag:'+tag_key, 'Values': [tag_value]}])
+    
+    # Iterate through reservations and instances
+    for reservation in instances['Reservations']:
+        for instance in reservation['Instances']:
+            instance_id = instance['InstanceId']
+                    
+            # Check the current state of the instance
+            instance_state = instance['State']['Name']
+                  
+            # If the instance is running, stop it
+            if instance_state == 'running':
+                ec2.stop_instances(InstanceIds=[instance_id])
+                print(f"Stopped EC2 instance {instance_id}")
+            else:
+                print(f"EC2 instance {instance_id} is in state {instance_state}, skipping.")
+```
