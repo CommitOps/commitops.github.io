@@ -218,7 +218,7 @@ check_open_security_groups()
 
 ```
 
-1)  EC2 Auto ShutDown using Lambda:
+11) EC2 Auto ShutDown using Lambda:
 
 ![ec2_auto_shutdown](../assets/images/ec2_auto_shutdown.png)
 
