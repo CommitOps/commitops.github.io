@@ -82,7 +82,7 @@ Whether you're new to Kubernetes or an experienced administrator, this guide wil
 | `kubectl delete configmap <name>`                         | Delete a ConfigMap                   | `kubectl delete configmap app-config`           |
 | `kubectl create secret generic <name> --from-literal=<key>=<value>` | Create a Secret from literal value | `kub
 ::contentReference[oaicite:0]{index=0}
- 
+
 ## Persistent Volume Operations
 
 | Command | Description |
