@@ -2,6 +2,46 @@
 title: Git
 ---
 
+# Git Commands CheatSheet
+
+## <a name="Atlassian Git CheatSheet">Git Commands CheatSheet</a>
+
+![Atlassian Git CheatSheet](../assets/pdf/atlassian-git-cheatsheet.pdf){ type=application/pdf style="min-height:100vh;width:100%" }
+
+--
+
+## <a name="Git CheatSheet">Git Commands CheatSheet</a>
+
+![Git CheatSheet](../assets/pdf/git-cheatsheet.pdf){ type=application/pdf style="min-height:100vh;width:100%" }
+
+--
+
+## <a name="Github Git CheatSheet">Github Git CheatSheet</a>
+
+![Github Git CheatSheet](../assets/pdf/GitHub-Git-Cheatsheet.pdf){ type=application/pdf style="min-height:100vh;width:100%" }
+
+<!-- ![Git CheatSheet](../assets/pdf/atlassian-git-cheatsheet.pdf) -->
+
+<!--- file: docs/CheatSheets/git-cheatsheet.md --->
+<!-- {% with pdf_file = "assets/pdf/atlassian-git-cheatsheet.pdf" %}
+
+{% set solid_filepdf = '<i class="fas fa-file-pdf"></i>' %}
+{% set empty_filepdf = '<i class="far fa-file-pdf"></i>' %}
+
+## Example: Embedding a PDF file
+
+<object data="{{ pdf_file }}" type="application/pdf">
+    <embed src="{{ pdf_file }}" type="application/pdf" />
+</object>
+
+## Example: Creating a link to a PDF file
+
+<a href="{{ pdf_file }}" class="image fit">{{ solid_filepdf }}</a>
+
+{% endwith %} -->
+
+--
+
 ## Git Commands
 
 1 git add
@@ -66,31 +106,3 @@ title: Git
 
 - Remote repository
 ↳ It's the version of a project stored on a server, such as GitHub
-
---
-
-![Atlassian Git CheatSheet](../assets/pdf/atlassian-git-cheatsheet.pdf){ type=application/pdf style="min-height:100vh;width:100%" }
-
---
-
-![Git CheatSheet](../assets/pdf/git-cheatsheet.pdf){ type=application/pdf style="min-height:100vh;width:100%" }
-
-<!-- ![Git CheatSheet](../assets/pdf/atlassian-git-cheatsheet.pdf) -->
-
-<!--- file: docs/CheatSheets/git-cheatsheet.md --->
-<!-- {% with pdf_file = "assets/pdf/atlassian-git-cheatsheet.pdf" %}
-
-{% set solid_filepdf = '<i class="fas fa-file-pdf"></i>' %}
-{% set empty_filepdf = '<i class="far fa-file-pdf"></i>' %}
-
-## Example: Embedding a PDF file
-
-<object data="{{ pdf_file }}" type="application/pdf">
-    <embed src="{{ pdf_file }}" type="application/pdf" />
-</object>
-
-## Example: Creating a link to a PDF file
-
-<a href="{{ pdf_file }}" class="image fit">{{ solid_filepdf }}</a>
-
-{% endwith %} -->
