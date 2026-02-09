@@ -1,5 +1,5 @@
 ---
-title: Docker Debugging Exercises
+title: Docker Debugging
 ---
 
 # Docker Scenario-Based Exercises
@@ -25,7 +25,6 @@ To troubleshoot a container exiting immediately:
 - Always start with `docker logs` for error clues.
 - Use `docker ps -a` to check container status and ID.
 - Common issues include missing dependencies or crashing apps.
-
 
 ---
 
